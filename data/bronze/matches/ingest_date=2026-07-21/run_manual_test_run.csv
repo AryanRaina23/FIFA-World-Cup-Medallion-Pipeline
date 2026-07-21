@@ -1,0 +1,185 @@
+year,stage,team1,score1,score2,team2,venue,city,country,date,notes,_ingestion_id,_ingested_at,_source_file,_source_format,_run_id
+1930,Group Stage,France,4,1,Mexico,Estadio Centenario,Montevideo,Uruguay,1930-07-13,First ever WC match,6d358b79-cc59-49d1-9e79-9078f916d2a5,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1930,Group Stage,USA,3,0,Belgium,Estadio Centenario,Montevideo,Uruguay,1930-07-13,nan,75597451-69ee-4b6d-98af-e9a18e52b75a,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1930,Group Stage,Yugoslavia,2,1,Brazil,Estadio Centenario,Montevideo,Uruguay,1930-07-14,nan,60e02953-9265-4f63-9a31-6582ee915f73,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1930,Group Stage,Uruguay,1,0,Peru,Estadio Centenario,Montevideo,Uruguay,1930-07-18,nan,75689d08-c514-44c4-afe1-8d7765673cef,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1930,Group Stage,Argentina,6,3,USA,Estadio Centenario,Montevideo,Uruguay,1930-07-26,nan,3a929b9f-407f-4530-a856-96570a046ed8,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1930,Semi-final,Uruguay,6,1,Yugoslavia,Estadio Centenario,Montevideo,Uruguay,1930-07-27,nan,dc9b0a2b-9ecf-4400-83f3-7f0128f0fd44,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1930,Semi-final,Argentina,6,1,USA,Estadio Centenario,Montevideo,Uruguay,1930-07-26,nan,423d2275-5e31-4dc1-ad05-381fd2f82590,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1930,Final,Uruguay,4,2,Argentina,Estadio Centenario,Montevideo,Uruguay,1930-07-30,First WC Final,531251a5-8d00-41bb-8e53-7be6281d0396,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1934,Round of 16,Italy,7,1,USA,PNF Stadium,Rome,Italy,1934-05-27,nan,5cbba7a1-c8bf-43c6-aa3f-a5304ceeb2a8,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1934,Round of 16,Germany,5,2,Belgium,PNF Stadium,Florence,Italy,1934-05-27,nan,3d761ebb-2b33-4f16-be36-8b2d1401f444,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1934,Quarter-final,Italy,1,1,Spain,PNF Stadium,Florence,Italy,1934-05-31,AET - replay,4100eb4d-74e4-4125-a9c6-ac8f26be83c8,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1934,Semi-final,Italy,1,0,Austria,San Siro,Milan,Italy,1934-06-03,nan,311d08e0-8c90-4808-ac2d-2b230f12b8ab,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1934,Semi-final,Germany,3,1,Sweden,Stadio Bentegodi,Bologna,Italy,1934-06-03,nan,a37c035a-32f7-4982-99d1-95c0d63f2355,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1934,3rd Place,Germany,3,2,Austria,Stadio Bentegodi,Naples,Italy,1934-06-07,nan,bb6eaf0c-f1f5-4329-a7ff-4b70db718555,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1934,Final,Italy,2,1,Czechoslovakia,PNF Stadium,Rome,Italy,1934-06-10,AET,9bd2966c-f69f-4a02-b200-bcf7245a2d79,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1938,Round of 16,Brazil,6,5,Poland,Stade de la Meinau,Strasbourg,France,1938-06-05,AET - 11 goals!,03fac60d-0b0b-4ebf-9d11-6e0e5377860d,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1938,Round of 16,Italy,2,1,Norway,Stade de Gerland,Lyon,France,1938-06-05,AET,2cbfdc0e-18c1-4b78-9eea-95f4f5713e75,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1938,Quarter-final,Brazil,1,1,Czechoslovakia,Stade de la Meinau,Bordeaux,France,1938-06-12,Replay,ba31a242-50e6-4d0c-855d-16de4c412332,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1938,Semi-final,Italy,2,1,Brazil,Stade de Colombes,Paris,France,1938-06-16,nan,33f663be-1bf0-44db-9441-cabe4ff972c7,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1938,Semi-final,Hungary,5,1,Sweden,Stade Olympique,Paris,France,1938-06-16,nan,7a735883-bceb-40fc-a40c-d177efd2f9a3,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1938,3rd Place,Brazil,4,2,Sweden,Stade de Bordeaux,Bordeaux,France,1938-06-19,nan,39f0a70d-a51c-4cd3-bb8e-9d38796dff00,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1938,Final,Italy,4,2,Hungary,Stade de Colombes,Paris,France,1938-06-19,nan,ca8d1afb-9c55-426c-80da-a8a9bfdf2b46,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1950,Group Stage,Brazil,4,0,Mexico,Estádio do Maracanã,Rio de Janeiro,Brazil,1950-06-24,nan,9a9f7f57-fff4-4555-9831-9d3d77d5e9fc,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1950,Group Stage,England,0,1,USA,Estádio Independência,Belo Horizonte,Brazil,1950-06-29,Greatest WC upset ever,ee7d0fec-f76e-47c2-92c6-3a1b416e16d4,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1950,Final Round,Brazil,7,1,Sweden,Estádio do Maracanã,Rio de Janeiro,Brazil,1950-07-09,nan,c0aaeadd-b724-4752-aa10-194b5d4c8fb4,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1950,Final Round,Uruguay,3,2,Sweden,Estádio do Maracanã,São Paulo,Brazil,1950-07-09,nan,9a6333a7-f3a1-4752-90d9-28d9ae621959,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1950,Final Round,Uruguay,2,1,Brazil,Estádio do Maracanã,Rio de Janeiro,Brazil,1950-07-16,Maracanazo,e5819bd1-0817-4091-919c-4517dabccab3,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1954,Group Stage,Hungary,9,0,South Korea,Hardturm,Zürich,Switzerland,1954-06-17,nan,f0120050-98f5-409e-bd73-a59346639c86,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1954,Group Stage,West Germany,3,8,Hungary,Wankdorf,Bern,Switzerland,1954-06-20,nan,c2b0b109-93d9-4094-934b-f5ca9e18732f,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1954,Quarter-final,Austria,7,5,Switzerland,Hardturm,Lausanne,Switzerland,1954-06-26,Highest scoring WC match ever,c17df5fb-f7ec-4ef1-bcb1-fa646e1194bb,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1954,Semi-final,West Germany,6,1,Austria,Wankdorf,Basel,Switzerland,1954-06-30,nan,24804cd8-ce57-453a-b2fb-8894d045377a,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1954,Semi-final,Hungary,4,2,Uruguay,Stade Olympique,Lausanne,Switzerland,1954-06-30,nan,86468c7e-5671-4ca5-b3d0-6845a786fdb1,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1954,3rd Place,Austria,3,1,Uruguay,Hardturm,Zürich,Switzerland,1954-07-03,nan,d25015ec-1f26-4055-9a39-23c117617ed5,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1954,Final,West Germany,3,2,Hungary,Wankdorf,Bern,Switzerland,1954-07-04,Miracle of Bern,4e115182-4ef7-4aeb-824f-3eef1533d972,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1958,Group Stage,Brazil,3,0,Austria,Ryavallen,Borås,Sweden,1958-06-08,nan,68255407-84c6-482c-bc01-6cbf6158f7b2,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1958,Group Stage,France,7,3,Paraguay,Idrottsparken,Norrköping,Sweden,1958-06-08,Fontaine hat-trick,d593269c-c556-4f20-a602-69be4b2ea240,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1958,Quarter-final,France,4,0,Northern Ireland,Ullevi,Gothenburg,Sweden,1958-06-19,nan,09894810-a12e-49d4-a4be-36cb2d4e0a2e,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1958,Semi-final,Brazil,5,2,France,Ullevi,Gothenburg,Sweden,1958-06-24,nan,10f4b658-af54-4363-a519-65a95d5da140,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1958,Semi-final,Sweden,3,1,West Germany,Ullevi,Gothenburg,Sweden,1958-06-24,nan,337cc7e9-1667-40c1-b15f-2a8453ba1939,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1958,3rd Place,France,6,3,West Germany,Ullevi,Gothenburg,Sweden,1958-06-28,Fontaine scores 4,a73a88a4-2937-492e-8041-6c2014c6eb3a,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1958,Final,Brazil,5,2,Sweden,Råsunda,Stockholm,Sweden,1958-06-29,Pelé scores 2 at 17,de1a3fb1-a85a-4214-be3a-ef56462c7ad2,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1962,Group Stage,Soviet Union,2,0,Yugoslavia,Estadio El Teniente,Rancagua,Chile,1962-05-31,nan,5b291ee6-649a-491c-a530-c3b1275c82f1,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1962,Group Stage,Italy,0,0,Chile,Estadio Nacional,Santiago,Chile,1962-06-02,Battle of Santiago,a0db0de5-350e-4688-ab3b-c38725ac95d2,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1962,Quarter-final,Brazil,3,1,England,Estadio Sausalito,Viña del Mar,Chile,1962-06-10,nan,d9af7265-2295-4264-9b35-c5f4610c410a,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1962,Semi-final,Brazil,4,2,Chile,Estadio Nacional,Santiago,Chile,1962-06-13,nan,2be197c3-56aa-4629-8ced-f6852c48b5df,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1962,Semi-final,Czechoslovakia,3,1,Yugoslavia,Estadio El Teniente,Vina del Mar,Chile,1962-06-13,nan,07055720-cdfb-486b-b4d0-14fe51bdf9d9,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1962,3rd Place,Chile,1,0,Yugoslavia,Estadio Nacional,Santiago,Chile,1962-06-16,nan,95e23c34-287b-4e9e-a136-e8197526208a,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1962,Final,Brazil,3,1,Czechoslovakia,Estadio Nacional,Santiago,Chile,1962-06-17,nan,a6f2fb20-6cf5-416d-9b61-0166bcb09428,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1966,Group Stage,England,0,0,Uruguay,Wembley,London,England,1966-07-11,nan,6ad9a4a0-5727-4307-abe1-451569151669,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1966,Group Stage,North Korea,1,0,Italy,Ayresome Park,Middlesbrough,England,1966-07-19,Biggest WC upset,1c7c2f10-ff83-4ad5-8882-a885504335c6,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1966,Quarter-final,North Korea,3,5,Portugal,Goodison Park,Liverpool,England,1966-07-23,Eusébio scores 4,c1f1a3c0-5b28-44e9-a574-6199336d8aa1,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1966,Quarter-final,England,1,0,Argentina,Wembley,London,England,1966-07-23,nan,dfe8d107-eab2-4157-b275-3fd412d979d7,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1966,Semi-final,England,2,1,Portugal,Wembley,London,England,1966-07-26,nan,1a7c52e8-408d-40f1-804e-5ca9910aad7e,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1966,Semi-final,West Germany,2,1,Soviet Union,Goodison Park,Liverpool,England,1966-07-25,nan,dae4e834-9265-4d08-b3d3-e78c0a86df53,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1966,3rd Place,Portugal,2,1,Soviet Union,Wembley,London,England,1966-07-28,nan,c8a93e61-488e-4bf7-b47f-e567e44e0928,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1966,Final,England,4,2,West Germany,Wembley,London,England,1966-07-30,Geoff Hurst hat-trick,b54bcc95-4638-4e66-93a3-7354190530d4,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1970,Group Stage,Brazil,4,1,Czechoslovakia,Estadio Jalisco,Guadalajara,Mexico,1970-06-03,nan,8eab7b0f-86c0-4a6e-b996-7bdac6206848,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1970,Group Stage,West Germany,3,10,Bulgaria,Estadio Nou Camp,León,Mexico,1970-06-02,nan,5454dab5-d30b-4313-821c-ced4e062f81b,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1970,Quarter-final,Brazil,4,2,Peru,Estadio Jalisco,Guadalajara,Mexico,1970-06-14,nan,4d9be3df-3f31-4f96-8347-81b45e0e5142,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1970,Quarter-final,West Germany,3,2,England,Estadio Nou Camp,León,Mexico,1970-06-14,AET - England 2-0 up,488bd402-30f1-47ff-9810-2715e12c7e89,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1970,Semi-final,Italy,4,3,West Germany,Estadio Azteca,Mexico City,Mexico,1970-06-17,Game of the Century AET,c3561860-fa46-4afb-9fd9-8e73c527da24,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1970,Semi-final,Brazil,3,1,Uruguay,Estadio Jalisco,Guadalajara,Mexico,1970-06-17,nan,e0cfdad3-a7bb-4324-a571-7dc862f05d7c,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1970,3rd Place,West Germany,1,0,Uruguay,Estadio Azteca,Mexico City,Mexico,1970-06-20,nan,c82537c1-697d-4c53-89a4-58096a13f4e4,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1970,Final,Brazil,4,1,Italy,Estadio Azteca,Mexico City,Mexico,1970-06-21,Brazil keep the Jules Rimet,a5a9c462-623b-4df0-9dc8-e8d8b7a7c62e,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1974,Group Stage,East Germany,1,0,West Germany,Volksparkstadion,Hamburg,West Germany,1974-06-22,Only time they met,ce9ef1a9-2171-4964-8d04-ea73c7a3e0f1,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1974,Group Stage,Brazil,0,0,Yugoslavia,Olympiastadion,Berlin,West Germany,1974-06-18,nan,3a9e5e00-8a9b-4b6e-9298-0f32810cd208,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1974,Semi-final Round,Netherlands,2,0,Brazil,Westfalenstadion,Dortmund,West Germany,1974-07-03,nan,00b1719a-55e1-4453-84f5-170c49fef21d,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1974,Semi-final Round,West Germany,1,0,Poland,Olympiastadion,Frankfurt,West Germany,1974-07-03,nan,7feeee61-3cd9-488f-8b9a-8eb76f1bbdaf,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1974,3rd Place,Poland,1,0,Brazil,Olympiastadion,Munich,West Germany,1974-07-06,nan,4e06622b-1ff7-4b29-b895-4c946adb032a,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1974,Final,West Germany,2,1,Netherlands,Olympiastadion,Munich,West Germany,1974-07-07,nan,02a0eb49-9f51-4293-8130-fbd73ba1e639,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1978,Group Stage,Argentina,2,1,Hungary,El Monumental,Buenos Aires,Argentina,1978-06-02,nan,67459e5c-9854-4297-9c8e-73dab5de8734,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1978,Group Stage,Italy,1,0,Argentina,El Monumental,Buenos Aires,Argentina,1978-06-10,nan,649b2677-ffd4-4288-9b6c-4d8068cb5543,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1978,Group Stage,Argentina,6,0,Peru,El Monumental,Buenos Aires,Argentina,1978-06-21,Controversial result,c35c7ebd-9c00-40b5-a5f3-ce69a47a856a,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1978,3rd Place,Brazil,2,1,Italy,El Monumental,Buenos Aires,Argentina,1978-06-24,nan,eadb8d50-6480-44b4-801c-43a5d2eb76d9,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1978,Final,Argentina,3,1,Netherlands,El Monumental,Buenos Aires,Argentina,1978-06-25,AET - Kempes 2,f332cc02-16f7-4b61-bfc1-1b3095ce32be,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1982,Group Stage,Algeria,2,1,West Germany,El Molinon,Gijón,Spain,1982-06-16,Biggest WC upset 1982,fd8cbbe6-bd48-4434-908d-d3b8f1725789,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1982,Group Stage,West Germany,1,0,Austria,El Molinon,Gijón,Spain,1982-06-25,Disgrace of Gijón,7d302ae8-35f7-4610-97c2-9321843b96f8,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1982,Group Stage,Brazil,3,1,Argentina,Sarriá,Barcelona,Spain,1982-06-02,nan,fa23ad78-bf01-4525-96ee-cc9e7c0b2228,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1982,Quarter-final,West Germany,0,0,France,Ramón Sánchez Pizjuán,Seville,Spain,1982-07-08,First WC shootout - Germany win 5-4 pens,984797e8-a3da-4478-a035-b7cc999c2a37,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1982,Semi-final,Italy,2,0,Poland,Camp Nou,Barcelona,Spain,1982-07-08,nan,ad08bc1c-f7e3-48ce-95f8-6fba9fc0d1f4,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1982,3rd Place,Poland,3,2,France,Estadio Metropolitano,Madrid,Spain,1982-07-10,nan,40e068e1-c5a2-4011-8ff0-7b62928d9971,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1982,Final,Italy,3,1,West Germany,Bernabéu,Madrid,Spain,1982-07-11,Rossi wins Golden Boot,22f0ed95-18c4-431e-870f-59d3bdf2c2ce,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1986,Group Stage,Denmark,6,1,Uruguay,Estadio Neza,Nezahualcóyotl,Mexico,1986-06-08,nan,c27c5909-f3d9-40bb-aae1-c781f225d7a6,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1986,Round of 16,Belgium,4,3,Soviet Union,Estadio Jalisco,Guadalajara,Mexico,1986-06-15,AET,35a7d95a-c5e5-4215-a0da-1a077cd73e86,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1986,Quarter-final,Argentina,2,1,England,Estadio Azteca,Mexico City,Mexico,1986-06-22,Hand of God + Goal of Century,47696349-94bb-4c5d-ada2-4ef6534f4468,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1986,Quarter-final,France,0,0,Brazil,Estadio Jalisco,Guadalajara,Mexico,1986-06-21,France win 4-3 pens,b8a77c94-de96-4b36-8da5-29a392a55574,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1986,Semi-final,Argentina,2,0,Belgium,Estadio Azteca,Mexico City,Mexico,1986-06-25,Maradona 2 goals,98ae2662-805f-4784-8649-4c365aec9cd8,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1986,Semi-final,West Germany,2,0,France,Estadio Jalisco,Guadalajara,Mexico,1986-06-25,nan,0b9005a5-a641-489c-9b17-5c54cc36e47d,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1986,3rd Place,France,4,2,Belgium,Estadio Cuauhtémoc,Puebla,Mexico,1986-06-28,nan,1a981e5f-5af8-4469-ade0-2c4570bab09c,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1986,Final,Argentina,3,2,West Germany,Estadio Azteca,Mexico City,Mexico,1986-06-29,Maradona's WC,dc7e9b49-30e7-44f6-99ab-225b13cac4fb,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1990,Group Stage,Argentina,0,1,Cameroon,San Siro,Milan,Italy,1990-06-08,Greatest WC upset 1990,c334e7fd-f9a1-4166-8131-6e7b3520e99f,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1990,Group Stage,Colombia,1,1,West Germany,Stadio Giuseppe Meazza,Milan,Italy,1990-06-19,Rene Higuita error,00e0d452-6f7e-4f00-9772-1cf04a5ad4aa,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1990,Round of 16,Ireland,0,0,Romania,Stadio Luigi Ferraris,Genoa,Italy,1990-06-25,Ireland win 5-4 pens,ea0319d3-fce2-41f7-b9b6-0ece3468e4c2,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1990,Quarter-final,West Germany,1,0,Czechoslovakia,Stadio delle Alpi,Turin,Italy,1990-07-01,nan,aaccc1c5-d4a3-4a58-b718-10d18b8a8ddb,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1990,Quarter-final,Argentina,0,0,Yugoslavia,Stadio Marc Antonio Bentegodi,Florence,Italy,1990-07-01,Argentina win 3-2 pens,3b11fe29-62e5-4070-88e3-b655d9075f9b,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1990,Semi-final,West Germany,1,1,England,Stadio delle Alpi,Turin,Italy,1990-07-04,Germany win 4-3 pens - Gazza cries,356313ca-2ec0-4158-8a45-ac272c024367,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1990,Semi-final,Argentina,1,1,Italy,San Paolo,Naples,Italy,1990-07-03,Argentina win 4-3 pens,52fa24cf-85cb-4d0e-abc3-e0e3afd1b915,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1990,3rd Place,Italy,2,1,England,Stadio San Nicola,Bari,Italy,1990-07-07,Schillaci Golden Boot,6754c9b0-ee74-405d-945e-225a886561c5,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1990,Final,West Germany,1,0,Argentina,Stadio Olimpico,Rome,Italy,1990-07-08,Penalty - Brehme,ad1fb678-af88-47b8-b873-fdd5201778df,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1994,Group Stage,Bolivia,0,1,Germany,Pontiac Silverdome,Detroit,USA,1994-06-17,First indoor WC match,99a14b64-05f1-439d-8ae6-032790dcaace,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1994,Group Stage,Russia,6,1,Cameroon,Stanford Stadium,Palo Alto,USA,1994-06-28,Salenko 5 goals,8e8985b4-ebfb-4980-97d0-3f6492c9b588,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1994,Group Stage,Brazil,3,0,Russia,Stanford Stadium,Stanford,USA,1994-06-28,nan,4b0db16b-0150-4b79-953f-341e5ee2e6aa,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1994,Quarter-final,Brazil,1,0,Netherlands,Cotton Bowl,Dallas,USA,1994-07-09,Bebeto cradle celebration,a70ee5dc-064f-4cc7-b45b-59f97d5b2e36,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1994,Semi-final,Brazil,1,0,Sweden,Rose Bowl,Pasadena,USA,1994-07-13,nan,b68c3964-8308-41b9-8371-5ec361a53050,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1994,Semi-final,Italy,2,1,Bulgaria,Giants Stadium,New Jersey,USA,1994-07-13,nan,42d566bc-1e02-41ba-ae3d-296297480396,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1994,3rd Place,Sweden,4,0,Bulgaria,Rose Bowl,Pasadena,USA,1994-07-16,nan,00f1c6a8-0c10-42df-bafe-9819300e93d9,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1994,Final,Brazil,0,0,Italy,Rose Bowl,Pasadena,USA,1994-07-17,Brazil win 3-2 pens - Baggio misses,bdebb5d9-f4a6-4ab1-af9b-f87fd6a4f51c,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1998,Group Stage,Brazil,2,1,Scotland,Stade de France,Saint-Denis,France,1998-06-10,nan,00a3ac95-7bf9-48af-9f95-d47c0accebf6,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1998,Group Stage,Nigeria,3,2,Spain,Stade de la Mosson,Montpellier,France,1998-06-13,nan,fdf36d2c-4eef-47b1-9e93-e038b6b5493e,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1998,Round of 16,Argentina,2,2,England,Stade Geoffroy-Guichard,Saint-Étienne,France,1998-06-30,Beckham sent off - Argentina win 4-3 pens,a6ed378d-a04b-47c0-bc12-8a4d16d0160f,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1998,Round of 16,France,1,0,Paraguay,Félix Bollaert,Lens,France,1998-06-28,AET - Blanc golden goal,476e83d7-e772-4751-8334-3519dccf3de2,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1998,Quarter-final,Netherlands,2,1,Argentina,Stade Vélodrome,Marseille,France,1998-07-04,Bergkamp goal of tournament,b99883c2-03c1-4ac7-9264-0d5b0fa7b6ab,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1998,Quarter-final,France,0,0,Italy,Stade de France,Saint-Denis,France,1998-07-03,France win 4-3 pens,08ebcea3-4119-4bee-8b5c-c36304df3e66,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1998,Semi-final,France,2,1,Croatia,Stade de France,Saint-Denis,France,1998-07-08,nan,f200249c-ac50-4a28-bd66-a479bb8dcb88,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1998,Semi-final,Brazil,1,1,Netherlands,Stade Vélodrome,Marseille,France,1998-07-07,Brazil win 4-2 pens,e56ecf35-0699-45b8-a049-2c19db1c0c8f,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1998,3rd Place,Croatia,2,1,Netherlands,Parc des Princes,Paris,France,1998-07-11,nan,829ab01e-984d-4689-aa08-d979e631a0c8,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+1998,Final,France,3,0,Brazil,Stade de France,Saint-Denis,France,1998-07-12,Ronaldo fit? France dominate,71dd8e86-3870-4947-9b20-9d7972b9687e,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2002,Group Stage,Senegal,1,0,France,Seoul World Cup Stadium,Seoul,South Korea,2002-05-31,Defending champions out in groups,8906000c-1052-45e3-bc9c-c208d2b881d0,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2002,Group Stage,South Korea,2,0,Portugal,Suwon World Cup Stadium,Suwon,South Korea,2002-06-14,nan,b0841f06-2066-4426-a0df-ee926235f37d,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2002,Round of 16,South Korea,2,1,Italy,Daejeon World Cup Stadium,Daejeon,South Korea,2002-06-18,AET - Ahn golden goal,9945e6d7-f130-4d2d-896d-3a5550c19e9b,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2002,Quarter-final,South Korea,0,0,Spain,Gwangju World Cup Stadium,Gwangju,South Korea,2002-06-22,South Korea win 5-3 pens,aceaeeee-8047-4af8-8134-acb75ef0f1ad,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2002,Quarter-final,Brazil,2,1,England,Shizuoka Stadium,Shizuoka,Japan,2002-06-21,Ronaldinho free kick,fbaaa876-c573-4b28-97fc-9c8b2f61ce20,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2002,Semi-final,Brazil,1,0,Turkey,Saitama Stadium,Saitama,Japan,2002-06-26,nan,087091b0-0283-46e3-ae84-037974c0efe3,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2002,Semi-final,Germany,1,0,South Korea,Seoul World Cup Stadium,Seoul,South Korea,2002-06-25,nan,30d13e9a-24d6-4633-8198-347c187fb816,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2002,3rd Place,Turkey,3,2,South Korea,Daegu World Cup Stadium,Daegu,South Korea,2002-06-29,nan,fb17f3fc-fe34-459d-b12b-55d6c6774a3d,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2002,Final,Brazil,2,0,Germany,Yokohama International,Yokohama,Japan,2002-06-30,Ronaldo 2 goals,872a28fa-33e5-4bee-aa2a-adc5e342cc69,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2006,Group Stage,Germany,4,2,Costa Rica,Allianz Arena,Munich,Germany,2006-06-09,Opening match,35788294-891f-44a6-b3b7-2533c5d97de8,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2006,Group Stage,Australia,3,1,Japan,Fritz Walter Stadion,Kaiserslautern,Germany,2006-06-12,nan,286689fb-74d7-4bb3-bd6c-41a07dafa1f7,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2006,Round of 16,Italy,1,0,Australia,Fritz Walter Stadion,Kaiserslautern,Germany,2006-06-26,AET Totti pen,38304c5c-81fa-461f-bb3e-64b6171447b8,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2006,Round of 16,Portugal,1,0,Netherlands,Allianz Arena,Nuremberg,Germany,2006-06-25,Battle of Nuremberg - 4 red cards,bc2a0e9a-cbf2-40a0-b740-ec59ab20113a,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2006,Quarter-final,Italy,3,0,Ukraine,Olympiastadion,Hamburg,Germany,2006-06-30,Toni 2 goals,1f1661eb-9a39-4db6-9faf-e56f92d5b525,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2006,Quarter-final,Germany,1,1,Argentina,Olympiastadion,Berlin,Germany,2006-06-30,Germany win 4-2 pens,927e8d63-991f-4080-aaf7-868db2b61445,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2006,Semi-final,Italy,2,0,Germany,Signal Iduna Park,Dortmund,Germany,2006-07-04,Grosso + Del Piero AET injury time,8f6c3df6-ec0b-45e7-87c7-c3fc34b57d03,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2006,Semi-final,Portugal,0,1,France,Allianz Arena,Munich,Germany,2006-07-05,Zidane pen,9ff74aad-6378-4100-bb8d-304cd3fd4ca4,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2006,3rd Place,Germany,3,1,Portugal,Gottlieb-Daimler-Stadion,Stuttgart,Germany,2006-07-08,nan,4b89225c-7b77-40ab-b7af-4a5948615e18,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2006,Final,Italy,1,1,France,Olympiastadion,Berlin,Germany,2006-07-09,Zidane headbutt - Italy win 5-3 pens,88b39da2-225c-4dbe-9232-12f8a439f668,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,Group Stage,South Africa,1,1,Mexico,Soccer City,Johannesburg,South Africa,2010-06-11,First WC in Africa,8317639d-fedc-4977-8315-db7a7ed74370,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,Group Stage,England,1,1,USA,Royal Bafokeng,Rustenburg,South Africa,2010-06-12,Green howler,d69a3045-d9c5-4fd1-b518-e48b8c857d38,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,Group Stage,Germany,4,0,Australia,Moses Mabhida,Durban,South Africa,2010-06-13,nan,f1536699-e936-4950-acc9-7a8a88d45ebb,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,Round of 16,USA,1,2,Ghana,Royal Bafokeng,Rustenburg,South Africa,2010-06-26,AET,813b2090-684a-43dc-bd02-9c132c879a76,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,Round of 16,England,1,4,Germany,Free State Stadium,Bloemfontein,South Africa,2010-06-27,Lampard ghost goal,a608fa60-6162-48be-973d-0b8c698196c3,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,Quarter-final,Argentina,0,4,Germany,Cape Town Stadium,Cape Town,South Africa,2010-07-03,nan,964ab064-4ec1-4b60-bd41-48bd50945042,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,Quarter-final,Netherlands,2,1,Brazil,Nelson Mandela Bay,Port Elizabeth,South Africa,2010-07-02,Robben goal,803f90e7-e410-496d-9f43-a222660f8000,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,Semi-final,Netherlands,3,2,Uruguay,Cape Town Stadium,Cape Town,South Africa,2010-07-06,nan,becc39a7-b515-40d9-8a28-6833d20cb0a1,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,Semi-final,Spain,1,0,Germany,Moses Mabhida,Durban,South Africa,2010-07-07,Puyol header,57c38a4a-e83e-40bc-ac9f-ded6cd5071b7,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,3rd Place,Uruguay,2,3,Germany,Nelson Mandela Bay,Port Elizabeth,South Africa,2010-07-10,Forlan Golden Ball,7dd74041-9bf5-4634-91ed-f1abca77e59c,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2010,Final,Spain,1,0,Netherlands,Soccer City,Johannesburg,South Africa,2010-07-11,AET - Iniesta,f9947b0e-ab95-4138-8983-034e6c4c6609,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,Group Stage,Brazil,3,1,Croatia,Arena de São Paulo,São Paulo,Brazil,2014-06-12,Opening - OG + Neymar 2,c0c44fa4-18ff-4047-b85c-9bcef524aa35,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,Group Stage,Spain,1,5,Netherlands,Arena Fonte Nova,Salvador,Brazil,2014-06-13,Defending champs thrashed,15502d75-cfb2-4e9d-8f97-7356bed1f990,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,Group Stage,Uruguay,2,1,England,Arena Corinthians,São Paulo,Brazil,2014-06-19,Suárez 2,2d14afd0-6d4b-48ef-a5bd-48fbdfd97a73,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,Round of 16,Colombia,2,0,Uruguay,Maracanã,Rio de Janeiro,Brazil,2014-06-28,Suárez bites Chiellini,021ddd9a-48ca-4f8f-8d60-20a4e2e6c4d9,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,Round of 16,Germany,2,1,Algeria,Estadio Beira-Rio,Porto Alegre,Brazil,2014-06-30,AET,93edf435-651e-4d1d-8fd6-820da53e5ce2,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,Quarter-final,Argentina,0,0,Belgium,Estadio Nacional,Brasília,Brazil,2014-07-05,Higuaín - Argentina win 1-0,73978b06-660d-4212-a733-1464d67fc79b,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,Quarter-final,Germany,1,0,France,Maracanã,Rio de Janeiro,Brazil,2014-07-04,Hummels header,bd7620d9-1f1d-4f1d-97cf-07089b6ebcba,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,Semi-final,Brazil,1,7,Germany,Estadio Mineirão,Belo Horizonte,Brazil,2014-07-08,Mineirazo - biggest WC shock,91d32485-a6a7-4708-9a33-b46356fe02de,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,Semi-final,Argentina,0,0,Netherlands,Arena Corinthians,São Paulo,Brazil,2014-07-09,Argentina win 4-2 pens,7b598416-d832-4646-ad1b-bb428d01b538,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,3rd Place,Brazil,0,3,Netherlands,Estadio Nacional,Brasília,Brazil,2014-07-12,nan,bf147f06-9320-4df7-ae61-2a445314cf63,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2014,Final,Germany,1,0,Argentina,Maracanã,Rio de Janeiro,Brazil,2014-07-13,AET - Götze 113th min,d19f1d05-7aa1-499c-802d-c8b88fc9acd1,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Group Stage,Russia,5,0,Saudi Arabia,Luzhniki,Moscow,Russia,2018-06-14,Opening match,d41edb34-f963-4c01-bc17-4acd8823a9bd,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Group Stage,Germany,0,1,Mexico,Luzhniki,Moscow,Russia,2018-06-17,Defending champs shocked,346886db-8a3a-4d91-990d-2ba1bf73f81c,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Group Stage,Spain,3,3,Portugal,Fisht Olympic,Sochi,Russia,2018-06-15,Ronaldo hat-trick,19932048-06c4-4e41-b4d4-dff5a6f96bce,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Round of 16,Argentina,1,3,France,Kazan Arena,Kazan,Russia,2018-06-30,Mbappé double - Pavard screamer,a3cb7f10-4157-42e5-8ac5-8f61941706e2,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Round of 16,Spain,1,1,Russia,Luzhniki,Moscow,Russia,2018-07-01,Russia win 4-3 pens,612b76f6-0516-4545-a514-e9e8aca43e0d,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Round of 16,Brazil,2,0,Mexico,Samara Arena,Samara,Russia,2018-07-02,Neymar + Firmino,bf03ac18-fa75-426c-a8c5-630e05801031,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Quarter-final,Russia,2,2,Croatia,Fisht Olympic,Sochi,Russia,2018-07-07,Croatia win 4-3 pens,0553ef3c-ba1d-4d78-9544-18742ff44d8a,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Quarter-final,Belgium,2,1,Brazil,Kazan Arena,Kazan,Russia,2018-07-06,De Bruyne assist + Chadli goal,06e16578-88e9-4339-9a0e-d6b3124ff428,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Semi-final,France,1,0,Belgium,Saint Petersburg,St Petersburg,Russia,2018-07-10,Umtiti header,d0849f93-27d6-4bf4-bc2a-c838e5e1e03f,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Semi-final,Croatia,2,1,England,Luzhniki,Moscow,Russia,2018-07-11,AET - Mandzukic,db4e1b0b-35ac-4956-ab4e-3ccf0c2a50a0,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,3rd Place,Belgium,2,0,England,Saint Petersburg,St Petersburg,Russia,2018-07-14,nan,33ee6d0e-6258-471e-b4f3-f69a62841577,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2018,Final,France,4,2,Croatia,Luzhniki,Moscow,Russia,2018-07-15,Mbappé scores - youngest since Pelé,a24a36b6-2b43-400f-bdd4-b3141952a756,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Group Stage,Qatar,0,2,Ecuador,Al Bayt Stadium,Al Khor,Qatar,2022-11-20,Opening match - Qatar humbled at home,21a0bfdf-94ed-4ced-b752-cefaae4e498c,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Group Stage,Saudi Arabia,2,1,Argentina,Lusail Stadium,Lusail,Qatar,2022-11-22,Biggest WC upset 2022,6536f6ef-58fa-4125-95a3-8df2b2846f7d,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Group Stage,Germany,1,2,Japan,Khalifa International,Al Rayyan,Qatar,2022-11-23,nan,fb9c284d-8dba-4065-9d52-e78b23078cf2,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Group Stage,Spain,1,2,Japan,Khalifa International,Al Rayyan,Qatar,2022-12-01,nan,a10bd477-bbe0-4235-9ce7-6a53d750c45d,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Group Stage,Germany,4,2,Costa Rica,Al Bayt Stadium,Al Khor,Qatar,2022-12-01,Germany out despite winning,3002241e-d9b1-4f6a-b03b-310e4f003ccd,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Round of 16,Morocco,0,0,Spain,Education City Stadium,Al Rayyan,Qatar,2022-12-06,Morocco win 3-0 pens,f86ddbdf-e203-41a9-8975-e7faae61c48a,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Round of 16,France,3,1,Poland,Al Thumama Stadium,Doha,Qatar,2022-12-04,Mbappé double,94c6cd82-ff70-4117-aa2d-f9bee06bbd28,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Round of 16,Netherlands,3,1,USA,Khalifa International,Al Rayyan,Qatar,2022-12-03,nan,7ce61206-1f37-45db-8d36-0e1ab6dba7b9,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Quarter-final,Morocco,1,0,Portugal,Al Thumama Stadium,Doha,Qatar,2022-12-10,En-Nesyri - historic,adb32617-448e-4110-9350-c71f5c00fba6,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Quarter-final,France,2,1,England,Al Bayt Stadium,Al Khor,Qatar,2022-12-10,Kane pen miss,45ab4d3d-8740-4236-97df-84fdd36c5bf3,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Semi-final,Argentina,3,0,Croatia,Lusail Stadium,Lusail,Qatar,2022-12-13,Messi pen + Álvarez 2,a1b1246a-be2a-4fb2-ae29-5b6c1fee52f4,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Semi-final,France,2,0,Morocco,Al Bayt Stadium,Al Khor,Qatar,2022-12-14,nan,b5472620-0bca-4545-b19d-e12446af8c1e,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,3rd Place,Croatia,2,1,Morocco,Khalifa International,Al Rayyan,Qatar,2022-12-17,nan,e6d7f508-d395-48d2-8649-6a86dff0c9a4,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run
+2022,Final,Argentina,3,3,France,Lusail Stadium,Lusail,Qatar,2022-12-18,AET - Argentina win 4-2 pens - GOAT final,9941ca64-a067-437d-a16a-5b40353b8b85,2026-07-21T06:00:23.806052,wc_all_matches.csv,CSV,manual_test_run

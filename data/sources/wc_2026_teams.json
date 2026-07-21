@@ -1,0 +1,434 @@
+[
+    {
+        "team": "Mexico",
+        "group": "A",
+        "confederation": "CONCACAF",
+        "fifa_rank": 15,
+        "coach": "Javier Aguirre",
+        "best_wc_result": "Quarter-finals (1970,1986)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "South Africa",
+        "group": "A",
+        "confederation": "CAF",
+        "fifa_rank": 60,
+        "coach": "Hugo Broos",
+        "best_wc_result": "Group stage (1998,2002,2010)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "South Korea",
+        "group": "A",
+        "confederation": "AFC",
+        "fifa_rank": 25,
+        "coach": "Hong Myung-bo",
+        "best_wc_result": "Semi-finals (2002)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Czechia",
+        "group": "A",
+        "confederation": "UEFA",
+        "fifa_rank": 41,
+        "coach": "Ivan Hasek",
+        "best_wc_result": "Runner-up (1934,1962)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Canada",
+        "group": "B",
+        "confederation": "CONCACAF",
+        "fifa_rank": 30,
+        "coach": "Jesse Marsch",
+        "best_wc_result": "Group stage (1986,2022)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Switzerland",
+        "group": "B",
+        "confederation": "UEFA",
+        "fifa_rank": 19,
+        "coach": "Murat Yakin",
+        "best_wc_result": "Quarter-finals (1934,1938,1954)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Qatar",
+        "group": "B",
+        "confederation": "AFC",
+        "fifa_rank": 35,
+        "coach": "Marquez Lopez",
+        "best_wc_result": "Group stage (2022)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Bosnia and Herzegovina",
+        "group": "B",
+        "confederation": "UEFA",
+        "fifa_rank": 52,
+        "coach": "Sergej Barbarez",
+        "best_wc_result": "Group stage (2014)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Brazil",
+        "group": "C",
+        "confederation": "CONMEBOL",
+        "fifa_rank": 3,
+        "coach": "Dorival J\u00fanior",
+        "best_wc_result": "Winners (1958,1962,1970,1994,2002)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Morocco",
+        "group": "C",
+        "confederation": "CAF",
+        "fifa_rank": 8,
+        "coach": "Walid Regragui",
+        "best_wc_result": "Semi-finals (2022)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Haiti",
+        "group": "C",
+        "confederation": "CONCACAF",
+        "fifa_rank": 83,
+        "coach": "Marc Collat",
+        "best_wc_result": "Group stage (1974)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Scotland",
+        "group": "C",
+        "confederation": "UEFA",
+        "fifa_rank": 47,
+        "coach": "Steve Clarke",
+        "best_wc_result": "Group stage (multiple)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "USA",
+        "group": "D",
+        "confederation": "CONCACAF",
+        "fifa_rank": 16,
+        "coach": "Mauricio Pochettino",
+        "best_wc_result": "Third place (1930)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Paraguay",
+        "group": "D",
+        "confederation": "CONMEBOL",
+        "fifa_rank": 64,
+        "coach": "Gustavo Alfaro",
+        "best_wc_result": "Quarter-finals (2010)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Australia",
+        "group": "D",
+        "confederation": "AFC",
+        "fifa_rank": 26,
+        "coach": "Tony Popovic",
+        "best_wc_result": "Round of 16 (2006,2022)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "T\u00fcrkiye",
+        "group": "D",
+        "confederation": "UEFA",
+        "fifa_rank": 42,
+        "coach": "Vincenzo Montella",
+        "best_wc_result": "Third place (2002)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Germany",
+        "group": "E",
+        "confederation": "UEFA",
+        "fifa_rank": 10,
+        "coach": "Jurgen Klopp",
+        "best_wc_result": "Winners (1954,1974,1990,2014)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Cura\u00e7ao",
+        "group": "E",
+        "confederation": "CONCACAF",
+        "fifa_rank": 81,
+        "coach": "Dick Advocaat",
+        "best_wc_result": "First appearance",
+        "debut_2026": "Yes"
+    },
+    {
+        "team": "Ivory Coast",
+        "group": "E",
+        "confederation": "CAF",
+        "fifa_rank": 33,
+        "coach": "Emerse Fa\u00e9",
+        "best_wc_result": "Group stage (2006,2010,2014)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Ecuador",
+        "group": "E",
+        "confederation": "CONMEBOL",
+        "fifa_rank": 24,
+        "coach": "Sebasti\u00e1n Beccacece",
+        "best_wc_result": "Round of 16 (2006)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Netherlands",
+        "group": "F",
+        "confederation": "UEFA",
+        "fifa_rank": 7,
+        "coach": "Ronald Koeman",
+        "best_wc_result": "Runner-up (1974,1978,2010)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Japan",
+        "group": "F",
+        "confederation": "AFC",
+        "fifa_rank": 18,
+        "coach": "Hajime Moriyasu",
+        "best_wc_result": "Round of 16 (2002,2010,2018,2022)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Sweden",
+        "group": "F",
+        "confederation": "UEFA",
+        "fifa_rank": 39,
+        "coach": "Jon Dahl Tomasson",
+        "best_wc_result": "Runner-up (1958)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Tunisia",
+        "group": "F",
+        "confederation": "CAF",
+        "fifa_rank": 40,
+        "coach": "Faouzi Benzarti",
+        "best_wc_result": "Group stage (6 apps)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Belgium",
+        "group": "G",
+        "confederation": "UEFA",
+        "fifa_rank": 9,
+        "coach": "Domenico Tedesco",
+        "best_wc_result": "Semi-finals (2018)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Egypt",
+        "group": "G",
+        "confederation": "CAF",
+        "fifa_rank": 29,
+        "coach": "Hossam El-Badry",
+        "best_wc_result": "Round of 16 (1934)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Iran",
+        "group": "G",
+        "confederation": "AFC",
+        "fifa_rank": 21,
+        "coach": "Amir Ghalenoei",
+        "best_wc_result": "Group stage (6 apps)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "New Zealand",
+        "group": "G",
+        "confederation": "OFC",
+        "fifa_rank": 95,
+        "coach": "Darren Bazeley",
+        "best_wc_result": "Group stage (1982,2010)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Spain",
+        "group": "H",
+        "confederation": "UEFA",
+        "fifa_rank": 2,
+        "coach": "Luis de la Fuente",
+        "best_wc_result": "Winners (2010)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Cape Verde",
+        "group": "H",
+        "confederation": "CAF",
+        "fifa_rank": 70,
+        "coach": "Pedro Brito",
+        "best_wc_result": "First appearance",
+        "debut_2026": "Yes"
+    },
+    {
+        "team": "Saudi Arabia",
+        "group": "H",
+        "confederation": "AFC",
+        "fifa_rank": 57,
+        "coach": "Roberto Mancini",
+        "best_wc_result": "Round of 16 (1994)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Uruguay",
+        "group": "H",
+        "confederation": "CONMEBOL",
+        "fifa_rank": 17,
+        "coach": "Marcelo Bielsa",
+        "best_wc_result": "Winners (1930,1950)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "France",
+        "group": "I",
+        "confederation": "UEFA",
+        "fifa_rank": 1,
+        "coach": "Didier Deschamps",
+        "best_wc_result": "Winners (1998,2018)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Senegal",
+        "group": "I",
+        "confederation": "CAF",
+        "fifa_rank": 14,
+        "coach": "Aliou Ciss\u00e9",
+        "best_wc_result": "Quarter-finals (2002)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Norway",
+        "group": "I",
+        "confederation": "UEFA",
+        "fifa_rank": 44,
+        "coach": "St\u00e5le Solbakken",
+        "best_wc_result": "Round of 16 (1994,1998)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Iraq",
+        "group": "I",
+        "confederation": "AFC",
+        "fifa_rank": 61,
+        "coach": "Graham Arnold",
+        "best_wc_result": "Group stage (1986)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Argentina",
+        "group": "J",
+        "confederation": "CONMEBOL",
+        "fifa_rank": 3,
+        "coach": "Lionel Scaloni",
+        "best_wc_result": "Winners (1978,1986,2022)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Algeria",
+        "group": "J",
+        "confederation": "CAF",
+        "fifa_rank": 36,
+        "coach": "Vladimir Petkovic",
+        "best_wc_result": "Round of 16 (2014)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Austria",
+        "group": "J",
+        "confederation": "UEFA",
+        "fifa_rank": 23,
+        "coach": "Ralf Rangnick",
+        "best_wc_result": "Third place (1954)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Jordan",
+        "group": "J",
+        "confederation": "AFC",
+        "fifa_rank": 68,
+        "coach": "Hussain Ammouta",
+        "best_wc_result": "First appearance",
+        "debut_2026": "Yes"
+    },
+    {
+        "team": "Portugal",
+        "group": "K",
+        "confederation": "UEFA",
+        "fifa_rank": 5,
+        "coach": "Roberto Mart\u00ednez",
+        "best_wc_result": "Semi-finals (1966,2006)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "DR Congo",
+        "group": "K",
+        "confederation": "CAF",
+        "fifa_rank": 51,
+        "coach": "S\u00e9bastien Desabre",
+        "best_wc_result": "Group stage (1974)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Uzbekistan",
+        "group": "K",
+        "confederation": "AFC",
+        "fifa_rank": 62,
+        "coach": "Srecko Katanec",
+        "best_wc_result": "First appearance",
+        "debut_2026": "Yes"
+    },
+    {
+        "team": "Colombia",
+        "group": "K",
+        "confederation": "CONMEBOL",
+        "fifa_rank": 13,
+        "coach": "N\u00e9stor Lorenzo",
+        "best_wc_result": "Quarter-finals (2014)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "England",
+        "group": "L",
+        "confederation": "UEFA",
+        "fifa_rank": 4,
+        "coach": "Thomas Tuchel",
+        "best_wc_result": "Winners (1966)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Croatia",
+        "group": "L",
+        "confederation": "UEFA",
+        "fifa_rank": 11,
+        "coach": "Zlatko Dali\u0107",
+        "best_wc_result": "Runner-up (2018)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Ghana",
+        "group": "L",
+        "confederation": "CAF",
+        "fifa_rank": 65,
+        "coach": "Otto Addo",
+        "best_wc_result": "Quarter-finals (2010)",
+        "debut_2026": "No"
+    },
+    {
+        "team": "Panama",
+        "group": "L",
+        "confederation": "CONCACAF",
+        "fifa_rank": 53,
+        "coach": "Thomas Christiansen",
+        "best_wc_result": "Group stage (2018)",
+        "debut_2026": "No"
+    }
+]

@@ -1,0 +1,23 @@
+edition_id,year,host,champion,runner_up,third_place,teams_count,matches_count,goals_count,attendance,host_won
+1,1930,Uruguay,Uruguay,Argentina,United States,13,18,70,590549,False
+2,1934,Italy,Italy,Czechoslovakia,Germany,16,17,70,363000,True
+3,1938,France,Italy,Hungary,Brazil,15,18,84,375700,True
+4,1950,Brazil,Uruguay,Brazil,Sweden,13,22,88,1045246,False
+5,1954,Switzerland,West Germany,Hungary,Austria,16,26,140,768607,False
+6,1958,Sweden,Brazil,Sweden,France,16,35,126,819810,False
+7,1962,Chile,Brazil,Czechoslovakia,Chile,16,32,89,893172,False
+8,1966,England,England,West Germany,Portugal,16,32,89,1563135,True
+9,1970,Mexico,Brazil,Italy,West Germany,16,32,95,1603975,False
+10,1974,West Germany,West Germany,Netherlands,Poland,16,38,97,1865753,True
+11,1978,Argentina,Argentina,Netherlands,Brazil,16,38,102,1545791,True
+12,1982,Spain,Italy,West Germany,Poland,24,52,146,1766277,False
+13,1986,Mexico,Argentina,West Germany,France,24,52,132,2394031,False
+14,1990,Italy,West Germany,Argentina,Italy,24,52,115,2516215,False
+15,1994,United States,Brazil,Italy,Sweden,24,52,141,3587538,False
+16,1998,France,France,Brazil,Croatia,32,64,171,2785100,True
+17,2002,South Korea / Japan,Brazil,Germany,Turkey,32,64,161,2705197,False
+18,2006,Germany,Italy,France,Germany,32,64,147,3359439,False
+19,2010,South Africa,Spain,Netherlands,Germany,32,64,145,3178856,False
+20,2014,Brazil,Germany,Argentina,Netherlands,32,64,171,3429873,False
+21,2018,Russia,France,Croatia,Belgium,32,64,169,3031768,False
+22,2022,Qatar,Argentina,France,Croatia,32,64,172,3404252,False

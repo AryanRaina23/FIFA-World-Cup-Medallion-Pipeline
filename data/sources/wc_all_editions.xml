@@ -1,0 +1,487 @@
+<?xml version="1.0" ?>
+<editions>
+  <edition>
+    <edition>1</edition>
+    <year>1930</year>
+    <host>Uruguay</host>
+    <champion>Uruguay</champion>
+    <runner_up>Argentina</runner_up>
+    <third_place>United States</third_place>
+    <fourth_place>Yugoslavia</fourth_place>
+    <teams>13</teams>
+    <matches>18</matches>
+    <goals>70</goals>
+    <goals_per_match>3.89</goals_per_match>
+    <attendance>590549</attendance>
+    <top_scorer>Guillermo Stábile</top_scorer>
+    <top_scorer_country>Argentina</top_scorer_country>
+    <top_scorer_goals>8</top_scorer_goals>
+    <start_date>July 13</start_date>
+    <end_date>July 30</end_date>
+    <final_city>Montevideo</final_city>
+    <host_won>No</host_won>
+    <format>Round Robin</format>
+  </edition>
+  <edition>
+    <edition>2</edition>
+    <year>1934</year>
+    <host>Italy</host>
+    <champion>Italy</champion>
+    <runner_up>Czechoslovakia</runner_up>
+    <third_place>Germany</third_place>
+    <fourth_place>Austria</fourth_place>
+    <teams>16</teams>
+    <matches>17</matches>
+    <goals>70</goals>
+    <goals_per_match>4.12</goals_per_match>
+    <attendance>363000</attendance>
+    <top_scorer>Oldřich Nejedlý</top_scorer>
+    <top_scorer_country>Czechoslovakia</top_scorer_country>
+    <top_scorer_goals>5</top_scorer_goals>
+    <start_date>May 27</start_date>
+    <end_date>June 10</end_date>
+    <final_city>Rome</final_city>
+    <host_won>Yes</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>3</edition>
+    <year>1938</year>
+    <host>France</host>
+    <champion>Italy</champion>
+    <runner_up>Hungary</runner_up>
+    <third_place>Brazil</third_place>
+    <fourth_place>Sweden</fourth_place>
+    <teams>15</teams>
+    <matches>18</matches>
+    <goals>84</goals>
+    <goals_per_match>4.67</goals_per_match>
+    <attendance>375700</attendance>
+    <top_scorer>Leônidas</top_scorer>
+    <top_scorer_country>Brazil</top_scorer_country>
+    <top_scorer_goals>7</top_scorer_goals>
+    <start_date>June 4</start_date>
+    <end_date>June 19</end_date>
+    <final_city>Paris</final_city>
+    <host_won>Yes</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>4</edition>
+    <year>1950</year>
+    <host>Brazil</host>
+    <champion>Uruguay</champion>
+    <runner_up>Brazil</runner_up>
+    <third_place>Sweden</third_place>
+    <fourth_place>Spain</fourth_place>
+    <teams>13</teams>
+    <matches>22</matches>
+    <goals>88</goals>
+    <goals_per_match>4.0</goals_per_match>
+    <attendance>1045246</attendance>
+    <top_scorer>Ademir</top_scorer>
+    <top_scorer_country>Brazil</top_scorer_country>
+    <top_scorer_goals>8</top_scorer_goals>
+    <start_date>June 24</start_date>
+    <end_date>July 16</end_date>
+    <final_city>Rio de Janeiro</final_city>
+    <host_won>No</host_won>
+    <format>Round Robin Final</format>
+  </edition>
+  <edition>
+    <edition>5</edition>
+    <year>1954</year>
+    <host>Switzerland</host>
+    <champion>West Germany</champion>
+    <runner_up>Hungary</runner_up>
+    <third_place>Austria</third_place>
+    <fourth_place>Uruguay</fourth_place>
+    <teams>16</teams>
+    <matches>26</matches>
+    <goals>140</goals>
+    <goals_per_match>5.38</goals_per_match>
+    <attendance>768607</attendance>
+    <top_scorer>Sándor Kocsis</top_scorer>
+    <top_scorer_country>Hungary</top_scorer_country>
+    <top_scorer_goals>11</top_scorer_goals>
+    <start_date>June 16</start_date>
+    <end_date>July 4</end_date>
+    <final_city>Bern</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>6</edition>
+    <year>1958</year>
+    <host>Sweden</host>
+    <champion>Brazil</champion>
+    <runner_up>Sweden</runner_up>
+    <third_place>France</third_place>
+    <fourth_place>West Germany</fourth_place>
+    <teams>16</teams>
+    <matches>35</matches>
+    <goals>126</goals>
+    <goals_per_match>3.6</goals_per_match>
+    <attendance>819810</attendance>
+    <top_scorer>Just Fontaine</top_scorer>
+    <top_scorer_country>France</top_scorer_country>
+    <top_scorer_goals>13</top_scorer_goals>
+    <start_date>June 8</start_date>
+    <end_date>June 29</end_date>
+    <final_city>Stockholm</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>7</edition>
+    <year>1962</year>
+    <host>Chile</host>
+    <champion>Brazil</champion>
+    <runner_up>Czechoslovakia</runner_up>
+    <third_place>Chile</third_place>
+    <fourth_place>Yugoslavia</fourth_place>
+    <teams>16</teams>
+    <matches>32</matches>
+    <goals>89</goals>
+    <goals_per_match>2.78</goals_per_match>
+    <attendance>893172</attendance>
+    <top_scorer>Florian Albert / Garrincha / Valentin Ivanov / Leonel Sánchez / Dražan Jerković / Vavá</top_scorer>
+    <top_scorer_country>Multiple</top_scorer_country>
+    <top_scorer_goals>4</top_scorer_goals>
+    <start_date>May 30</start_date>
+    <end_date>June 17</end_date>
+    <final_city>Santiago</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>8</edition>
+    <year>1966</year>
+    <host>England</host>
+    <champion>England</champion>
+    <runner_up>West Germany</runner_up>
+    <third_place>Portugal</third_place>
+    <fourth_place>Soviet Union</fourth_place>
+    <teams>16</teams>
+    <matches>32</matches>
+    <goals>89</goals>
+    <goals_per_match>2.78</goals_per_match>
+    <attendance>1563135</attendance>
+    <top_scorer>Eusébio</top_scorer>
+    <top_scorer_country>Portugal</top_scorer_country>
+    <top_scorer_goals>9</top_scorer_goals>
+    <start_date>July 11</start_date>
+    <end_date>July 30</end_date>
+    <final_city>London</final_city>
+    <host_won>Yes</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>9</edition>
+    <year>1970</year>
+    <host>Mexico</host>
+    <champion>Brazil</champion>
+    <runner_up>Italy</runner_up>
+    <third_place>West Germany</third_place>
+    <fourth_place>Uruguay</fourth_place>
+    <teams>16</teams>
+    <matches>32</matches>
+    <goals>95</goals>
+    <goals_per_match>2.97</goals_per_match>
+    <attendance>1603975</attendance>
+    <top_scorer>Gerd Müller</top_scorer>
+    <top_scorer_country>West Germany</top_scorer_country>
+    <top_scorer_goals>10</top_scorer_goals>
+    <start_date>May 31</start_date>
+    <end_date>June 21</end_date>
+    <final_city>Mexico City</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>10</edition>
+    <year>1974</year>
+    <host>West Germany</host>
+    <champion>West Germany</champion>
+    <runner_up>Netherlands</runner_up>
+    <third_place>Poland</third_place>
+    <fourth_place>Brazil</fourth_place>
+    <teams>16</teams>
+    <matches>38</matches>
+    <goals>97</goals>
+    <goals_per_match>2.55</goals_per_match>
+    <attendance>1865753</attendance>
+    <top_scorer>Grzegorz Lato</top_scorer>
+    <top_scorer_country>Poland</top_scorer_country>
+    <top_scorer_goals>7</top_scorer_goals>
+    <start_date>June 13</start_date>
+    <end_date>July 7</end_date>
+    <final_city>Munich</final_city>
+    <host_won>Yes</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>11</edition>
+    <year>1978</year>
+    <host>Argentina</host>
+    <champion>Argentina</champion>
+    <runner_up>Netherlands</runner_up>
+    <third_place>Brazil</third_place>
+    <fourth_place>Italy</fourth_place>
+    <teams>16</teams>
+    <matches>38</matches>
+    <goals>102</goals>
+    <goals_per_match>2.68</goals_per_match>
+    <attendance>1545791</attendance>
+    <top_scorer>Mario Kempes</top_scorer>
+    <top_scorer_country>Argentina</top_scorer_country>
+    <top_scorer_goals>6</top_scorer_goals>
+    <start_date>June 1</start_date>
+    <end_date>June 25</end_date>
+    <final_city>Buenos Aires</final_city>
+    <host_won>Yes</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>12</edition>
+    <year>1982</year>
+    <host>Spain</host>
+    <champion>Italy</champion>
+    <runner_up>West Germany</runner_up>
+    <third_place>Poland</third_place>
+    <fourth_place>France</fourth_place>
+    <teams>24</teams>
+    <matches>52</matches>
+    <goals>146</goals>
+    <goals_per_match>2.81</goals_per_match>
+    <attendance>1766277</attendance>
+    <top_scorer>Paolo Rossi</top_scorer>
+    <top_scorer_country>Italy</top_scorer_country>
+    <top_scorer_goals>6</top_scorer_goals>
+    <start_date>June 13</start_date>
+    <end_date>July 11</end_date>
+    <final_city>Madrid</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>13</edition>
+    <year>1986</year>
+    <host>Mexico</host>
+    <champion>Argentina</champion>
+    <runner_up>West Germany</runner_up>
+    <third_place>France</third_place>
+    <fourth_place>Belgium</fourth_place>
+    <teams>24</teams>
+    <matches>52</matches>
+    <goals>132</goals>
+    <goals_per_match>2.54</goals_per_match>
+    <attendance>2394031</attendance>
+    <top_scorer>Gary Lineker</top_scorer>
+    <top_scorer_country>England</top_scorer_country>
+    <top_scorer_goals>6</top_scorer_goals>
+    <start_date>May 31</start_date>
+    <end_date>June 29</end_date>
+    <final_city>Mexico City</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>14</edition>
+    <year>1990</year>
+    <host>Italy</host>
+    <champion>West Germany</champion>
+    <runner_up>Argentina</runner_up>
+    <third_place>Italy</third_place>
+    <fourth_place>England</fourth_place>
+    <teams>24</teams>
+    <matches>52</matches>
+    <goals>115</goals>
+    <goals_per_match>2.21</goals_per_match>
+    <attendance>2516215</attendance>
+    <top_scorer>Salvatore Schillaci</top_scorer>
+    <top_scorer_country>Italy</top_scorer_country>
+    <top_scorer_goals>6</top_scorer_goals>
+    <start_date>June 8</start_date>
+    <end_date>July 8</end_date>
+    <final_city>Rome</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>15</edition>
+    <year>1994</year>
+    <host>United States</host>
+    <champion>Brazil</champion>
+    <runner_up>Italy</runner_up>
+    <third_place>Sweden</third_place>
+    <fourth_place>Bulgaria</fourth_place>
+    <teams>24</teams>
+    <matches>52</matches>
+    <goals>141</goals>
+    <goals_per_match>2.71</goals_per_match>
+    <attendance>3587538</attendance>
+    <top_scorer>Hristo Stoichkov / Oleg Salenko</top_scorer>
+    <top_scorer_country>Bulgaria / Russia</top_scorer_country>
+    <top_scorer_goals>6</top_scorer_goals>
+    <start_date>June 17</start_date>
+    <end_date>July 17</end_date>
+    <final_city>Pasadena</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>16</edition>
+    <year>1998</year>
+    <host>France</host>
+    <champion>France</champion>
+    <runner_up>Brazil</runner_up>
+    <third_place>Croatia</third_place>
+    <fourth_place>Netherlands</fourth_place>
+    <teams>32</teams>
+    <matches>64</matches>
+    <goals>171</goals>
+    <goals_per_match>2.67</goals_per_match>
+    <attendance>2785100</attendance>
+    <top_scorer>Davor Šuker</top_scorer>
+    <top_scorer_country>Croatia</top_scorer_country>
+    <top_scorer_goals>6</top_scorer_goals>
+    <start_date>June 10</start_date>
+    <end_date>July 12</end_date>
+    <final_city>Paris</final_city>
+    <host_won>Yes</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>17</edition>
+    <year>2002</year>
+    <host>South Korea / Japan</host>
+    <champion>Brazil</champion>
+    <runner_up>Germany</runner_up>
+    <third_place>Turkey</third_place>
+    <fourth_place>South Korea</fourth_place>
+    <teams>32</teams>
+    <matches>64</matches>
+    <goals>161</goals>
+    <goals_per_match>2.52</goals_per_match>
+    <attendance>2705197</attendance>
+    <top_scorer>Ronaldo</top_scorer>
+    <top_scorer_country>Brazil</top_scorer_country>
+    <top_scorer_goals>8</top_scorer_goals>
+    <start_date>May 31</start_date>
+    <end_date>June 30</end_date>
+    <final_city>Yokohama</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>18</edition>
+    <year>2006</year>
+    <host>Germany</host>
+    <champion>Italy</champion>
+    <runner_up>France</runner_up>
+    <third_place>Germany</third_place>
+    <fourth_place>Portugal</fourth_place>
+    <teams>32</teams>
+    <matches>64</matches>
+    <goals>147</goals>
+    <goals_per_match>2.3</goals_per_match>
+    <attendance>3359439</attendance>
+    <top_scorer>Miroslav Klose</top_scorer>
+    <top_scorer_country>Germany</top_scorer_country>
+    <top_scorer_goals>5</top_scorer_goals>
+    <start_date>June 9</start_date>
+    <end_date>July 9</end_date>
+    <final_city>Berlin</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>19</edition>
+    <year>2010</year>
+    <host>South Africa</host>
+    <champion>Spain</champion>
+    <runner_up>Netherlands</runner_up>
+    <third_place>Germany</third_place>
+    <fourth_place>Uruguay</fourth_place>
+    <teams>32</teams>
+    <matches>64</matches>
+    <goals>145</goals>
+    <goals_per_match>2.27</goals_per_match>
+    <attendance>3178856</attendance>
+    <top_scorer>Thomas Müller / Wesley Sneijder / David Villa / Diego Forlán</top_scorer>
+    <top_scorer_country>Multiple</top_scorer_country>
+    <top_scorer_goals>5</top_scorer_goals>
+    <start_date>June 11</start_date>
+    <end_date>July 11</end_date>
+    <final_city>Johannesburg</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>20</edition>
+    <year>2014</year>
+    <host>Brazil</host>
+    <champion>Germany</champion>
+    <runner_up>Argentina</runner_up>
+    <third_place>Netherlands</third_place>
+    <fourth_place>Brazil</fourth_place>
+    <teams>32</teams>
+    <matches>64</matches>
+    <goals>171</goals>
+    <goals_per_match>2.67</goals_per_match>
+    <attendance>3429873</attendance>
+    <top_scorer>James Rodríguez</top_scorer>
+    <top_scorer_country>Colombia</top_scorer_country>
+    <top_scorer_goals>6</top_scorer_goals>
+    <start_date>June 12</start_date>
+    <end_date>July 13</end_date>
+    <final_city>Rio de Janeiro</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>21</edition>
+    <year>2018</year>
+    <host>Russia</host>
+    <champion>France</champion>
+    <runner_up>Croatia</runner_up>
+    <third_place>Belgium</third_place>
+    <fourth_place>England</fourth_place>
+    <teams>32</teams>
+    <matches>64</matches>
+    <goals>169</goals>
+    <goals_per_match>2.64</goals_per_match>
+    <attendance>3031768</attendance>
+    <top_scorer>Harry Kane</top_scorer>
+    <top_scorer_country>England</top_scorer_country>
+    <top_scorer_goals>6</top_scorer_goals>
+    <start_date>June 14</start_date>
+    <end_date>July 15</end_date>
+    <final_city>Moscow</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+  <edition>
+    <edition>22</edition>
+    <year>2022</year>
+    <host>Qatar</host>
+    <champion>Argentina</champion>
+    <runner_up>France</runner_up>
+    <third_place>Croatia</third_place>
+    <fourth_place>Morocco</fourth_place>
+    <teams>32</teams>
+    <matches>64</matches>
+    <goals>172</goals>
+    <goals_per_match>2.69</goals_per_match>
+    <attendance>3404252</attendance>
+    <top_scorer>Kylian Mbappé</top_scorer>
+    <top_scorer_country>France</top_scorer_country>
+    <top_scorer_goals>8</top_scorer_goals>
+    <start_date>November 20</start_date>
+    <end_date>December 18</end_date>
+    <final_city>Lusail</final_city>
+    <host_won>No</host_won>
+    <format>Knockout</format>
+  </edition>
+</editions>
