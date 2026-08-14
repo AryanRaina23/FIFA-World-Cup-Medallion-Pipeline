@@ -5,9 +5,9 @@ edition_id,year,host,champion,runner_up,third_place,fourth_place,teams_count,mat
 4,1950,Brazil,Uruguay,Brazil,Sweden,Spain,13,22,88,4.0,1045246,Ademir,Brazil,8,1950-06-24,1950-07-16,Rio de Janeiro,False,Round Robin Final
 5,1954,Switzerland,West Germany,Hungary,Austria,Uruguay,16,26,140,5.38,768607,Sándor Kocsis,Hungary,11,1954-06-16,1954-07-04,Bern,False,Knockout
 6,1958,Sweden,Brazil,Sweden,France,West Germany,16,35,126,3.6,819810,Just Fontaine,France,13,1958-06-08,1958-06-29,Stockholm,False,Knockout
-7,1962,Chile,Brazil,Czechoslovakia,Chile,Yugoslavia,16,32,89,2.78,893172,Florian Albert / Garrincha / Valentin Ivanov / Leonel Sánchez / Dražan Jerković / Vavá,Multiple,4,1962-05-30,1962-06-17,Santiago,False,Knockout
-8,1966,England,England,West Germany,Portugal,Soviet Union,16,32,89,2.78,1563135,Eusébio,Portugal,9,1966-07-11,1966-07-30,London,True,Knockout
-9,1970,Mexico,Brazil,Italy,West Germany,Uruguay,16,32,95,2.97,1603975,Gerd Müller,West Germany,10,1970-05-31,1970-06-21,Mexico City,False,Knockout
+7,1962,Chile,Brazil,Czechoslovakia,Chile,Yugoslavia,16,32,89,2.7800000000000002,893172,Florian Albert / Garrincha / Valentin Ivanov / Leonel Sánchez / Dražan Jerković / Vavá,Multiple,4,1962-05-30,1962-06-17,Santiago,False,Knockout
+8,1966,England,England,West Germany,Portugal,Soviet Union,16,32,89,2.7800000000000002,1563135,Eusébio,Portugal,9,1966-07-11,1966-07-30,London,True,Knockout
+9,1970,Mexico,Brazil,Italy,West Germany,Uruguay,16,32,95,2.9699999999999998,1603975,Gerd Müller,West Germany,10,1970-05-31,1970-06-21,Mexico City,False,Knockout
 10,1974,West Germany,West Germany,Netherlands,Poland,Brazil,16,38,97,2.55,1865753,Grzegorz Lato,Poland,7,1974-06-13,1974-07-07,Munich,True,Knockout
 11,1978,Argentina,Argentina,Netherlands,Brazil,Italy,16,38,102,2.68,1545791,Mario Kempes,Argentina,6,1978-06-01,1978-06-25,Buenos Aires,True,Knockout
 12,1982,Spain,Italy,West Germany,Poland,France,24,52,146,2.81,1766277,Paolo Rossi,Italy,6,1982-06-13,1982-07-11,Madrid,False,Knockout
@@ -21,3 +21,4 @@ edition_id,year,host,champion,runner_up,third_place,fourth_place,teams_count,mat
 20,2014,Brazil,Germany,Argentina,Netherlands,Brazil,32,64,171,2.67,3429873,James Rodríguez,Colombia,6,2014-06-12,2014-07-13,Rio de Janeiro,False,Knockout
 21,2018,Russia,France,Croatia,Belgium,England,32,64,169,2.64,3031768,Harry Kane,England,6,2018-06-14,2018-07-15,Moscow,False,Knockout
 22,2022,Qatar,Argentina,France,Croatia,Morocco,32,64,172,2.69,3404252,Kylian Mbappé,France,8,2022-11-20,2022-12-18,Lusail,False,Knockout
+23,2026,United States / Canada / Mexico,Spain,Argentina,England,France,48,104,298,2.87,6850000,Kylian Mbappé,France,10,2026-06-11,2026-07-19,East Rutherford,False,Knockout

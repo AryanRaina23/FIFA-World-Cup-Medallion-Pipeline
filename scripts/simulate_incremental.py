@@ -4,6 +4,7 @@ import json
 import uuid
 import datetime
 import subprocess
+import sys
 import psycopg2
 
 def get_connection():
@@ -24,8 +25,10 @@ def get_connection():
     raise Exception("Unable to connect to PostgreSQL database.")
 
 def main():
-    teams_json_path = r"D:\UserFiles\Desktop\FIFA World Cup Pipeline PoC\data\sources\wc_2026_teams.json"
-    fixtures_csv_path = r"D:\UserFiles\Desktop\FIFA World Cup Pipeline PoC\data\sources\wc_2026_fixtures.csv"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(script_dir)
+    teams_json_path = os.path.join(project_root, "data", "sources", "wc_2026_teams.json")
+    fixtures_csv_path = os.path.join(project_root, "data", "sources", "wc_2026_fixtures.csv")
     
     print("Reading and modifying sources to simulate incremental data updates...")
     
@@ -57,7 +60,9 @@ def main():
         print(f"Error: {teams_json_path} not found.")
 
     # 2. Reset and append a new fixture to wc_2026_fixtures.csv (Incremental Ingestion)
-    src_fixtures = r"D:\UserFiles\Desktop\FIFA Dataset\wc_2026_fixtures.csv"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(script_dir)
+    src_fixtures = os.path.join(project_root, "FIFA Dataset", "wc_2026_fixtures.csv")
     if os.path.exists(src_fixtures):
         with open(src_fixtures, 'r', encoding='utf-8') as f_in:
             content = f_in.read()
@@ -85,8 +90,8 @@ def main():
     new_run_id = str(uuid.uuid4())
     print(f"\nTriggering incremental run (Run ID: {new_run_id})...")
     
-    script_path = r"D:\UserFiles\Desktop\FIFA World Cup Pipeline PoC\scripts\run_pipeline.py"
-    result = subprocess.run(["python", script_path, new_run_id], capture_output=False)
+    script_path = os.path.join(project_root, "scripts", "run_pipeline.py")
+    result = subprocess.run([sys.executable, script_path, new_run_id], capture_output=False)
     
     if result.returncode == 0:
         print("\nIncremental run completed successfully!")

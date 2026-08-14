@@ -10,8 +10,11 @@ def make_pretty_xml(elem):
     return reparsed.toprettyxml(indent="  ")
 
 def main():
-    src_dir = r"D:\UserFiles\Desktop\FIFA Dataset"
-    dest_dir = r"D:\UserFiles\Desktop\FIFA World Cup Pipeline PoC\data\sources"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(script_dir)
+    
+    src_dir = os.path.join(project_root, "FIFA Dataset")
+    dest_dir = os.path.join(project_root, "data", "sources")
     
     os.makedirs(dest_dir, exist_ok=True)
     

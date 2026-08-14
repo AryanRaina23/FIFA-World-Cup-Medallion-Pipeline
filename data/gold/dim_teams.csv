@@ -1,49 +1,49 @@
 team_id,team_name,confederation,confederation_full_name,debut_2026,best_wc_result,current_coach,current_fifa_rank,is_active,last_updated_at
-1,Mexico,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",False,"Quarter-finals (1970,1986)",Javier Aguirre,15,True,2026-07-21 09:12:46.886694
-2,South Africa,CAF,Confédération Africaine de Football,False,"Group stage (1998,2002,2010)",Hugo Broos,60,True,2026-07-21 09:12:46.886694
-3,South Korea,AFC,Asian Football Confederation,False,Semi-finals (2002),Hong Myung-bo,25,True,2026-07-21 09:12:46.886694
-4,Czechia,UEFA,Union of European Football Associations,False,"Runner-up (1934,1962)",Ivan Hasek,41,True,2026-07-21 09:12:46.886694
-5,Canada,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",False,"Group stage (1986,2022)",Jesse Marsch,30,True,2026-07-21 09:12:46.886694
-6,Switzerland,UEFA,Union of European Football Associations,False,"Quarter-finals (1934,1938,1954)",Murat Yakin,19,True,2026-07-21 09:12:46.886694
-7,Qatar,AFC,Asian Football Confederation,False,Group stage (2022),Marquez Lopez,35,True,2026-07-21 09:12:46.886694
-8,Bosnia and Herzegovina,UEFA,Union of European Football Associations,False,Group stage (2014),Sergej Barbarez,52,True,2026-07-21 09:12:46.886694
-9,Morocco,CAF,Confédération Africaine de Football,False,Semi-finals (2022),Walid Regragui,8,True,2026-07-21 09:12:46.886694
-10,Haiti,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",False,Group stage (1974),Marc Collat,83,True,2026-07-21 09:12:46.886694
-11,Scotland,UEFA,Union of European Football Associations,False,Group stage (multiple),Steve Clarke,47,True,2026-07-21 09:12:46.886694
-12,USA,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",False,Third place (1930),Mauricio Pochettino,16,True,2026-07-21 09:12:46.886694
-13,Paraguay,CONMEBOL,Confederación Sudamericana de Fútbol,False,Quarter-finals (2010),Gustavo Alfaro,64,True,2026-07-21 09:12:46.886694
-14,Australia,AFC,Asian Football Confederation,False,"Round of 16 (2006,2022)",Tony Popovic,26,True,2026-07-21 09:12:46.886694
-15,Türkiye,UEFA,Union of European Football Associations,False,Third place (2002),Vincenzo Montella,42,True,2026-07-21 09:12:46.886694
-16,Curaçao,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",True,First appearance,Dick Advocaat,81,True,2026-07-21 09:12:46.886694
-17,Ivory Coast,CAF,Confédération Africaine de Football,False,"Group stage (2006,2010,2014)",Emerse Faé,33,True,2026-07-21 09:12:46.886694
-18,Ecuador,CONMEBOL,Confederación Sudamericana de Fútbol,False,Round of 16 (2006),Sebastián Beccacece,24,True,2026-07-21 09:12:46.886694
-19,Netherlands,UEFA,Union of European Football Associations,False,"Runner-up (1974,1978,2010)",Ronald Koeman,7,True,2026-07-21 09:12:46.886694
-20,Japan,AFC,Asian Football Confederation,False,"Round of 16 (2002,2010,2018,2022)",Hajime Moriyasu,18,True,2026-07-21 09:12:46.886694
-21,Sweden,UEFA,Union of European Football Associations,False,Runner-up (1958),Jon Dahl Tomasson,39,True,2026-07-21 09:12:46.886694
-22,Tunisia,CAF,Confédération Africaine de Football,False,Group stage (6 apps),Faouzi Benzarti,40,True,2026-07-21 09:12:46.886694
-23,Belgium,UEFA,Union of European Football Associations,False,Semi-finals (2018),Domenico Tedesco,9,True,2026-07-21 09:12:46.886694
-24,Egypt,CAF,Confédération Africaine de Football,False,Round of 16 (1934),Hossam El-Badry,29,True,2026-07-21 09:12:46.886694
-25,Iran,AFC,Asian Football Confederation,False,Group stage (6 apps),Amir Ghalenoei,21,True,2026-07-21 09:12:46.886694
-26,New Zealand,OFC,Oceania Football Confederation,False,"Group stage (1982,2010)",Darren Bazeley,95,True,2026-07-21 09:12:46.886694
-27,Spain,UEFA,Union of European Football Associations,False,Winners (2010),Luis de la Fuente,2,True,2026-07-21 09:12:46.886694
-28,Cape Verde,CAF,Confédération Africaine de Football,True,First appearance,Pedro Brito,70,True,2026-07-21 09:12:46.886694
-29,Saudi Arabia,AFC,Asian Football Confederation,False,Round of 16 (1994),Roberto Mancini,57,True,2026-07-21 09:12:46.886694
-30,Uruguay,CONMEBOL,Confederación Sudamericana de Fútbol,False,"Winners (1930,1950)",Marcelo Bielsa,17,True,2026-07-21 09:12:46.886694
-31,France,UEFA,Union of European Football Associations,False,"Winners (1998,2018)",Didier Deschamps,1,True,2026-07-21 09:12:46.886694
-32,Senegal,CAF,Confédération Africaine de Football,False,Quarter-finals (2002),Aliou Cissé,14,True,2026-07-21 09:12:46.886694
-33,Norway,UEFA,Union of European Football Associations,False,"Round of 16 (1994,1998)",Ståle Solbakken,44,True,2026-07-21 09:12:46.886694
-34,Iraq,AFC,Asian Football Confederation,False,Group stage (1986),Graham Arnold,61,True,2026-07-21 09:12:46.886694
-35,Argentina,CONMEBOL,Confederación Sudamericana de Fútbol,False,"Winners (1978,1986,2022)",Lionel Scaloni,3,True,2026-07-21 09:12:46.886694
-36,Algeria,CAF,Confédération Africaine de Football,False,Round of 16 (2014),Vladimir Petkovic,36,True,2026-07-21 09:12:46.886694
-37,Austria,UEFA,Union of European Football Associations,False,Third place (1954),Ralf Rangnick,23,True,2026-07-21 09:12:46.886694
-38,Jordan,AFC,Asian Football Confederation,True,First appearance,Hussain Ammouta,68,True,2026-07-21 09:12:46.886694
-39,Portugal,UEFA,Union of European Football Associations,False,"Semi-finals (1966,2006)",Roberto Martínez,5,True,2026-07-21 09:12:46.886694
-40,DR Congo,CAF,Confédération Africaine de Football,False,Group stage (1974),Sébastien Desabre,51,True,2026-07-21 09:12:46.886694
-41,Uzbekistan,AFC,Asian Football Confederation,True,First appearance,Srecko Katanec,62,True,2026-07-21 09:12:46.886694
-42,Colombia,CONMEBOL,Confederación Sudamericana de Fútbol,False,Quarter-finals (2014),Néstor Lorenzo,13,True,2026-07-21 09:12:46.886694
-43,England,UEFA,Union of European Football Associations,False,Winners (1966),Thomas Tuchel,4,True,2026-07-21 09:12:46.886694
-44,Croatia,UEFA,Union of European Football Associations,False,Runner-up (2018),Zlatko Dalić,11,True,2026-07-21 09:12:46.886694
-45,Ghana,CAF,Confédération Africaine de Football,False,Quarter-finals (2010),Otto Addo,65,True,2026-07-21 09:12:46.886694
-46,Panama,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",False,Group stage (2018),Thomas Christiansen,53,True,2026-07-21 09:12:46.886694
-47,Brazil,CONMEBOL,Confederación Sudamericana de Fútbol,False,"Winners (1958,1962,1970,1994,2002)",Dorival Júnior,3,True,2026-07-21 09:12:46.886694
-48,Germany,UEFA,Union of European Football Associations,False,"Winners (1954,1974,1990,2014)",Jurgen Klopp,10,True,2026-07-21 09:12:46.886694
+1,Mexico,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",False,"Quarter-finals (1970,1986)",Javier Aguirre,15,True,2026-08-12 08:36:41.469275
+2,South Africa,CAF,Confédération Africaine de Football,False,"Group stage (1998,2002,2010)",Hugo Broos,60,True,2026-08-12 08:36:41.469275
+3,South Korea,AFC,Asian Football Confederation,False,Semi-finals (2002),Hong Myung-bo,25,True,2026-08-12 08:36:41.469275
+4,Czechia,UEFA,Union of European Football Associations,False,"Runner-up (1934,1962)",Ivan Hasek,41,True,2026-08-12 08:36:41.469275
+5,Canada,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",False,"Group stage (1986,2022)",Jesse Marsch,30,True,2026-08-12 08:36:41.469275
+6,Switzerland,UEFA,Union of European Football Associations,False,"Quarter-finals (1934,1938,1954)",Murat Yakin,19,True,2026-08-12 08:36:41.469275
+7,Qatar,AFC,Asian Football Confederation,False,Group stage (2022),Marquez Lopez,35,True,2026-08-12 08:36:41.469275
+8,Bosnia and Herzegovina,UEFA,Union of European Football Associations,False,Group stage (2014),Sergej Barbarez,52,True,2026-08-12 08:36:41.469275
+9,Morocco,CAF,Confédération Africaine de Football,False,Semi-finals (2022),Walid Regragui,8,True,2026-08-12 08:36:41.469275
+10,Haiti,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",False,Group stage (1974),Marc Collat,83,True,2026-08-12 08:36:41.469275
+11,Scotland,UEFA,Union of European Football Associations,False,Group stage (multiple),Steve Clarke,47,True,2026-08-12 08:36:41.469275
+12,USA,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",False,Third place (1930),Mauricio Pochettino,16,True,2026-08-12 08:36:41.469275
+13,Paraguay,CONMEBOL,Confederación Sudamericana de Fútbol,False,Quarter-finals (2010),Gustavo Alfaro,64,True,2026-08-12 08:36:41.469275
+14,Australia,AFC,Asian Football Confederation,False,"Round of 16 (2006,2022)",Tony Popovic,26,True,2026-08-12 08:36:41.469275
+15,Türkiye,UEFA,Union of European Football Associations,False,Third place (2002),Vincenzo Montella,42,True,2026-08-12 08:36:41.469275
+16,Curaçao,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",True,First appearance,Dick Advocaat,81,True,2026-08-12 08:36:41.469275
+17,Ivory Coast,CAF,Confédération Africaine de Football,False,"Group stage (2006,2010,2014)",Emerse Faé,33,True,2026-08-12 08:36:41.469275
+18,Ecuador,CONMEBOL,Confederación Sudamericana de Fútbol,False,Round of 16 (2006),Sebastián Beccacece,24,True,2026-08-12 08:36:41.469275
+19,Netherlands,UEFA,Union of European Football Associations,False,"Runner-up (1974,1978,2010)",Ronald Koeman,7,True,2026-08-12 08:36:41.469275
+20,Japan,AFC,Asian Football Confederation,False,"Round of 16 (2002,2010,2018,2022)",Hajime Moriyasu,18,True,2026-08-12 08:36:41.469275
+21,Sweden,UEFA,Union of European Football Associations,False,Runner-up (1958),Jon Dahl Tomasson,39,True,2026-08-12 08:36:41.469275
+22,Tunisia,CAF,Confédération Africaine de Football,False,Group stage (6 apps),Faouzi Benzarti,40,True,2026-08-12 08:36:41.469275
+23,Belgium,UEFA,Union of European Football Associations,False,Semi-finals (2018),Domenico Tedesco,9,True,2026-08-12 08:36:41.469275
+24,Egypt,CAF,Confédération Africaine de Football,False,Round of 16 (1934),Hossam El-Badry,29,True,2026-08-12 08:36:41.469275
+25,Iran,AFC,Asian Football Confederation,False,Group stage (6 apps),Amir Ghalenoei,21,True,2026-08-12 08:36:41.469275
+26,New Zealand,OFC,Oceania Football Confederation,False,"Group stage (1982,2010)",Darren Bazeley,95,True,2026-08-12 08:36:41.469275
+27,Spain,UEFA,Union of European Football Associations,False,Winners (2010),Luis de la Fuente,2,True,2026-08-12 08:36:41.469275
+28,Cape Verde,CAF,Confédération Africaine de Football,True,First appearance,Pedro Brito,70,True,2026-08-12 08:36:41.469275
+29,Saudi Arabia,AFC,Asian Football Confederation,False,Round of 16 (1994),Roberto Mancini,57,True,2026-08-12 08:36:41.469275
+30,Uruguay,CONMEBOL,Confederación Sudamericana de Fútbol,False,"Winners (1930,1950)",Marcelo Bielsa,17,True,2026-08-12 08:36:41.469275
+31,France,UEFA,Union of European Football Associations,False,"Winners (1998,2018)",Didier Deschamps,1,True,2026-08-12 08:36:41.469275
+32,Senegal,CAF,Confédération Africaine de Football,False,Quarter-finals (2002),Aliou Cissé,14,True,2026-08-12 08:36:41.469275
+33,Norway,UEFA,Union of European Football Associations,False,"Round of 16 (1994,1998)",Ståle Solbakken,44,True,2026-08-12 08:36:41.469275
+34,Iraq,AFC,Asian Football Confederation,False,Group stage (1986),Graham Arnold,61,True,2026-08-12 08:36:41.469275
+35,Argentina,CONMEBOL,Confederación Sudamericana de Fútbol,False,"Winners (1978,1986,2022)",Lionel Scaloni,3,True,2026-08-12 08:36:41.469275
+36,Algeria,CAF,Confédération Africaine de Football,False,Round of 16 (2014),Vladimir Petkovic,36,True,2026-08-12 08:36:41.469275
+37,Austria,UEFA,Union of European Football Associations,False,Third place (1954),Ralf Rangnick,23,True,2026-08-12 08:36:41.469275
+38,Jordan,AFC,Asian Football Confederation,True,First appearance,Hussain Ammouta,68,True,2026-08-12 08:36:41.469275
+39,Portugal,UEFA,Union of European Football Associations,False,"Semi-finals (1966,2006)",Roberto Martínez,5,True,2026-08-12 08:36:41.469275
+40,DR Congo,CAF,Confédération Africaine de Football,False,Group stage (1974),Sébastien Desabre,51,True,2026-08-12 08:36:41.469275
+41,Uzbekistan,AFC,Asian Football Confederation,True,First appearance,Srecko Katanec,62,True,2026-08-12 08:36:41.469275
+42,Colombia,CONMEBOL,Confederación Sudamericana de Fútbol,False,Quarter-finals (2014),Néstor Lorenzo,13,True,2026-08-12 08:36:41.469275
+43,England,UEFA,Union of European Football Associations,False,Winners (1966),Thomas Tuchel,4,True,2026-08-12 08:36:41.469275
+44,Croatia,UEFA,Union of European Football Associations,False,Runner-up (2018),Zlatko Dalić,11,True,2026-08-12 08:36:41.469275
+45,Ghana,CAF,Confédération Africaine de Football,False,Quarter-finals (2010),Otto Addo,65,True,2026-08-12 08:36:41.469275
+46,Panama,CONCACAF,"Confederation of North, Central America and Caribbean Association Football",False,Group stage (2018),Thomas Christiansen,53,True,2026-08-12 08:36:41.469275
+47,Brazil,CONMEBOL,Confederación Sudamericana de Fútbol,False,"Winners (1958,1962,1970,1994,2002)",Dorival Júnior,3,True,2026-08-12 08:36:41.469275
+48,Germany,UEFA,Union of European Football Associations,False,"Winners (1954,1974,1990,2014)",Jurgen Klopp,10,True,2026-08-12 08:36:41.469275

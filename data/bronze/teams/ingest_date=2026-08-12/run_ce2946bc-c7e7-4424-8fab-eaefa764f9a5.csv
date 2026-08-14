@@ -1,0 +1,49 @@
+team,group,confederation,fifa_rank,coach,best_wc_result,debut_2026,_ingestion_id,_ingested_at,_source_file,_source_format,_run_id
+Mexico,A,CONCACAF,15,Javier Aguirre,"Quarter-finals (1970,1986)",No,df4ebf3d-1ef6-46c5-8991-c4c82e6f4b24,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+South Africa,A,CAF,60,Hugo Broos,"Group stage (1998,2002,2010)",No,94e34ee6-e3ee-4928-9e7e-0704d95adfa0,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+South Korea,A,AFC,25,Hong Myung-bo,Semi-finals (2002),No,e5c4da20-6997-4d22-8268-19707d652e09,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Czechia,A,UEFA,41,Ivan Hasek,"Runner-up (1934,1962)",No,277ff95c-acc3-44bf-b7aa-621d00bd7bd5,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Canada,B,CONCACAF,30,Jesse Marsch,"Group stage (1986,2022)",No,940f7a18-3f16-479e-b925-7690e0da8e48,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Switzerland,B,UEFA,19,Murat Yakin,"Quarter-finals (1934,1938,1954)",No,6a005e28-1d0a-412a-971a-7373e506dcc8,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Qatar,B,AFC,35,Marquez Lopez,Group stage (2022),No,a1844764-73b0-4281-85f4-7e84d3234865,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Bosnia and Herzegovina,B,UEFA,52,Sergej Barbarez,Group stage (2014),No,8900423d-992a-4ea8-9f25-c7cf54e208b2,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Brazil,C,CONMEBOL,3,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",No,960900b6-b092-4784-b4b8-f5770982f889,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Morocco,C,CAF,8,Walid Regragui,Semi-finals (2022),No,db72938f-1615-43a4-b3d7-432d39c809b8,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Haiti,C,CONCACAF,83,Marc Collat,Group stage (1974),No,22665a3a-8cf0-4c5e-bf71-fef577c4e8d6,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Scotland,C,UEFA,47,Steve Clarke,Group stage (multiple),No,07539b02-2349-4f45-a63b-ca5482774ad4,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+USA,D,CONCACAF,16,Mauricio Pochettino,Third place (1930),No,48cb8048-ed8e-4184-9dfc-fc944bf7cbee,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Paraguay,D,CONMEBOL,64,Gustavo Alfaro,Quarter-finals (2010),No,e6673639-8046-44e6-9025-2c9d5acfd99d,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Australia,D,AFC,26,Tony Popovic,"Round of 16 (2006,2022)",No,6f876316-36b7-4736-aa74-926749e3884e,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Türkiye,D,UEFA,42,Vincenzo Montella,Third place (2002),No,5b531cd4-4e8f-4846-86ac-f461112b25b5,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Germany,E,UEFA,10,Jurgen Klopp,"Winners (1954,1974,1990,2014)",No,abf66c1a-ea96-43e5-a603-20507cb7d1cf,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Curaçao,E,CONCACAF,81,Dick Advocaat,First appearance,Yes,147e80dd-4737-4312-83c3-d1a82fc1bd70,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Ivory Coast,E,CAF,33,Emerse Faé,"Group stage (2006,2010,2014)",No,6ea79e87-b466-411a-b643-cfbc1fe63dac,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Ecuador,E,CONMEBOL,24,Sebastián Beccacece,Round of 16 (2006),No,ef295ff9-aa56-4682-b409-6e98da850a59,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Netherlands,F,UEFA,7,Ronald Koeman,"Runner-up (1974,1978,2010)",No,74b991ed-43e9-455a-aa6a-6dfc742ea93a,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Japan,F,AFC,18,Hajime Moriyasu,"Round of 16 (2002,2010,2018,2022)",No,4a667cec-bfca-4299-86f5-06feb6fb4562,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Sweden,F,UEFA,39,Jon Dahl Tomasson,Runner-up (1958),No,6abd569d-cf98-4221-a053-3a1f99a8a751,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Tunisia,F,CAF,40,Faouzi Benzarti,Group stage (6 apps),No,fd8e2998-8386-47ee-a12d-1bb641661b51,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Belgium,G,UEFA,9,Domenico Tedesco,Semi-finals (2018),No,f0602bd4-c0f2-465e-aa6c-ce0ef02b1797,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Egypt,G,CAF,29,Hossam El-Badry,Round of 16 (1934),No,d6d9db97-6a8d-4e83-88d1-379bffdb0fe9,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Iran,G,AFC,21,Amir Ghalenoei,Group stage (6 apps),No,b7882e01-5ab0-4ea6-9ad1-b158c260195e,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+New Zealand,G,OFC,95,Darren Bazeley,"Group stage (1982,2010)",No,91b26974-2c17-4a99-baf7-568bed12b69f,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Spain,H,UEFA,2,Luis de la Fuente,Winners (2010),No,8adaf8f2-a980-48ac-b558-f5f20f732d88,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Cape Verde,H,CAF,70,Pedro Brito,First appearance,Yes,08e978b7-be5e-4e1c-b507-2ec29e8d667a,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Saudi Arabia,H,AFC,57,Roberto Mancini,Round of 16 (1994),No,cd37f4ca-d94d-4293-a846-0ca53ae82f38,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Uruguay,H,CONMEBOL,17,Marcelo Bielsa,"Winners (1930,1950)",No,f52e0377-a955-4a36-b041-7a1802b59f20,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+France,I,UEFA,1,Didier Deschamps,"Winners (1998,2018)",No,d58e253b-e455-4ae9-8fee-ba94613414ee,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Senegal,I,CAF,14,Aliou Cissé,Quarter-finals (2002),No,90b26b11-b478-49f9-9ddc-e9f7867ca871,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Norway,I,UEFA,44,Ståle Solbakken,"Round of 16 (1994,1998)",No,ee278feb-02a3-4aca-b537-cfa56a0dd320,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Iraq,I,AFC,61,Graham Arnold,Group stage (1986),No,74b98518-c6ef-4d05-937e-874f5058bd16,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Argentina,J,CONMEBOL,3,Lionel Scaloni,"Winners (1978,1986,2022)",No,81c004a8-0218-49a2-a62e-d290ad7a757e,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Algeria,J,CAF,36,Vladimir Petkovic,Round of 16 (2014),No,e76b64ab-302d-4876-b988-7b3f6bd6d520,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Austria,J,UEFA,23,Ralf Rangnick,Third place (1954),No,624e0cc4-35ed-4183-9a50-fdc54a51b687,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Jordan,J,AFC,68,Hussain Ammouta,First appearance,Yes,7412c418-d64a-4d3d-af22-5d8e75e35b4b,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Portugal,K,UEFA,5,Roberto Martínez,"Semi-finals (1966,2006)",No,ec1caf94-e4a2-44e8-85a7-224c7dc14e91,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+DR Congo,K,CAF,51,Sébastien Desabre,Group stage (1974),No,073a02b3-b6f1-4c1b-b674-71aad158ca12,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Uzbekistan,K,AFC,62,Srecko Katanec,First appearance,Yes,e0a281e5-06a7-4c84-b914-71dc065b2dbe,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Colombia,K,CONMEBOL,13,Néstor Lorenzo,Quarter-finals (2014),No,c98f79bf-fa0a-4f37-9c1f-86807aece39d,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+England,L,UEFA,4,Thomas Tuchel,Winners (1966),No,18fcf7ec-b06c-428b-93bc-bce875772af7,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Croatia,L,UEFA,11,Zlatko Dalić,Runner-up (2018),No,2b346e4b-8174-4643-ad4c-3c8879aef4f6,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Ghana,L,CAF,65,Otto Addo,Quarter-finals (2010),No,91ce8833-7cef-4579-b490-549b545289e3,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5
+Panama,L,CONCACAF,53,Thomas Christiansen,Group stage (2018),No,f3286ee9-8d15-4bef-abcc-caae0fa67e7d,2026-08-12T13:06:54.362281,wc_2026_teams.json,JSON,ce2946bc-c7e7-4424-8fab-eaefa764f9a5

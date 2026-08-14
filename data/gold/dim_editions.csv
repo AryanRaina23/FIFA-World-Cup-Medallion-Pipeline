@@ -21,3 +21,4 @@ edition_id,year,host,champion,runner_up,third_place,teams_count,matches_count,go
 20,2014,Brazil,Germany,Argentina,Netherlands,32,64,171,3429873,False
 21,2018,Russia,France,Croatia,Belgium,32,64,169,3031768,False
 22,2022,Qatar,Argentina,France,Croatia,32,64,172,3404252,False
+23,2026,United States / Canada / Mexico,Spain,Argentina,England,48,104,298,6850000,False

@@ -138,7 +138,7 @@ The project includes a 2-page dashboard connected live to the PostgreSQL `gold` 
 ## 🚀 Step-by-Step Execution Guide
 
 ### 1. Start Infrastructure via Docker Compose
-From the project root directory (`D:\UserFiles\Desktop\FIFA World Cup Pipeline PoC`):
+From the project root directory (`D:\Kanini Projects\FIFA World Cup Pipeline PoC`):
 ```bash
 docker compose up -d
 ```

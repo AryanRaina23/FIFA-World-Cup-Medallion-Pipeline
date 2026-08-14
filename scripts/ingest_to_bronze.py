@@ -78,7 +78,9 @@ def parse_xml_to_df(xml_path):
         records.append(row)
     return pd.DataFrame(records)
 
-BASE_DIR = os.environ.get("AIRFLOW_HOME", r"D:\UserFiles\Desktop\FIFA World Cup Pipeline PoC")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(script_dir)
+BASE_DIR = os.environ.get("AIRFLOW_HOME", project_root)
 
 def save_local_bronze_backup(df, table_name, run_id):
     today = datetime.date.today().isoformat()
@@ -116,7 +118,7 @@ def main():
     sources = {
         "teams": {"file": "wc_2026_teams.json", "format": "JSON"},
         "fixtures": {"file": "wc_2026_fixtures.csv", "format": "CSV"},
-        "editions": {"file": "wc_all_editions.xml", "format": "XML"},
+        "editions": {"file": "wc_all_editions.json", "format": "JSON"},
         "matches": {"file": "wc_all_matches.csv", "format": "CSV"},
         "top_scorers": {"file": "wc_top_scorers.json", "format": "JSON"}
     }

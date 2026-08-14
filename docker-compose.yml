@@ -50,7 +50,7 @@ services:
           --firstname Admin \
           --lastname User \
           --role Admin \
-          --email admin@example.com
+          --email admin@example.com || true
 
   airflow-webserver:
     <<: *airflow-common

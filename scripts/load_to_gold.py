@@ -211,6 +211,55 @@ def main():
         )
 
         # =====================================================================
+        # 5b. CREATE ALL TIME TOP SCORERS TABLE
+        # =====================================================================
+        print("Loading gold.dim_all_time_top_scorers...")
+        cur.execute("DROP TABLE IF EXISTS gold.dim_all_time_top_scorers CASCADE;")
+        cur.execute(
+            """
+            CREATE TABLE gold.dim_all_time_top_scorers (
+                player VARCHAR(100),
+                country VARCHAR(100),
+                goals INT
+            );
+            """
+        )
+        scorers_data = [
+            ("Kylian Mbappé", "France", 22),
+            ("Lionel Messi", "Argentina", 21),
+            ("Miroslav Klose", "Germany", 16),
+            ("Ronaldo", "Brazil", 15),
+            ("Gerd Müller", "Germany", 14),
+            ("Harry Kane", "England", 14),
+            ("Just Fontaine", "France", 13),
+            ("Pelé", "Brazil", 12),
+            ("Sándor Kocsis", "Hungary", 11),
+            ("Jürgen Klinsmann", "Germany", 11),
+            ("Gabriel Batistuta", "Argentina", 10),
+            ("Gary Lineker", "England", 10),
+            ("Helmut Rahn", "Germany", 10),
+            ("Thomas Müller", "Germany", 10),
+            ("Grzegorz Lato", "Poland", 10),
+            ("Teófilo Cubillas", "Peru", 10),
+            ("Roberto Baggio", "Italy", 9),
+            ("Christian Vieri", "Italy", 9),
+            ("Paolo Rossi", "Italy", 9),
+            ("David Villa", "Spain", 9),
+            ("Eusébio", "Portugal", 9),
+            ("Diego Maradona", "Argentina", 8),
+            ("Cristiano Ronaldo", "Portugal", 8),
+            ("Jude Bellingham", "England", 8),
+            ("Erling Haaland", "Norway", 7)
+        ]
+        for player, country, goals in scorers_data:
+            cur.execute(
+                "INSERT INTO gold.dim_all_time_top_scorers (player, country, goals) VALUES (%s, %s, %s);",
+                (player, country, goals)
+            )
+        print("Loaded gold.dim_all_time_top_scorers.")
+        log_to_audit(run_id, "GOLD", "gold.dim_all_time_top_scorers", len(scorers_data), len(scorers_data), 0, 0, "SUCCESS")
+
+        # =====================================================================
         # 6. LOAD KPI_SUMMARY (KPI Summary equivalent)
         # =====================================================================
         print("Loading gold.kpi_summary...")
@@ -240,10 +289,12 @@ def main():
         log_to_audit(run_id, "GOLD", "gold.kpi_summary", 1, 1, 0, 0, "SUCCESS")
 
         # Export Gold tables to local CSV files to show the Gold Layer in the workspace
-        base_dir = os.environ.get("AIRFLOW_HOME", r"D:\UserFiles\Desktop\FIFA World Cup Pipeline PoC")
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)
+        base_dir = os.environ.get("AIRFLOW_HOME", project_root)
         gold_dir = os.path.join(base_dir, "data", "gold")
         os.makedirs(gold_dir, exist_ok=True)
-        gold_tables = ["dim_teams", "dim_editions", "fact_matches", "mart_world_cup_stats", "kpi_summary"]
+        gold_tables = ["dim_teams", "dim_editions", "fact_matches", "mart_world_cup_stats", "kpi_summary", "dim_all_time_top_scorers"]
         for tbl in gold_tables:
             try:
                 gdf = pd.read_sql_query(f"SELECT * FROM gold.{tbl};", conn)

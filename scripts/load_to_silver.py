@@ -440,7 +440,9 @@ def main():
             log_to_audit(run_id, "SILVER", "silver.dim_teams_scd2", len(df), scd_inserted, scd_updated, 0, "SUCCESS")
 
         # Export Silver tables to local CSV files to show the Silver Layer in the workspace
-        base_dir = os.environ.get("AIRFLOW_HOME", r"D:\UserFiles\Desktop\FIFA World Cup Pipeline PoC")
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(script_dir)
+        base_dir = os.environ.get("AIRFLOW_HOME", project_root)
         silver_dir = os.path.join(base_dir, "data", "silver")
         os.makedirs(silver_dir, exist_ok=True)
         silver_tables = ["editions", "matches", "fixtures", "top_scorers", "dim_teams_scd2", "lkp_confederations"]

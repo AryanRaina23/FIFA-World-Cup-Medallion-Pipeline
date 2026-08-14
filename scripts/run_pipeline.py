@@ -53,7 +53,8 @@ def update_run_status(run_id, status, duration=None):
         conn.close()
 
 def run_script(script_name, run_id):
-    script_path = os.path.join("D:\\UserFiles\\Desktop\\FIFA World Cup Pipeline PoC\\scripts", script_name)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    script_path = os.path.join(script_dir, script_name)
     
     # If running inside docker container, we can adjust paths
     if not os.path.exists(script_path):
