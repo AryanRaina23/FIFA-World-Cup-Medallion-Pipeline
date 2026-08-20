@@ -9,7 +9,7 @@ load_dotenv()
 
 # Configure Google Gemini
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
-MODEL_NAME = "gemini-3.5-flash-lite"
+MODEL_NAME = "gemini-1.5-flash"
 
 
 
