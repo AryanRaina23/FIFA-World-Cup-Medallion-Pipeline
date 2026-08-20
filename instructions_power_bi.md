@@ -1,140 +1,97 @@
 # Power BI Dashboard Connection and Design Guide
 
-This guide provides step-by-step instructions on how to connect Microsoft Power BI Desktop to your FIFA World Cup Gold Data Warehouse and build an interactive, professional dashboard.
+This guide provides step-by-step instructions on how to connect Microsoft Power BI Desktop to your FIFA World Cup Gold Data Warehouse and build an interactive, professional dashboard matching the finalized 3-page layout.
 
 ---
 
-## 1. Prerequisites & Database Details
-Your data warehouse is running locally inside a Docker container. When configuring the connection, use the following credentials:
+## 1. Connection Details
+Your production data warehouse is running in the cloud on Neon. When configuring the connection in Power BI Desktop, use the following credentials:
 
-- **Data Source Type**: PostgreSQL Database
-- **Server**: `localhost:5433` (or `127.0.0.1:5433` if standard porting is required)
-- **Database**: `fifa_dw`
-- **Authentication Method**: Database (Username/Password)
-  - **Username**: `postgres`
-  - **Password**: `postgres`
-- **SSL / Encryption**: Disabled (uncheck "Encrypt Connection" in Power BI if prompted, since the local container does not use SSL certificates).
-
-> [!NOTE]
-> If Power BI prompts that it requires a data source developer library (e.g. Npgsql), you can install the **Npgsql GAC installation package** or configure a local **ODBC Connection** mapping to PostgreSQL.
+*   **Data Source Type**: PostgreSQL Database
+*   **Server**: `ep-withered-firefly-ay1mdau7-pooler.c-5.us-east-2.aws.neon.tech`
+*   **Database**: `neondb`
+*   **Authentication Method**: Database (Username/Password)
+    *   **Username**: `neondb_owner`
+    *   **Password**: `npg_JO5ASvYf7pIT`
+*   **SSL / Encryption**: Enabled (Required by Neon).
 
 ---
 
-## 2. Connecting Power BI to the Gold Warehouse
+## 2. Page-by-Page Visualization Design
 
-Follow these steps to import your analytics-ready datasets:
+### Page 1: FIFA World Cup History (General Overview)
+This page gives a macro view of the tournament's evolution from 1930 to 2026.
 
-1. Open **Power BI Desktop**.
-2. On the **Home** tab, click **Get Data** $\rightarrow$ **More...**
-3. Select **Database** $\rightarrow$ **PostgreSQL database**, and click **Connect**.
-4. In the dialog box:
-   - **Server**: `localhost:5433`
-   - **Database**: `fifa_dw`
-   - **Data Connectivity Mode**: Select **Import** (recommended for performance and interactive filtering).
-5. Click **OK**.
-6. When prompted for credentials, select the **Database** tab on the left:
-   - **User name**: `postgres`
-   - **Password**: `postgres`
-   - Click **Connect**.
-7. In the **Navigator** window, expand the schemas. Look for the `gold` schema tables:
-   - Check `dim_teams` (Customer equivalent)
-   - Check `dim_editions` (Product equivalent)
-   - Check `fact_matches` (Sales Fact equivalent)
-   - Check `mart_world_cup_stats` (Revenue Mart equivalent)
-   - Check `dim_top_scorers_ranked` (Ranked Scorers View)
-   - Check `kpi_summary` (Summary Table)
-8. Click **Load** to import the data into Power BI.
-
----
-
-## 3. Data Modeling & Relationships
-
-Once the tables are loaded, navigate to the **Model View** (the icon with three boxes on the left sidebar) to establish relationships. Create the following connections by dragging fields from one table to another:
-
-| Active | Fact / Dimension | Join Column | Target Dimension | Target Column | Cardinality | Filter Direction |
-|:---:|:---|:---|:---|:---|:---:|:---:|
-| **Yes** | `fact_matches` | `edition_year` | `dim_editions` | `year` | Many-to-One (`* -> 1`) | Single |
-| **Yes** | `dim_top_scorers_ranked` | `edition_id` | `dim_editions` | `edition_id` | Many-to-One (`* -> 1`) | Single |
-| **Yes** | `mart_world_cup_stats` | `year` | `dim_editions` | `year` | One-to-One (`1 -> 1`) | Both |
-| **Yes** | `fact_matches` | `team1_name` | `dim_teams` | `team_name` | Many-to-One (`* -> 1`) | Single |
-| *No* | `fact_matches` | `team2_name` | `dim_teams` | `team_name` | Many-to-One (`* -> 1`) | Single |
-
-> [!TIP]
-> Since a match involves two teams (`team1_name` and `team2_name`), only one active relationship can exist between `fact_matches` and `dim_teams`. Keep the relationship with `team1_name` active, and the relationship with `team2_name` inactive. You can use the DAX function `USERELATIONSHIP` in measures to analyze team2 stats where needed.
+*   **Header**: Add a yellow banner (`#f59e0b`) in the top center with the title **"FIFA World Cup History"**. Add navigation buttons next to it linking to `Page 2` and `Page 3`.
+*   **KPI Cards (using `gold.kpi_summary`)**:
+    *   **Total Matches**: `total_matches_played` (Format display unit as *None* $\rightarrow$ displays as `1K`).
+    *   **Total Attendance**: `total_attendance` (Format display unit as *Millions* $\rightarrow$ displays as `50M`).
+    *   **Total Goals**: `total_goals_scored` (Format display unit as *None* $\rightarrow$ displays as `3K`).
+*   **Donut Chart: "World Cup Titles by Nation"**:
+    *   **Legend**: `champion` (from `gold.dim_editions`)
+    *   **Values**: Count of `year` (or your `Championships Won` measure)
+*   **Line and Clustered Column Chart: "Attendance & Goals Trend Over Time"**:
+    *   **X-Axis**: `year` (from `gold.dim_editions`)
+    *   **Column Y-Axis**: `attendance` (Sum)
+    *   **Line Y-Axis**: `goals_count` (Sum)
+*   **Clustered Column Chart: "Goal Scoring History by Champion"**:
+    *   **X-Axis**: `year`
+    *   **Y-Axis**: `goals_count` (Sum)
+    *   **Legend**: `champion`
+*   **Treemap: "World Cup Hosts"**:
+    *   **Category**: `host` (from `gold.dim_editions`)
+    *   **Values**: Count of `year`
 
 ---
 
-## 4. Designing the Dashboard Pages
+### Page 2: Squad Intel & Golden Boot (Performance Drilldown)
+This page drills down into team-level parameters, squad coaches, and player efficiency.
 
-We recommend building a three-page interactive dashboard to showcase the data engineering results:
-
-### Page 1: Historical World Cup Analysis (General Overview)
-This page gives a macro view of the tournament's evolution from 1930 to 2022.
-
-- **KPI Cards (using `kpi_summary`)**:
-  - Total World Cup Editions: `total_editions`
-  - Total Goals Scored: `total_goals_scored`
-  - Total Matches Played: `total_matches_played`
-  - Total Global Attendance: `total_attendance` (Format as Million/Billion)
-- **Combo Chart (Line and Clustered Column)**:
-  - **X-Axis**: `year` (from `mart_world_cup_stats`)
-  - **Column y-axis**: `total_attendance`
-  - **Line y-axis**: `total_goals`
-  - *Insight*: Shows how the tournament expanded in size and goal count over time.
-- **Geographic Map Visual**:
-  - **Location**: `host` (from `dim_editions`)
-  - **Bubble Size**: Count of `edition_id`
-  - *Insight*: Displays which countries have hosted the World Cup most frequently.
-- **Tree Map (Most Titles)**:
-  - **Category**: `champion` (from `dim_editions`)
-  - **Values**: Count of `year`
-  - *Insight*: Visual comparison of title distribution (Brazil, Germany, Italy, Uruguay, etc.).
-
----
-
-### Page 2: Team Performance & Goal Scorers (Sales & Product equivalent)
-This page drills down into team performance and legendary top scorers.
-
-- **Slicer (Filter)**:
-  - Select World Cup Year (Dropdown selection from `dim_editions.year`).
-- **Bar Chart (Top Goal Scorers)**:
-  - **Y-Axis**: `player` (from `dim_top_scorers_ranked`)
-  - **X-Axis**: `goals`
-  - **Tooltip/Legend**: `country`, `position`
-  - *Insight*: Shows who won the Golden Boot in each edition (e.g. Just Fontaine scoring 13 in 1958).
-- **KPI Card (Top Goal Count)**:
-  - Display the name and goals of the top scorer of the selected year.
-- **Scatter Plot (FIFA Rank vs Best Result)**:
-  - **X-Axis**: `current_fifa_rank` (from `dim_teams`)
-  - **Y-Axis**: `best_wc_result`
-  - *Insight*: Evaluates whether a team's current FIFA ranking correlates with their historically best finish.
-- **Donut Chart (Player Goal Share)**:
-  - **Legend**: `player` (from `dim_top_scorers_ranked`)
-  - **Values**: `goals` (Sum)
-  - *Insight*: Shows the percentage breakdown of goal contribution within a selected squad (filtered by Country and Year).
+*   **Slicer**: Add a Slicer visual for **"Team Name"** using `gold.dim_teams.team_name` configured as a dropdown.
+*   **SCD2 KPI Cards (DAX fallback configuration)**:
+    Create these three DAX measures in your model to display double-dashes (`--`) when no team is selected in the slicer:
+    ```dax
+    Display Coach = SELECTEDVALUE(dim_teams[current_coach], "--")
+    Display Rank = SELECTEDVALUE(dim_teams[current_fifa_rank], "--")
+    Display Best Finish = SELECTEDVALUE(dim_teams[best_wc_result], "--")
+    ```
+    *   **KPI Card 1**: Drag the `Display Coach` measure onto a card labeled **"Current Coach"**.
+    *   **KPI Card 2**: Drag the `Display Rank` measure onto a card labeled **"FIFA Rank"** (Ensure display unit is set to *None*).
+    *   **KPI Card 3**: Drag the `Display Best Finish` measure onto a card labeled **"Best WC Finish"**.
+*   **Horizontal Bar Chart: "All-Time Top Goal Scorers"**:
+    *   **Y-Axis**: `player` (from `gold.dim_top_scorers_ranked`)
+    *   **X-Axis**: `goals` (Sum)
+*   **Funnel Chart: "Participating Teams by Confederation"**:
+    *   **Group**: `confederation` (from `gold.dim_teams`)
+    *   **Values**: Count of `team_name`
+*   **Clustered Column Chart: "Goal Differential by Tournament Stage"**:
+    *   **X-Axis**: `stage` (from `gold.fact_matches`)
+    *   **Y-Axis**: `goal_difference` (Sum)
+*   **Q&A Prompt Visual**: Add a native **Q&A Visual** to the bottom right of the page to allow natural language prompt queries.
 
 ---
 
-### Page 3: Revenue & Match Statistics (Revenue Mart)
-Demonstrates the business/financial insights of the World Cup.
+### Page 3: World Cup Honors & Commercial Forecasts (Commercials & Awards)
+Demonstrates the financial forecasts, award list history, and links to the AI Agent.
 
-- **KPI Cards**:
-  - **Estimated Total Revenue**: Sum of `estimated_revenue_usd` from `mart_world_cup_stats` (Format as Currency in USD).
-  - **Average Attendance per Match**: Sum of `avg_attendance_per_match`.
-- **Area Chart (Revenue Growth)**:
-  - **X-Axis**: `year`
-  - **Y-Axis**: `estimated_revenue_usd`
-  - *Insight*: Demonstrates the massive growth in tickets revenue from early days to the modern multi-million dollar business.
-- **Heatmap Matrix (Match Matrix)**:
-  - **Rows**: `team1_name`
-  - **Columns**: `team2_name`
-  - **Values**: Average of `goal_difference`
-  - *Insight*: Visualizes matchups that historically result in high goal margins.
+*   **Chatbot Hyperlink Header**: Add a text block labeled **"Chatbot 💬"** at the top center. Turn on **Action** $\rightarrow$ set **Type** to **Web URL** $\rightarrow$ paste the live chatbot link: `https://fifa-world-cup-medallion-pipeline.vercel.app/`
+*   **Clustered Bar Chart: "Ballon d'Or Winners"**:
+    *   **Y-Axis**: `player` (from `gold.dim_ballon_dor`)
+    *   **X-Axis**: Count of `award_id` (representing total awards won, e.g. Lionel Messi with 8)
+    *   **Tooltips**: `country`, `club`
+*   **Table: "Tournament Award Winners List"**:
+    *   Add a Table visual with the columns: `year`, `award_type`, `winner`, `country` (from `gold.dim_world_cup_awards`).
+*   **Line Chart: "Goals Scored Over Time"**:
+    *   **X-Axis**: `year`
+    *   **Y-Axis**: `goals_count` (from `gold.dim_editions`)
+*   **Line and Clustered Column Chart: "Attendance vs Ticket Price Trends"**:
+    *   **X-Axis**: `year` (from `gold.mart_world_cup_stats`)
+    *   **Column Y-Axis**: `total_attendance` (Sum)
+    *   **Line Y-Axis**: `avg_ticket_price_usd` (Average)
 
 ---
 
-## 5. Connecting and Refreshing Data
-Since the pipeline is fully orchestrated by Airflow and supports incremental loading:
-1. Whenever the Airflow pipeline runs and ingests new data (e.g. 2026 fixtures updates), the `gold` tables are updated in PostgreSQL.
-2. In Power BI Desktop, simply click the **Refresh** button on the Home ribbon.
-3. Power BI will query the PostgreSQL container, fetch the updated fact/dimension tables, and update all visuals, charts, and metrics automatically.
+## 3. Drill and Synced Slicer Actions
+1.  **Drill Down/Up**: Enabled on the Page 1 combo chart on the X-Axis (`confederation` $\rightarrow$ `team_name`).
+2.  **Drill Through**: Configured on Page 2 targeting `dim_teams.team_name`.
+3.  **Sync Slicers**: Sync the tournament year selection between Page 1 and Page 3.
