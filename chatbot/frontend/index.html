@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIFA World Cup Chatbot</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS & Plugins via CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              start: '#f97316', // Ronas IT Orange
+              end: '#f59e0b',   // Ronas IT Amber
+            },
+            charcoal: {
+              50: '#fcfcfd',    // Warm light background
+              100: '#f4f4f6',   // Soft light sidebar
+              200: '#e5e5ea',
+              800: '#1b1b1e',
+              900: '#0f0f10',   // Deep dark charcoal
+              950: '#09090a',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- React 18, React DOM, and Babel CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .glow-accent {
+      box-shadow: 0 0 20px rgba(249, 115, 22, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-charcoal-50 dark:bg-charcoal-900 text-charcoal-800 dark:text-charcoal-100 transition-colors duration-300">
+  
+  <div id="root"></div>
+
+  <!-- React Application Source Code -->
+  <script type="text/babel">
+    const { useState, useEffect, useRef, useMemo } = React;
+
+    const BASE_URL = "http://localhost:8000";
+    const API_URL = `${BASE_URL}/chat`;
+
+    // Initial dummy chats to look professional on first load
+    const INITIAL_CHATS = [
+      {
+        id: "chat-1",
+        title: "All-time World Cup Champions",
+        timestamp: Date.now() - 2 * 3600 * 1000,
+        messages: [
+          { role: "user", content: "Who has won the most World Cups?" },
+          { 
+            role: "bot", 
+            content: "Brazil is the most successful nation in World Cup history, having won the tournament 5 times. Italy and Germany follow closely with 4 titles each.", 
+            sql: "SELECT champion, COUNT(*) as titles FROM gold.dim_editions GROUP BY champion ORDER BY titles DESC;",
+            sqlResult: {
+              columns: ["champion", "titles"],
+              rows: [
+                { champion: "Brazil", titles: 5 },
+                { champion: "Italy", titles: 4 },
+                { champion: "Germany", titles: 4 },
+                { champion: "Argentina", titles: 3 },
+                { champion: "France", titles: 2 },
+                { champion: "Uruguay", titles: 2 },
+                { champion: "England", titles: 1 },
+                { champion: "Spain", titles: 1 }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        id: "chat-2",
+        title: "Golden Ball Award 2022",
+        timestamp: Date.now() - 30 * 3600 * 1000,
+        messages: [
+          { role: "user", content: "Who won the Golden Ball in 2022?" },
+          { 
+            role: "bot", 
+            content: "Lionel Messi won the Golden Ball in the 2022 FIFA World Cup in Qatar, leading Argentina to their third title.", 
+            sql: "SELECT * FROM gold.dim_world_cup_awards WHERE year = 2022 AND award_name = 'Golden Ball';",
+            sqlResult: {
+              columns: ["year", "award_type", "winner", "country"],
+              rows: [
+                { year: 2022, award_type: "Golden Ball", winner: "Lionel Messi", country: "Argentina" }
+              ]
+            }
+          }
+        ]
+      }
+    ];
+
+    // Suggestions grid questions
+    const SUGGESTIONS = [
+      { text: "Most World Cup titles", q: "Which country has won the most World Cup titles?" },
+      { text: "2022 top goalscorer", q: "Who was the top scorer of the 2022 World Cup?" },
+      { text: "Brazil vs Germany", q: "Compare Brazil vs Germany head to head matches" },
+      { text: "Last 5 Ballon d'Or", q: "List the last 5 Ballon d'Or winners" }
+    ];
+
+    // Schema Explorer structure
+    const SCHEMA_TABLES = [
+      {
+        name: "gold.fact_matches",
+        desc: "Individual match scores and information.",
+        columns: [
+          { name: "match_id", type: "INTEGER" },
+          { name: "year", type: "INTEGER" },
+          { name: "match_date", type: "DATE" },
+          { name: "stage", type: "VARCHAR" },
+          { name: "home_team", type: "VARCHAR" },
+          { name: "away_team", type: "VARCHAR" },
+          { name: "home_score", type: "INTEGER" },
+          { name: "away_score", type: "INTEGER" },
+          { name: "attendance", type: "INTEGER" }
+        ]
+      },
+      {
+        name: "gold.dim_top_scorers_ranked",
+        desc: "All-time ranked scorers by tournament.",
+        columns: [
+          { name: "player", type: "VARCHAR" },
+          { name: "country", type: "VARCHAR" },
+          { name: "goals", type: "INTEGER" },
+          { name: "matches", type: "INTEGER" }
+        ]
+      },
+      {
+        name: "gold.dim_world_cup_awards",
+        desc: "Tournament special individual awards.",
+        columns: [
+          { name: "year", type: "INTEGER" },
+          { name: "award_type", type: "VARCHAR" },
+          { name: "winner", type: "VARCHAR" },
+          { name: "country", type: "VARCHAR" }
+        ]
+      },
+      {
+        name: "gold.dim_ballon_dor",
+        desc: "Historical Ballon d'Or awards.",
+        columns: [
+          { name: "year", type: "INTEGER" },
+          { name: "player", type: "VARCHAR" },
+          { name: "country", type: "VARCHAR" },
+          { name: "rank", type: "INTEGER" }
+        ]
+      },
+      {
+        name: "gold.dim_editions",
+        desc: "World Cup tournament summaries.",
+        columns: [
+          { name: "year", type: "INTEGER" },
+          { name: "host", type: "VARCHAR" },
+          { name: "champion", type: "VARCHAR" },
+          { name: "runner_up", type: "VARCHAR" }
+        ]
+      }
+    ];
+
+    // Custom Markdown parser to render clean, aesthetic text and highlights
+    function Markdown({ text }) {
+      if (!text) return null;
+      
+      const lines = text.split("\n");
+      
+      return (
+        <div className="space-y-2 text-charcoal-700 dark:text-charcoal-200">
+          {lines.map((line, idx) => {
+            const cleanLine = line.trim();
+            
+            if (cleanLine === "---") {
+              return <hr key={idx} className="my-3 border-charcoal-200 dark:border-charcoal-800/60" />;
+            }
+            
+            if (cleanLine.startsWith("###")) {
+              const headerText = cleanLine.substring(3).trim();
+              return (
+                <h3 key={idx} className="text-xs font-bold text-orange-600 dark:text-orange-400 mt-3 mb-1 flex items-center gap-1.5 border-b border-charcoal-100 dark:border-charcoal-800/30 pb-0.5">
+                  {headerText}
+                </h3>
+              );
+            }
+            if (cleanLine.startsWith("##")) {
+              const headerText = cleanLine.substring(2).trim();
+              return (
+                <h2 key={idx} className="text-sm font-extrabold text-orange-600 dark:text-orange-400 mt-4 mb-2">
+                  {headerText}
+                </h2>
+              );
+            }
+            if (cleanLine.startsWith("#")) {
+              const headerText = cleanLine.substring(1).trim();
+              return (
+                <h1 key={idx} className="text-base font-black text-orange-600 dark:text-orange-400 mt-4 mb-2">
+                  {headerText}
+                </h1>
+              );
+            }
+            
+            if (cleanLine.startsWith("-") || cleanLine.startsWith("*")) {
+              const bulletText = cleanLine.substring(1).trim();
+              return (
+                <ul key={idx} className="list-disc pl-4 space-y-0.5 my-1">
+                  <li className="text-xs leading-relaxed text-charcoal-600 dark:text-charcoal-300">
+                    {parseInlineStyles(bulletText)}
+                  </li>
+                </ul>
+              );
+            }
+            
+            const numMatch = cleanLine.match(/^(\d+)\.\s(.*)/);
+            if (numMatch) {
+              const num = numMatch[1];
+              const numText = numMatch[2];
+              return (
+                <ol key={idx} className="list-decimal pl-4 space-y-0.5 my-1">
+                  <li className="text-xs leading-relaxed text-charcoal-600 dark:text-charcoal-300">
+                    {parseInlineStyles(numText)}
+                  </li>
+                </ol>
+              );
+            }
+            
+            if (cleanLine === "") return <div key={idx} className="h-1" />;
+            
+            return (
+              <p key={idx} className="text-xs leading-relaxed">
+                {parseInlineStyles(line)}
+              </p>
+            );
+          })}
+        </div>
+      );
+    }
+    
+    function parseInlineStyles(text) {
+      if (!text) return "";
+      const parts = text.split("**");
+      return parts.map((part, i) => {
+        if (i % 2 === 1) {
+          return <strong key={i} className="font-bold text-orange-600 dark:text-orange-400 bg-orange-500/5 dark:bg-orange-500/10 px-1 py-0.5 rounded">{part}</strong>;
+        }
+        return part;
+      });
+    }
+
+    function InteractiveResult({ result }) {
+      const [viewMode, setViewMode] = useState("table"); 
+      const [sortCol, setSortCol] = useState(null);
+      const [sortDesc, setSortDesc] = useState(false);
+
+      if (!result || !result.rows || result.rows.length === 0) return null;
+
+      const columns = result.columns || (result.rows && result.rows.length > 0 ? Object.keys(result.rows[0]) : []);
+      
+      const numericCol = columns.find(col => {
+        const isIdOrYear = col.toLowerCase().includes("year") || col.toLowerCase().includes("id");
+        return !isIdOrYear && result.rows.some(row => typeof row[col] === 'number');
+      });
+      const labelCol = columns.find(col => col !== numericCol && typeof result.rows[0][col] === 'string') || columns[0];
+
+      useEffect(() => {
+        if (!numericCol) {
+          setViewMode("table");
+        }
+      }, [numericCol]);
+
+      const sortedRows = useMemo(() => {
+        if (!sortCol) return result.rows;
+        const sorted = [...result.rows].sort((a, b) => {
+          let valA = a[sortCol];
+          let valB = b[sortCol];
+          if (valA === null || valA === undefined) return 1;
+          if (valB === null || valB === undefined) return -1;
+          if (typeof valA === 'number' && typeof valB === 'number') {
+            return valA - valB;
+          }
+          return String(valA).localeCompare(String(valB));
+        });
+        return sortDesc ? sorted.reverse() : sorted;
+      }, [result.rows, sortCol, sortDesc]);
+
+      const handleSort = (col) => {
+        if (sortCol === col) {
+          setSortDesc(!sortDesc);
+        } else {
+          setSortCol(col);
+          setSortDesc(true); 
+        }
+      };
+
+      const maxVal = useMemo(() => {
+        if (!numericCol) return 1;
+        return Math.max(...result.rows.map(row => Number(row[numericCol]) || 0), 1);
+      }, [result.rows, numericCol]);
+
+      return (
+        <div className="mt-4 border border-charcoal-200 dark:border-charcoal-800/80 rounded-xl bg-charcoal-50/50 dark:bg-charcoal-900/40 overflow-hidden text-xs">
+          <div className="flex items-center justify-between px-3 py-2 border-b border-charcoal-200 dark:border-charcoal-800/80 bg-white dark:bg-charcoal-800/80">
+            <span className="font-bold text-orange-500 uppercase tracking-wider text-[10px]">Database Rows ({result.rows.length})</span>
+            <div className="flex gap-1">
+              <button 
+                onClick={() => setViewMode("table")}
+                className={`px-2.5 py-1 rounded-md font-semibold text-[10px] transition-colors ${viewMode === "table" ? 'bg-orange-100 text-orange-600 dark:bg-orange-950/20 dark:text-orange-400' : 'text-charcoal-400 hover:bg-charcoal-100 dark:hover:bg-charcoal-800'}`}
+              >
+                📋 Grid Table
+              </button>
+              {numericCol && (
+                <button 
+                  onClick={() => setViewMode("chart")}
+                  className={`px-2.5 py-1 rounded-md font-semibold text-[10px] transition-colors ${viewMode === "chart" ? 'bg-orange-100 text-orange-600 dark:bg-orange-950/20 dark:text-orange-400' : 'text-charcoal-400 hover:bg-charcoal-100 dark:hover:bg-charcoal-800'}`}
+                >
+                  📊 Visual Chart
+                </button>
+              )}
+            </div>
+          </div>
+
+          <div className="p-3 overflow-x-auto no-scrollbar max-h-72">
+            {viewMode === "table" ? (
+              <table className="w-full border-collapse text-left">
+                <thead>
+                  <tr className="border-b className border-charcoal-200 dark:border-charcoal-800/80">
+                    {columns.map(col => (
+                      <th 
+                        key={col}
+                        onClick={() => handleSort(col)}
+                        className="pb-2 font-bold text-charcoal-400 dark:text-charcoal-400 cursor-pointer hover:text-orange-500 select-none pr-3"
+                      >
+                        {col} {sortCol === col ? (sortDesc ? "↓" : "↑") : ""}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {sortedRows.map((row, rIdx) => (
+                    <tr 
+                      key={rIdx} 
+                      className="border-b border-charcoal-100 dark:border-charcoal-800/40 last:border-0 hover:bg-charcoal-100/30 dark:hover:bg-charcoal-800/10"
+                    >
+                      {columns.map(col => (
+                        <td key={col} className="py-2 pr-3 text-charcoal-700 dark:text-charcoal-300 font-mono text-[11px]">
+                          {row[col] !== null ? String(row[col]) : <span className="italic text-charcoal-400">null</span>}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            ) : (
+              <div className="space-y-3 py-2">
+                {result.rows.slice(0, 10).map((row, idx) => {
+                  const label = row[labelCol] || `Item ${idx+1}`;
+                  const val = Number(row[numericCol]) || 0;
+                  const pct = Math.min((val / maxVal) * 100, 100);
+                  return (
+                    <div key={idx} className="space-y-1">
+                      <div className="flex justify-between font-semibold text-[10px] text-charcoal-600 dark:text-charcoal-400">
+                        <span>{label}</span>
+                        <span className="font-bold font-mono text-orange-500">{val}</span>
+                      </div>
+                      <div className="h-2 w-full bg-charcoal-200 dark:bg-charcoal-800 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-gradient-to-r from-brand-start to-brand-end rounded-full transition-all duration-700" 
+                          style={{ width: `${pct}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                  );
+                })}
+                {result.rows.length > 10 && (
+                  <p className="text-[9px] text-charcoal-400 text-center italic mt-2">Showing top 10 rows for chart presentation</p>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    function App() {
+      // Core states
+      const [chats, setChats] = useState(() => {
+        const saved = localStorage.getItem("fifa_chats");
+        return saved ? JSON.parse(saved) : INITIAL_CHATS;
+      });
+      const [activeChatId, setActiveChatId] = useState(() => {
+        return chats.length > 0 ? chats[0].id : null;
+      });
+      
+      // Layout control states
+      const [sidebarOpen, setSidebarOpen] = useState(true);
+      const [schemaOpen, setSchemaOpen] = useState(false);
+      const [darkMode, setDarkMode] = useState(() => {
+        const saved = localStorage.getItem("theme");
+        return saved ? saved === "dark" : false; 
+      });
+      
+      // Interactive feature states
+      const [searchQuery, setSearchQuery] = useState("");
+      const [inputValue, setInputValue] = useState("");
+      const [isGenerating, setIsGenerating] = useState(false);
+      const [activeSqlId, setActiveSqlId] = useState(null); 
+      const [toasts, setToasts] = useState([]);
+      const [soundEnabled, setSoundEnabled] = useState(false);
+      const [isListening, setIsListening] = useState(false);
+      const [attachedFiles, setAttachedFiles] = useState([]);
+      const [showFileDropdown, setShowFileDropdown] = useState(false);
+      const [expandedTables, setExpandedTables] = useState({});
+      const [liveStats, setLiveStats] = useState({ editions: "--", matches: "--", goals: "--", loading: true });
+
+      const chatEndRef = useRef(null);
+
+      // Fetch live statistics from backend
+      useEffect(() => {
+        const getStats = async () => {
+          try {
+            const res = await fetch(`${BASE_URL}/stats`);
+            const data = await res.json();
+            setLiveStats({
+              editions: data.editions || "24",
+              matches: data.matches ? data.matches.toLocaleString() : "1,004",
+              goals: data.goals ? data.goals.toLocaleString() : "2,984",
+              loading: false
+            });
+          } catch (e) {
+            setLiveStats({ editions: "24", matches: "1,004", goals: "2,984", loading: false });
+          }
+        };
+        getStats();
+      }, []);
+
+      // Sync state to LocalStorage
+      useEffect(() => {
+        localStorage.setItem("fifa_chats", JSON.stringify(chats));
+      }, [chats]);
+
+      // Sync dark mode class
+      useEffect(() => {
+        if (darkMode) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        }
+      }, [darkMode]);
+
+      // Auto scroll to bottom
+      useEffect(() => {
+        chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+      }, [chats, activeChatId, isGenerating]);
+
+      // Active chat selector
+      const activeChat = useMemo(() => {
+        return chats.find(c => c.id === activeChatId) || null;
+      }, [chats, activeChatId]);
+
+      // Filter chats for sidebar
+      const groupedChats = useMemo(() => {
+        const filtered = chats.filter(c => 
+          c.title.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        const groups = { today: [], yesterday: [], older: [] };
+        const now = new Date();
+        const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+        const startOfYesterday = startOfToday - 24 * 3600 * 1000;
+
+        filtered.forEach(chat => {
+          if (chat.timestamp >= startOfToday) {
+            groups.today.push(chat);
+          } else if (chat.timestamp >= startOfYesterday) {
+            groups.yesterday.push(chat);
+          } else {
+            groups.older.push(chat);
+          }
+        });
+        return groups;
+      }, [chats, searchQuery]);
+
+      // Synth Sound Generator (Native Web Audio API)
+      const playChime = (type) => {
+        if (!soundEnabled) return;
+        try {
+          const ctx = new (window.AudioContext || window.webkitAudioContext)();
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          
+          if (type === "send") {
+            osc.frequency.setValueAtTime(580, ctx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.12);
+            gain.gain.setValueAtTime(0.04, ctx.currentTime);
+            gain.gain.linearRampToValueAtTime(0.01, ctx.currentTime + 0.12);
+            osc.start();
+            osc.stop(ctx.currentTime + 0.12);
+          } else if (type === "receive") {
+            osc.frequency.setValueAtTime(520, ctx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(740, ctx.currentTime + 0.18);
+            gain.gain.setValueAtTime(0.04, ctx.currentTime);
+            gain.gain.linearRampToValueAtTime(0.01, ctx.currentTime + 0.18);
+            osc.start();
+            osc.stop(ctx.currentTime + 0.18);
+          }
+        } catch (e) {}
+      };
+
+      // Toast System helper
+      const addToast = (message, type = "success") => {
+        const id = Date.now();
+        setToasts(prev => [...prev, { id, message, type }]);
+        setTimeout(() => {
+          setToasts(prev => prev.filter(t => t.id !== id));
+        }, 2500);
+      };
+
+      // Create new chat
+      const handleNewChat = () => {
+        const newId = "chat-" + Date.now();
+        const newChat = {
+          id: newId,
+          title: "New Conversation",
+          timestamp: Date.now(),
+          messages: []
+        };
+        setChats(prev => [newChat, ...prev]);
+        setActiveChatId(newId);
+        addToast("Created new conversation thread!");
+        if (window.innerWidth < 768) {
+          setSidebarOpen(false);
+        }
+      };
+
+      // Delete a chat
+      const handleDeleteChat = (id, e) => {
+        e.stopPropagation();
+        const updated = chats.filter(c => c.id !== id);
+        setChats(updated);
+        addToast("Conversation deleted.", "info");
+        if (activeChatId === id) {
+          setActiveChatId(updated.length > 0 ? updated[0].id : null);
+        }
+      };
+
+      // Send Message logic
+      const handleSendMessage = async (textToSend) => {
+        const text = textToSend || inputValue;
+        if (!text.trim() || isGenerating) return;
+
+        setInputValue("");
+        setIsGenerating(true);
+        playChime("send");
+
+        let currentChatId = activeChatId;
+        let currentChat = activeChat;
+
+        if (!currentChatId) {
+          const newId = "chat-" + Date.now();
+          currentChat = {
+            id: newId,
+            title: text.length > 30 ? text.substring(0, 30) + "..." : text,
+            timestamp: Date.now(),
+            messages: []
+          };
+          setChats(prev => [currentChat, ...prev]);
+          setActiveChatId(newId);
+          currentChatId = newId;
+        }
+
+        // Include file headers in question query if files are attached
+        let processedText = text;
+        if (attachedFiles.length > 0) {
+          processedText = `[File attached: ${attachedFiles.join(", ")}] ` + text;
+          setAttachedFiles([]); // Clear attachment chips
+        }
+
+        const userMsg = { role: "user", content: text };
+        setChats(prev => prev.map(c => {
+          if (c.id === currentChatId) {
+            const newTitle = c.title === "New Conversation" ? 
+              (text.length > 30 ? text.substring(0, 30) + "..." : text) : c.title;
+            return {
+              ...c,
+              title: newTitle,
+              timestamp: Date.now(),
+              messages: [...c.messages, userMsg]
+            };
+          }
+          return c;
+        }));
+
+        try {
+          const payload = {
+            question: processedText,
+            session_id: currentChatId
+          };
+
+          const response = await fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+
+          const data = await response.json();
+
+          const botMsg = {
+            role: "bot",
+            content: data.answer || "Something went wrong.",
+            sql: data.sql_used || null,
+            sqlResult: data.sql_result || null
+          };
+
+          setChats(prev => prev.map(c => {
+            if (c.id === currentChatId) {
+              return { ...c, messages: [...c.messages, botMsg] };
+            }
+            return c;
+          }));
+          playChime("receive");
+
+        } catch (err) {
+          const botError = {
+            role: "bot",
+            content: "Connection error — could not reach the database backend on port 8000.",
+            sql: null
+          };
+          setChats(prev => prev.map(c => {
+            if (c.id === currentChatId) {
+              return { ...c, messages: [...c.messages, botError] };
+            }
+            return c;
+          }));
+        } finally {
+          setIsGenerating(false);
+        }
+      };
+
+      const handleKeyDown = (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          handleSendMessage();
+        }
+      };
+
+      // Voice Input Simulation
+      const handleVoiceClick = () => {
+        if (isListening) return;
+        setIsListening(true);
+        addToast("Voice recognition active... Speak now.", "info");
+
+        // Simulate typing of speech in 3 seconds
+        setTimeout(() => {
+          setInputValue("Who won the World Cup in 2026?");
+          setIsListening(false);
+          addToast("Speech translated successfully!");
+        }, 2200);
+      };
+
+      // File attachment simulator
+      const handleAttachFile = (filename) => {
+        setAttachedFiles(prev => [...prev, filename]);
+        setShowFileDropdown(false);
+        addToast(`Attached dataset: ${filename}`);
+      };
+
+      // Copy Text utility
+      const copyToClipboard = (text, type = "Message") => {
+        navigator.clipboard.writeText(text);
+        addToast(`Copied ${type} to clipboard!`);
+      };
+
+      // Schema paste query helper
+      const handlePasteSchemaTerm = (term) => {
+        setInputValue(prev => prev + " " + term);
+        addToast(`Inserted '${term}' into your input box.`);
+      };
+
+      // Toggle table details inside right explorer
+      const toggleTableExpand = (name) => {
+        setExpandedTables(prev => ({ ...prev, [name]: !prev[name] }));
+      };
+
+      // Highlight SQL keywords for display
+      const highlightSql = (code) => {
+        if (!code) return "";
+        const keywords = /\b(SELECT|FROM|WHERE|JOIN|LEFT|RIGHT|INNER|ON|GROUP BY|ORDER BY|LIMIT|AND|OR|IN|AS|INSERT|INTO|VALUES|CREATE|TABLE|ALTER|DEFAULT|PRIVILEGES|DO|GRANT|TO|WITH|PASSWORD)\b/gi;
+        let highlighted = code
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+        highlighted = highlighted.replace(keywords, '<span class="text-orange-400 font-bold">$1</span>');
+        highlighted = highlighted.replace(/('[^']*')/g, '<span class="text-emerald-400">$1</span>');
+        highlighted = highlighted.replace(/\b(\d+)\b/g, '<span class="text-amber-400">$1</span>');
+        return highlighted;
+      };
+
+      return (
+        <div class="h-screen w-screen flex overflow-hidden font-sans">
+          
+          {/* TOAST SYSTEM CONTAINER */}
+          <div class="fixed top-4 right-4 space-y-2 z-50 pointer-events-none max-w-sm">
+            {toasts.map(t => (
+              <div 
+                key={t.id} 
+                class="p-3.5 rounded-xl bg-white dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 shadow-xl flex items-center gap-2.5 animate-fadeIn pointer-events-auto transform translate-y-0 transition-all duration-300"
+              >
+                <span class="text-base">
+                  {t.type === "success" ? "✓" : t.type === "error" ? "⚠️" : "ℹ"}
+                </span>
+                <span class="text-xs font-semibold text-charcoal-700 dark:text-charcoal-200">{t.message}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* 1. COLLAPSIBLE LEFT SIDEBAR */}
+          <div class={`h-full bg-white dark:bg-charcoal-900 border-r border-charcoal-200 dark:border-charcoal-800 flex flex-col transition-all duration-300 z-30
+            ${sidebarOpen ? 'w-[280px] translate-x-0' : 'w-0 -translate-x-[280px] md:w-0'} 
+            fixed md:relative`}
+          >
+            {/* Header / Brand */}
+            <div class="p-4 flex items-center justify-between border-b border-charcoal-100 dark:border-charcoal-800">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-start to-brand-end flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-orange-500/30">
+                  ⚽
+                </div>
+                <div>
+                  <h2 class="font-bold text-sm tracking-wide">FIFA PIPELINE</h2>
+                  <p class="text-[10px] text-charcoal-400 uppercase tracking-widest font-semibold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
+                    Live Warehouse
+                  </p>
+                </div>
+              </div>
+              
+              <button 
+                onClick={() => setSidebarOpen(false)}
+                class="p-1.5 rounded-lg hover:bg-charcoal-100 dark:hover:bg-charcoal-800 text-charcoal-400 hover:text-charcoal-600 dark:hover:text-charcoal-200 md:hidden"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+
+            {/* New Chat Button */}
+            <div class="p-3">
+              <button 
+                onClick={handleNewChat}
+                class="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-gradient-to-r from-brand-start to-brand-end text-white rounded-xl font-medium text-sm hover:opacity-90 hover:scale-[1.01] active:scale-95 transition-all shadow-md shadow-orange-500/10"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                New Conversation
+              </button>
+            </div>
+
+            {/* Search Bar */}
+            <div class="px-3 pb-3">
+              <div class="relative flex items-center">
+                <svg class="w-4 h-4 text-charcoal-400 absolute left-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <input 
+                  type="text" 
+                  placeholder="Search chats..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  class="w-full pl-9 pr-4 py-2 bg-charcoal-100 dark:bg-charcoal-800/60 border border-transparent focus:border-charcoal-200 dark:focus:border-charcoal-700 rounded-lg text-xs outline-none transition-all placeholder-charcoal-400"
+                />
+              </div>
+            </div>
+
+            {/* Chats List Grouped */}
+            <div class="flex-1 overflow-y-auto no-scrollbar px-3 space-y-4">
+              
+              {/* TODAY */}
+              {groupedChats.today.length > 0 && (
+                <div>
+                  <h3 class="text-[10px] uppercase font-bold text-charcoal-400 tracking-wider mb-1.5 px-2">Today</h3>
+                  <div class="space-y-1">
+                    {groupedChats.today.map(c => (
+                      <div 
+                        key={c.id} 
+                        onClick={() => { setActiveChatId(c.id); if (window.innerWidth < 768) setSidebarOpen(false); }}
+                        class={`group flex items-center justify-between p-2.5 rounded-xl cursor-pointer transition-all border ${activeChatId === c.id ? 'bg-orange-50/60 dark:bg-orange-950/10 border-orange-100 dark:border-orange-900/30 text-orange-600 dark:text-orange-400' : 'bg-transparent border-transparent hover:bg-charcoal-100/50 dark:hover:bg-charcoal-800/40'}`}
+                      >
+                        <div class="flex items-center gap-2 overflow-hidden mr-2">
+                          <span class="text-base flex-shrink-0">💬</span>
+                          <span class="text-xs font-medium truncate">{c.title}</span>
+                        </div>
+                        <button 
+                          onClick={(e) => handleDeleteChat(c.id, e)}
+                          class="opacity-0 group-hover:opacity-100 p-1 hover:bg-charcoal-200 dark:hover:bg-charcoal-700 rounded text-charcoal-400 hover:text-red-500 transition-all"
+                        >
+                          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* YESTERDAY */}
+              {groupedChats.yesterday.length > 0 && (
+                <div>
+                  <h3 class="text-[10px] uppercase font-bold text-charcoal-400 tracking-wider mb-1.5 px-2">Yesterday</h3>
+                  <div class="space-y-1 font-semibold">
+                    {groupedChats.yesterday.map(c => (
+                      <div 
+                        key={c.id} 
+                        onClick={() => { setActiveChatId(c.id); if (window.innerWidth < 768) setSidebarOpen(false); }}
+                        class={`group flex items-center justify-between p-2.5 rounded-xl cursor-pointer transition-all border ${activeChatId === c.id ? 'bg-orange-50/60 dark:bg-orange-950/10 border-orange-100 dark:border-orange-900/30 text-orange-600 dark:text-orange-400' : 'bg-transparent border-transparent hover:bg-charcoal-100/50 dark:hover:bg-charcoal-800/40'}`}
+                      >
+                        <div class="flex items-center gap-2 overflow-hidden mr-2">
+                          <span class="text-base flex-shrink-0">💬</span>
+                          <span class="text-xs font-medium truncate">{c.title}</span>
+                        </div>
+                        <button 
+                          onClick={(e) => handleDeleteChat(c.id, e)}
+                          class="opacity-0 group-hover:opacity-100 p-1 hover:bg-charcoal-200 dark:hover:bg-charcoal-700 rounded text-charcoal-400 hover:text-red-500 transition-all"
+                        >
+                          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {groupedChats.older.length > 0 && (
+                <div>
+                  <h3 class="text-[10px] uppercase font-bold text-charcoal-400 tracking-wider mb-1.5 px-2">Previous 7 Days</h3>
+                  <div class="space-y-1">
+                    {groupedChats.older.map(c => (
+                      <div 
+                        key={c.id} 
+                        onClick={() => { setActiveChatId(c.id); if (window.innerWidth < 768) setSidebarOpen(false); }}
+                        class={`group flex items-center justify-between p-2.5 rounded-xl cursor-pointer transition-all border ${activeChatId === c.id ? 'bg-orange-50/60 dark:bg-orange-950/10 border-orange-100 dark:border-orange-900/30 text-orange-600 dark:text-orange-400' : 'bg-transparent border-transparent hover:bg-charcoal-100/50 dark:hover:bg-charcoal-800/40'}`}
+                      >
+                        <div class="flex items-center gap-2 overflow-hidden mr-2">
+                          <span class="text-base flex-shrink-0">💬</span>
+                          <span class="text-xs font-medium truncate">{c.title}</span>
+                        </div>
+                        <button 
+                          onClick={(e) => handleDeleteChat(c.id, e)}
+                          class="opacity-0 group-hover:opacity-100 p-1 hover:bg-charcoal-200 dark:hover:bg-charcoal-700 rounded text-charcoal-400 hover:text-red-500 transition-all"
+                        >
+                          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {chats.length === 0 && (
+                <div class="text-center py-6 text-xs text-charcoal-400 font-medium">
+                  No conversation history
+                </div>
+              )}
+            </div>
+
+            {/* Profile Drawer */}
+            <div class="p-3 border-t border-charcoal-100 dark:border-charcoal-800 bg-charcoal-100/40 dark:bg-charcoal-900/40 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-orange-500/20 text-orange-500 flex items-center justify-center font-bold text-xs border border-orange-500/30">
+                  AW
+                </div>
+                <div class="overflow-hidden">
+                  <p class="text-xs font-bold truncate">Aryan's Workspace</p>
+                  <p class="text-[9px] text-charcoal-400 font-semibold truncate">D:\Kanini Projects</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-1">
+                {/* Audio Synth Toggle */}
+                <button 
+                  onClick={() => { setSoundEnabled(!soundEnabled); addToast(soundEnabled ? "Audio Muted." : "Audio Enabled!", "info"); }}
+                  class={`p-1.5 rounded-lg transition-colors ${soundEnabled ? 'text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-950/20' : 'text-charcoal-400 hover:bg-charcoal-200 dark:hover:bg-charcoal-800'}`}
+                  title={soundEnabled ? "Mute audio" : "Unmute audio"}
+                >
+                  {soundEnabled ? (
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                  ) : (
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15zM17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/></svg>
+                  )}
+                </button>
+
+                <button 
+                  onClick={() => setDarkMode(!darkMode)}
+                  class="p-1.5 rounded-lg hover:bg-charcoal-200 dark:hover:bg-charcoal-800 text-charcoal-500 hover:text-charcoal-800 dark:hover:text-charcoal-200 transition-colors"
+                  title="Toggle Light/Dark Theme"
+                >
+                  {darkMode ? (
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-11.314l.707.707m11.314 11.314l.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  ) : (
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                  )}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Sidebar Overlay for Mobile */}
+          {sidebarOpen && (
+            <div 
+              onClick={() => setSidebarOpen(false)}
+              class="fixed inset-0 bg-black/40 backdrop-blur-sm z-20 md:hidden"
+            ></div>
+          )}
+
+          {/* 2. MAIN CHAT AREA */}
+          <div class="flex-1 flex flex-col h-full bg-charcoal-50 dark:bg-charcoal-900 transition-colors relative overflow-hidden">
+            
+            {/* Top Toolbar Navigation */}
+            <div class="h-14 flex items-center justify-between px-4 border-b border-charcoal-200/60 dark:border-charcoal-800/80 bg-white/40 dark:bg-charcoal-900/40 backdrop-blur-md z-10">
+              <div class="flex items-center gap-3">
+                <button 
+                  onClick={() => setSidebarOpen(!sidebarOpen)}
+                  class="p-2 rounded-lg hover:bg-charcoal-200/80 dark:hover:bg-charcoal-800/60 text-charcoal-500 dark:text-charcoal-300"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+                <div class="flex items-center gap-2">
+                  <h2 class="font-semibold text-xs md:text-sm">{activeChat ? activeChat.title : "New Conversation"}</h2>
+                  {isGenerating && <span class="w-1.5 h-1.5 rounded-full bg-orange-500 animate-ping"></span>}
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-2">
+                {/* Database Schema Explorer Toggle Button */}
+                <button 
+                  onClick={() => { setSchemaOpen(!schemaOpen); addToast(schemaOpen ? "Closed Schema panel" : "Opened Schema Database Explorer", "info"); }}
+                  class={`p-2 rounded-lg transition-all ${schemaOpen ? 'text-orange-500 bg-orange-50 dark:bg-orange-950/20' : 'text-charcoal-500 dark:text-charcoal-300 hover:bg-charcoal-200/80 dark:hover:bg-charcoal-800/60'}`}
+                  title="Toggle Database Schema Explorer"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Chat Messages */}
+            <div class="flex-1 overflow-y-auto px-4 py-6 md:px-8 space-y-6">
+              
+              <div class="max-w-[768px] mx-auto space-y-6">
+                
+                {/* WELCOME / EMPTY STATE */}
+                {(!activeChat || activeChat.messages.length === 0) && (
+                  <div class="pt-10 pb-8 flex flex-col items-center text-center space-y-6">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-start to-brand-end flex items-center justify-center text-3xl shadow-xl shadow-orange-500/20">
+                      ⚽
+                    </div>
+                    <div class="space-y-2">
+                      <h1 class="text-xl md:text-2xl font-extrabold tracking-tight">FIFA World Cup AI Assistant</h1>
+                      <p class="text-xs md:text-sm text-charcoal-400 dark:text-charcoal-400 max-w-sm">
+                        Ask any question about World Cup records, top scorers, match statistics, trophies, or historical champions.
+                      </p>
+                    </div>
+
+                    {/* Live Quick DB Stats Panel */}
+                    <div class="flex gap-4 p-4 rounded-xl bg-white dark:bg-charcoal-800/30 border border-charcoal-200/60 dark:border-charcoal-800/60 shadow-sm w-full max-w-[600px] justify-around">
+                      <div class="text-center">
+                        <span class={`block text-lg font-extrabold transition-all duration-500 ${liveStats.loading ? 'animate-pulse text-charcoal-300' : 'text-orange-500'}`}>
+                          {liveStats.editions}
+                        </span>
+                        <span class="text-[10px] font-semibold text-charcoal-400 uppercase tracking-wider">Editions</span>
+                      </div>
+                      <div class="w-px h-10 bg-charcoal-200 dark:bg-charcoal-800"></div>
+                      <div class="text-center">
+                        <span class={`block text-lg font-extrabold transition-all duration-500 ${liveStats.loading ? 'animate-pulse text-charcoal-300' : 'text-orange-500'}`}>
+                          {liveStats.matches}
+                        </span>
+                        <span class="text-[10px] font-semibold text-charcoal-400 uppercase tracking-wider">Matches</span>
+                      </div>
+                      <div class="w-px h-10 bg-charcoal-200 dark:bg-charcoal-800"></div>
+                      <div class="text-center">
+                        <span class={`block text-lg font-extrabold transition-all duration-500 ${liveStats.loading ? 'animate-pulse text-charcoal-300' : 'text-orange-500'}`}>
+                          {liveStats.goals}
+                        </span>
+                        <span class="text-[10px] font-semibold text-charcoal-400 uppercase tracking-wider">Goals Logged</span>
+                      </div>
+                    </div>
+                    
+                    {/* Suggested Cards Grid */}
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 w-full max-w-[600px] pt-2">
+                      {SUGGESTIONS.map((item, idx) => (
+                        <div 
+                          key={idx}
+                          onClick={() => handleSendMessage(item.q)}
+                          class="p-4 rounded-xl text-left bg-white dark:bg-charcoal-800/30 border border-charcoal-200/60 dark:border-charcoal-800/60 hover:border-orange-500/50 dark:hover:border-orange-500/50 hover:bg-orange-50/10 dark:hover:bg-orange-950/10 cursor-pointer shadow-sm hover:shadow transition-all group duration-300"
+                        >
+                          <h4 class="font-semibold text-xs text-charcoal-800 dark:text-charcoal-200 group-hover:text-orange-600 dark:group-hover:text-orange-400 mb-1">{item.text}</h4>
+                          <p class="text-[11px] text-charcoal-400 dark:text-charcoal-400 line-clamp-1">{item.q}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* ACTIVE MESSAGES LIST */}
+                {activeChat && activeChat.messages.map((msg, idx) => (
+                  <div 
+                    key={idx} 
+                    class={`flex gap-3.5 group animate-fadeIn ${msg.role === "user" ? 'justify-end' : 'justify-start'}`}
+                  >
+                    {msg.role === "bot" && (
+                      <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-start to-brand-end flex items-center justify-center text-sm flex-shrink-0 shadow shadow-orange-500/10">
+                        ⚽
+                      </div>
+                    )}
+                    
+                    <div class="max-w-[85%] space-y-1.5 relative">
+                      
+                      {/* Bubble */}
+                      <div class={`rounded-2xl p-4 text-sm leading-relaxed border ${
+                        msg.role === "user" 
+                          ? 'bg-gradient-to-tr from-orange-500 to-amber-500 text-white border-orange-400/20 shadow-md shadow-orange-500/5' 
+                          : 'bg-white dark:bg-charcoal-800/30 border-charcoal-200/80 dark:border-charcoal-800/80 text-charcoal-800 dark:text-charcoal-100'
+                      }`}>
+                        
+                        <Markdown text={msg.content} />
+
+                        {/* Interactive Grid Table and Chart Visualizer */}
+                        {msg.role === "bot" && msg.sqlResult && (
+                          <InteractiveResult result={msg.sqlResult} />
+                        )}
+
+                        {/* Collapsible SQL panel */}
+                        {msg.role === "bot" && msg.sql && (
+                          <div class="mt-3.5 border-t border-charcoal-100 dark:border-charcoal-800 pt-3">
+                            <button 
+                              onClick={() => setActiveSqlId(activeSqlId === idx ? null : idx)}
+                              class="text-[11px] font-semibold text-orange-500 dark:text-orange-400 hover:underline flex items-center gap-1"
+                            >
+                              {activeSqlId === idx ? '▾ Hide SQL query' : '▸ View SQL database query used'}
+                            </button>
+                            
+                            {activeSqlId === idx && (
+                              <div class="mt-2 text-xs rounded-xl bg-charcoal-900 border border-charcoal-800 p-3.5 font-mono text-charcoal-200 overflow-x-auto relative">
+                                <button 
+                                  onClick={() => copyToClipboard(msg.sql, "SQL Statement")}
+                                  class="absolute right-2.5 top-2 py-1 px-2 rounded bg-charcoal-800 border border-charcoal-700 text-[10px] text-charcoal-400 hover:text-white hover:bg-charcoal-700 transition-colors"
+                                >
+                                  📄 Copy
+                                </button>
+                                <pre class="whitespace-pre" dangerouslySetInnerHTML={{ __html: highlightSql(msg.sql) }} />
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Utility Action Bar */}
+                      <div class={`flex items-center gap-3.5 text-[10px] text-charcoal-400 dark:text-charcoal-400 px-1 ${msg.role === "user" ? 'justify-end' : 'justify-start'}`}>
+                        <span>Just now</span>
+                        
+                        <div class="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1.5">
+                          <button 
+                            onClick={() => copyToClipboard(msg.content, "Message")}
+                            class="hover:text-charcoal-600 dark:hover:text-charcoal-200 p-0.5 rounded"
+                            title="Copy message"
+                          >
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 002 2h2a2 2 0 002-2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                          </button>
+                          
+                          {msg.role === "bot" && (
+                            <React.Fragment>
+                              <button 
+                                onClick={() => handleSendMessage(activeChat.messages[idx - 1]?.content)}
+                                class="hover:text-charcoal-600 dark:hover:text-charcoal-200 p-0.5 rounded"
+                                title="Regenerate"
+                              >
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18"/></svg>
+                              </button>
+                              <button class="hover:text-emerald-500 p-0.5 rounded" title="Thumbs up">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
+                              </button>
+                              <button class="hover:text-red-500 p-0.5 rounded" title="Thumbs down">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.737 3h4.018c.163 0 .326.02.485.06L17 4m-7 10V19a2 2 0 002 2h.095c.5 0 .905-.405.905-.905 0-.714.211-1.412.608-2.006L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5"/></svg>
+                              </button>
+                            </React.Fragment>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+
+                {/* GENERATING / TYPING LOADERS */}
+                {isGenerating && (
+                  <div class="flex gap-3.5 justify-start animate-pulse">
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-start to-brand-end flex items-center justify-center text-sm flex-shrink-0 shadow">
+                      ⚽
+                    </div>
+                    <div class="bg-white dark:bg-charcoal-800/30 border border-charcoal-200/80 dark:border-charcoal-800/80 rounded-2xl p-4 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-orange-500 animate-bounce" style={{ animationDelay: '0ms' }}></span>
+                      <span class="w-2 h-2 rounded-full bg-orange-500 animate-bounce" style={{ animationDelay: '150ms' }}></span>
+                      <span class="w-2 h-2 rounded-full bg-orange-500 animate-bounce" style={{ animationDelay: '300ms' }}></span>
+                    </div>
+                  </div>
+                )}
+
+                <div ref={chatEndRef} />
+              </div>
+            </div>
+
+            {/* Bottom Floating Input panel */}
+            <div class="p-4 border-t border-charcoal-200/50 dark:border-charcoal-800/50 bg-white/20 dark:bg-charcoal-900/20 backdrop-blur-md">
+              <div class="max-w-[768px] mx-auto space-y-2">
+                
+                {/* Active Attachment Chips */}
+                {attachedFiles.length > 0 && (
+                  <div class="flex flex-wrap gap-1.5 px-2">
+                    {attachedFiles.map((file, idx) => (
+                      <span key={idx} class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-950/20 border border-orange-200/30 text-[10px] font-bold text-orange-600 dark:text-orange-400">
+                        📄 {file}
+                        <button 
+                          onClick={() => setAttachedFiles(prev => prev.filter(f => f !== file))}
+                          class="hover:text-orange-800 font-bold ml-0.5"
+                        >
+                          ×
+                        </button>
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {/* Voice Listening Active visualizer */}
+                {isListening && (
+                  <div class="flex items-center gap-1.5 px-3 py-1 bg-orange-50 dark:bg-orange-950/10 text-orange-600 dark:text-orange-400 rounded-lg text-xs animate-pulse font-semibold">
+                    <span class="w-1.5 h-3 bg-orange-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
+                    <span class="w-1.5 h-4 bg-orange-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
+                    <span class="w-1.5 h-2 bg-orange-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+                    Voice recognition listening... speak your database query now.
+                  </div>
+                )}
+
+                <div class="relative flex items-center bg-white dark:bg-charcoal-800/60 border border-charcoal-200 dark:border-charcoal-800 rounded-2xl p-2.5 shadow-lg shadow-charcoal-800/5 dark:shadow-charcoal-950/20 focus-within:border-orange-500 dark:focus-within:border-orange-500/50 transition-all duration-300">
+                  
+                  {/* Attach File Button */}
+                  <div class="relative">
+                    <button 
+                      onClick={() => setShowFileDropdown(!showFileDropdown)}
+                      class="p-2 rounded-xl hover:bg-charcoal-100 dark:hover:bg-charcoal-800 text-charcoal-400 hover:text-charcoal-600 dark:hover:text-charcoal-200 transition-colors"
+                      title="Attach file"
+                    >
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg>
+                    </button>
+
+                    {/* Mock Dropdown for File Attachment */}
+                    {showFileDropdown && (
+                      <div class="absolute bottom-12 left-0 w-48 rounded-xl bg-white dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 shadow-xl p-1 z-30 animate-fadeIn">
+                        <button onClick={() => handleAttachFile("matches_2026.csv")} class="w-full text-left px-3 py-2 rounded-lg text-xs hover:bg-charcoal-100 dark:hover:bg-charcoal-700">📄 matches_2026.csv (Dataset)</button>
+                        <button onClick={() => handleAttachFile("top_scorers.json")} class="w-full text-left px-3 py-2 rounded-lg text-xs hover:bg-charcoal-100 dark:hover:bg-charcoal-700">📄 top_scorers.json (Metadata)</button>
+                        <button onClick={() => handleAttachFile("awards.xml")} class="w-full text-left px-3 py-2 rounded-lg text-xs hover:bg-charcoal-100 dark:hover:bg-charcoal-700">📄 awards.xml (DDL Logs)</button>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Textarea Input */}
+                  <textarea 
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    placeholder="Ask anything about the World Cup data..."
+                    rows="1"
+                    class="flex-1 max-h-[160px] bg-transparent outline-none resize-none border-none pl-3 pr-2 py-1.5 text-sm placeholder-charcoal-400 text-charcoal-800 dark:text-charcoal-100"
+                  ></textarea>
+
+                  {/* Voice Input Button */}
+                  <button 
+                    onClick={handleVoiceClick}
+                    class={`p-2 rounded-xl transition-colors mr-1 ${isListening ? 'text-orange-500 bg-orange-100 dark:bg-orange-950/20' : 'text-charcoal-400 hover:bg-charcoal-100 dark:hover:bg-charcoal-800 hover:text-charcoal-600 dark:hover:text-charcoal-200'}`}
+                    title="Simulate Voice Input"
+                  >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+                  </button>
+
+                  {/* Submit button */}
+                  <button 
+                    onClick={() => handleSendMessage()}
+                    disabled={!inputValue.trim() || isGenerating}
+                    class={`w-10 h-10 rounded-xl flex items-center justify-center text-white transition-all duration-300
+                      ${inputValue.trim() && !isGenerating 
+                        ? 'bg-gradient-to-tr from-brand-start to-brand-end hover:shadow-lg hover:shadow-orange-500/25 active:scale-95' 
+                        : 'bg-charcoal-100 dark:bg-charcoal-800 text-charcoal-400 cursor-not-allowed opacity-50'}`}
+                    title="Send Message"
+                  >
+                    <svg class="w-4 h-4 rotate-45 mr-0.5 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                  </button>
+                </div>
+              </div>
+              
+              <p class="text-[10px] text-center text-charcoal-400 mt-2 font-medium">
+                FIFA World Cup Chatbot can generate SQL queries that alter database view counts. Verify queries before deployment.
+              </p>
+            </div>
+            
+          </div>
+
+          {/* 3. SCHEMA EXPLORER (RIGHT COLLAPSIBLE PANEL) */}
+          <div class={`h-full bg-white dark:bg-charcoal-900 border-l border-charcoal-200 dark:border-charcoal-800 flex flex-col transition-all duration-300 z-30
+            ${schemaOpen ? 'w-[320px] translate-x-0' : 'w-0 translate-x-[320px]'}`}
+          >
+            {/* Header */}
+            <div class="p-4 flex items-center justify-between border-b border-charcoal-100 dark:border-charcoal-800">
+              <div class="flex items-center gap-2">
+                <span class="text-base text-orange-500">📁</span>
+                <span class="font-bold text-xs uppercase tracking-wider text-charcoal-700 dark:text-charcoal-200">Database Schema</span>
+              </div>
+              <button 
+                onClick={() => setSchemaOpen(false)}
+                class="p-1 rounded hover:bg-charcoal-100 dark:hover:bg-charcoal-800 text-charcoal-400 hover:text-charcoal-600"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Explanation note */}
+            <div class="p-3 bg-orange-50/50 dark:bg-orange-950/10 border-b border-orange-100/30 text-[10.5px] text-charcoal-500 dark:text-charcoal-400 font-medium">
+              💡 **Interactive tip**: Click any table or column name to instantly paste it into your chat box.
+            </div>
+
+            {/* Tables Explorer list */}
+            <div class="flex-1 overflow-y-auto p-3 space-y-3 no-scrollbar">
+              {SCHEMA_TABLES.map(table => (
+                <div 
+                  key={table.name} 
+                  class="rounded-xl border border-charcoal-200/80 dark:border-charcoal-800/80 bg-white/40 dark:bg-charcoal-900/40 p-2.5 transition-all shadow-sm"
+                >
+                  <div 
+                    onClick={() => toggleTableExpand(table.name)}
+                    class="flex items-center justify-between cursor-pointer group"
+                  >
+                    <span 
+                      onClick={(e) => { e.stopPropagation(); handlePasteSchemaTerm(table.name); }}
+                      class="text-xs font-bold text-charcoal-800 dark:text-charcoal-200 hover:text-orange-500 hover:underline transition-colors"
+                      title="Paste table name"
+                    >
+                      {table.name}
+                    </span>
+                    <span class="text-xs text-charcoal-400 group-hover:text-charcoal-600">
+                      {expandedTables[table.name] ? '▼' : '▶'}
+                    </span>
+                  </div>
+                  <p class="text-[10px] text-charcoal-400 mt-1">{table.desc}</p>
+                  
+                  {/* Expanded Columns details */}
+                  {expandedTables[table.name] && (
+                    <div class="mt-3.5 pt-2 border-t border-charcoal-100 dark:border-charcoal-800 space-y-2 animate-fadeIn">
+                      {table.columns.map(col => (
+                        <div 
+                          key={col.name} 
+                          onClick={() => handlePasteSchemaTerm(col.name)}
+                          class="flex items-center justify-between p-1 rounded hover:bg-charcoal-100/60 dark:hover:bg-charcoal-800/40 cursor-pointer group"
+                          title="Paste column name"
+                        >
+                          <span class="text-[11px] font-medium font-mono text-charcoal-600 dark:text-charcoal-300 group-hover:text-orange-500 group-hover:underline">
+                            {col.name}
+                          </span>
+                          <span class="text-[9px] uppercase font-bold text-charcoal-400 font-mono">
+                            {col.type}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          
+        </div>
+      );
+    }
+
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+  </script>
+</body>
+</html>

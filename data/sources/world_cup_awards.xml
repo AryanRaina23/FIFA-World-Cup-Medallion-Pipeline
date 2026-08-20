@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FIFA World Cup Individual Awards Dataset
+  Source: compiled from FIFA official records / public tournament award histories
+-->
+<world_cup_awards>
+
+  <edition year="1930" host="Uruguay">
+    <golden_ball winner="José Nasazzi" country="Uruguay"/>
+  </edition>
+
+  <edition year="1934" host="Italy">
+    <golden_ball winner="Giuseppe Meazza" country="Italy"/>
+  </edition>
+
+  <edition year="1938" host="France">
+    <golden_ball winner="Leônidas" country="Brazil"/>
+  </edition>
+
+  <edition year="1950" host="Brazil">
+    <golden_ball winner="Zizinho" country="Brazil"/>
+  </edition>
+
+  <edition year="1954" host="Switzerland">
+    <golden_ball winner="Ferenc Puskás" country="Hungary"/>
+  </edition>
+
+  <edition year="1958" host="Sweden">
+    <golden_ball winner="Didi" country="Brazil"/>
+  </edition>
+
+  <edition year="1962" host="Chile">
+    <golden_ball winner="Garrincha" country="Brazil"/>
+  </edition>
+
+  <edition year="1966" host="England">
+    <golden_ball winner="Bobby Charlton" country="England"/>
+  </edition>
+
+  <edition year="1970" host="Mexico">
+    <golden_ball winner="Pelé" country="Brazil"/>
+  </edition>
+
+  <edition year="1974" host="West Germany">
+    <golden_ball winner="Johan Cruyff" country="Netherlands"/>
+  </edition>
+
+  <edition year="1978" host="Argentina">
+    <golden_ball winner="Mario Kempes" country="Argentina"/>
+  </edition>
+
+  <edition year="1982" host="Spain">
+    <golden_ball winner="Paolo Rossi" country="Italy"/>
+  </edition>
+
+  <edition year="1986" host="Mexico">
+    <golden_ball winner="Diego Maradona" country="Argentina"/>
+  </edition>
+
+  <edition year="1990" host="Italy">
+    <golden_ball winner="Salvatore Schillaci" country="Italy"/>
+  </edition>
+
+  <edition year="1994" host="USA">
+    <golden_ball winner="Romário" country="Brazil"/>
+    <golden_glove winner="Michel Preud'homme" country="Belgium"/>
+  </edition>
+
+  <edition year="1998" host="France">
+    <golden_ball winner="Ronaldo" country="Brazil"/>
+    <golden_glove winner="Fabien Barthez" country="France"/>
+  </edition>
+
+  <edition year="2002" host="Korea/Japan">
+    <golden_ball winner="Oliver Kahn" country="Germany"/>
+    <golden_glove winner="Oliver Kahn" country="Germany"/>
+  </edition>
+
+  <edition year="2006" host="Germany">
+    <golden_ball winner="Zinedine Zidane" country="France"/>
+    <golden_glove winner="Gianluigi Buffon" country="Italy"/>
+    <best_young_player winner="Lukas Podolski" country="Germany"/>
+  </edition>
+
+  <edition year="2010" host="South Africa">
+    <golden_ball winner="Diego Forlán" country="Uruguay"/>
+    <golden_glove winner="Iker Casillas" country="Spain"/>
+    <best_young_player winner="Thomas Müller" country="Germany"/>
+  </edition>
+
+  <edition year="2014" host="Brazil">
+    <golden_ball winner="Lionel Messi" country="Argentina"/>
+    <golden_glove winner="Manuel Neuer" country="Germany"/>
+    <best_young_player winner="Paul Pogba" country="France"/>
+  </edition>
+
+  <edition year="2018" host="Russia">
+    <golden_ball winner="Luka Modrić" country="Croatia"/>
+    <golden_glove winner="Thibaut Courtois" country="Belgium"/>
+    <best_young_player winner="Kylian Mbappé" country="France"/>
+  </edition>
+
+  <edition year="2022" host="Qatar">
+    <golden_ball winner="Lionel Messi" country="Argentina"/>
+    <golden_glove winner="Emiliano Martínez" country="Argentina"/>
+    <best_young_player winner="Enzo Fernández" country="Argentina"/>
+  </edition>
+
+  <edition year="2026" host="USA/Canada/Mexico">
+    <golden_ball winner="Rodri" country="Spain"/>
+    <golden_glove winner="Unai Simón" country="Spain"/>
+    <best_young_player winner="Pau Cubarsí" country="Spain"/>
+  </edition>
+
+</world_cup_awards>

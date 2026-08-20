@@ -275,7 +275,7 @@
     {
         "edition": 22,
         "year": 2022,
-        "player": "Kylian Mbappé",
+        "player": "Kylian Mbapp\u00e9",
         "country": "France",
         "position": "FW",
         "goals": 8,
@@ -284,70 +284,5 @@
         "matches_played": 7,
         "host": "Qatar",
         "team_result": "Runner-up"
-    },
-    {
-        "edition": 23,
-        "year": 2026,
-        "player": "Kylian Mbappé",
-        "country": "France",
-        "position": "FW",
-        "goals": 10,
-        "assists": 4,
-        "penalties": 0,
-        "matches_played": 7,
-        "host": "USA, Mexico, Canada",
-        "team_result": "Fourth place"
-    },
-    {
-        "edition": 23,
-        "year": 2026,
-        "player": "Lionel Messi",
-        "country": "Argentina",
-        "position": "FW",
-        "goals": 8,
-        "assists": 4,
-        "penalties": 0,
-        "matches_played": 7,
-        "host": "USA, Mexico, Canada",
-        "team_result": "Runner-up"
-    },
-    {
-        "edition": 23,
-        "year": 2026,
-        "player": "Jude Bellingham",
-        "country": "England",
-        "position": "MF",
-        "goals": 7,
-        "assists": 1,
-        "penalties": 0,
-        "matches_played": 7,
-        "host": "USA, Mexico, Canada",
-        "team_result": "Third place"
-    },
-    {
-        "edition": 23,
-        "year": 2026,
-        "player": "Erling Haaland",
-        "country": "Norway",
-        "position": "FW",
-        "goals": 7,
-        "assists": 0,
-        "penalties": 0,
-        "matches_played": 6,
-        "host": "USA, Mexico, Canada",
-        "team_result": "Group stage"
-    },
-    {
-        "edition": 23,
-        "year": 2026,
-        "player": "Harry Kane",
-        "country": "England",
-        "position": "FW",
-        "goals": 6,
-        "assists": 1,
-        "penalties": 0,
-        "matches_played": 7,
-        "host": "USA, Mexico, Canada",
-        "team_result": "Third place"
     }
 ]

@@ -6,19 +6,22 @@ import psycopg2
 
 def get_connection():
     hosts = ['postgres', 'localhost', '127.0.0.1']
-    for host in hosts:
-        try:
-            conn = psycopg2.connect(
-                host=host,
-                database='fifa_dw',
-                user='postgres',
-                password='postgres',
-                port=5432,
-                connect_timeout=3
-            )
-            return conn
-        except Exception:
-            continue
+    ports = [5433, 5432]
+    for port in ports:
+        for host in hosts:
+            try:
+                import psycopg2
+                conn = psycopg2.connect(
+                    host=host,
+                    database='fifa_dw',
+                    user='postgres',
+                    password='postgres',
+                    port=port,
+                    connect_timeout=3
+                )
+                return conn
+            except Exception:
+                continue
     raise Exception("Unable to connect to PostgreSQL database.")
 
 def log_to_audit(run_id, step_name, table_name, processed, inserted, updated, rejected, status, error_msg=None):
@@ -439,13 +442,86 @@ def main():
             print(f"Teams SCD2: {scd_inserted} versions inserted, {scd_updated} closed & updated.")
             log_to_audit(run_id, "SILVER", "silver.dim_teams_scd2", len(df), scd_inserted, scd_updated, 0, "SUCCESS")
 
+        # =====================================================================
+        # 6. PROCESS BALLON D'OR
+        # =====================================================================
+        print("Processing ballon_dor...")
+        cur.execute(
+            """
+            SELECT r.* FROM bronze.ballon_dor_raw r
+            JOIN bronze.valid_records v ON r._ingestion_id = v.ingestion_id
+            WHERE r._run_id = %s AND v.run_id = %s;
+            """,
+            (run_id, run_id)
+        )
+        colnames = [desc[0] for desc in cur.description]
+        rows = cur.fetchall()
+        
+        bd_inserted = 0
+        if rows:
+            df = pd.DataFrame(rows, columns=colnames)
+            cur.execute("TRUNCATE TABLE silver.ballon_dor;")
+            for _, r in df.iterrows():
+                yr = int(float(r['year']))
+                player = r['player'].strip()
+                country = r['country'].strip() if r['country'] and r['country'].lower() != 'none' and r['country'].lower() != 'nan' else None
+                club = r['club'].strip() if r['club'] and r['club'].lower() != 'none' and r['club'].lower() != 'nan' else None
+                
+                cur.execute(
+                    """
+                    INSERT INTO silver.ballon_dor (year, player, country, club)
+                    VALUES (%s, %s, %s, %s);
+                    """,
+                    (yr, player, country, club)
+                )
+                bd_inserted += 1
+            print(f"Ballon d'Or: {bd_inserted} records inserted.")
+            log_to_audit(run_id, "SILVER", "silver.ballon_dor", len(df), bd_inserted, 0, 0, "SUCCESS")
+
+        # =====================================================================
+        # 7. PROCESS WORLD CUP AWARDS
+        # =====================================================================
+        print("Processing world_cup_awards...")
+        cur.execute(
+            """
+            SELECT r.* FROM bronze.world_cup_awards_raw r
+            JOIN bronze.valid_records v ON r._ingestion_id = v.ingestion_id
+            WHERE r._run_id = %s AND v.run_id = %s;
+            """,
+            (run_id, run_id)
+        )
+        colnames = [desc[0] for desc in cur.description]
+        rows = cur.fetchall()
+        
+        wca_inserted = 0
+        if rows:
+            df = pd.DataFrame(rows, columns=colnames)
+            cur.execute("TRUNCATE TABLE silver.world_cup_awards;")
+            for _, r in df.iterrows():
+                yr = int(float(r['year']))
+                host = r['host'].strip()
+                aw_type = r['award_type'].strip()
+                winner = r['winner'].strip()
+                country = r['country'].strip() if r['country'] and r['country'].lower() != 'none' and r['country'].lower() != 'nan' else None
+                
+                cur.execute(
+                    """
+                    INSERT INTO silver.world_cup_awards (year, host, award_type, winner, country)
+                    VALUES (%s, %s, %s, %s, %s);
+                    """,
+                    (yr, host, aw_type, winner, country)
+                )
+                wca_inserted += 1
+            print(f"World Cup Awards: {wca_inserted} records inserted.")
+            log_to_audit(run_id, "SILVER", "silver.world_cup_awards", len(df), wca_inserted, 0, 0, "SUCCESS")
+
         # Export Silver tables to local CSV files to show the Silver Layer in the workspace
         script_dir = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.dirname(script_dir)
         base_dir = os.environ.get("AIRFLOW_HOME", project_root)
         silver_dir = os.path.join(base_dir, "data", "silver")
         os.makedirs(silver_dir, exist_ok=True)
-        silver_tables = ["editions", "matches", "fixtures", "top_scorers", "dim_teams_scd2", "lkp_confederations"]
+        silver_tables = ["editions", "matches", "fixtures", "top_scorers", "dim_teams_scd2", "lkp_confederations", "ballon_dor", "world_cup_awards"]
         for tbl in silver_tables:
             try:
                 sdf = pd.read_sql_query(f"SELECT * FROM silver.{tbl};", conn)

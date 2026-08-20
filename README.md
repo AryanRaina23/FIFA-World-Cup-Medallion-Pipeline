@@ -146,7 +146,7 @@ Verify running services:
 ```bash
 docker ps
 ```
-*(Confirms `postgres_fifa` on port `5432` and `airflow_webserver` on port `8080` are active).*
+*(Confirms `postgres_fifa` on port `5433` and `airflow_webserver` on port `8080` are active).*
 
 ### 2. Initialize & Convert Data Sources
 ```bash
@@ -204,3 +204,26 @@ FIFA World Cup Pipeline PoC/
 ├── FIFA_World_Cup_Dashboard.pbix     # Power BI report file
 └── README.md                         # Project documentation
 ```
+
+---
+
+## 6. End-to-End System Verification & Port Conflict Fixes
+
+To ensure a seamless developer experience and resolve conflicts in local environments, the following fixes were implemented during the end-to-end verification:
+
+1. **Port Mapping (5433:5432)**: Remapped the host Postgres port to `5433` (e.g. `5433:5432` in `docker-compose.yml`) to prevent conflicts with native host database services running on `5432`. Scripts dynamically try port `5433` first, falling back to `5432` automatically.
+2. **Python 3.10 Compatibility**: Extracted list comprehension backslashes from f-string expressions in `ingest_to_bronze.py` to prevent `SyntaxError` crashes on Python 3.10.
+3. **Dynamic Paths**: Replaced all hardcoded absolute Windows paths (`C:\Users\aryan\...`) with relative path resolution in all ETL scripts, making them fully functional inside Linux Docker containers.
+4. **Chatbot Frontend Service**: Registered `chatbot_frontend` as the 5th Docker service inside `docker-compose.yml` to serve the static website on port `5501` automatically inside Docker.
+5. **Secure Readonly Logging**: Refactored `log_chat_query` to insert logs using the restricted `chatbot_readonly` database role rather than the `postgres` superuser.
+
+---
+
+## 7. Cloud Production Deployment (Neon, Render & Vercel)
+
+For production deployment, the project utilizes a modern serverless PaaS architecture:
+
+1. **Database (Neon)**: The PostgreSQL data warehouse is hosted on a Neon serverless instance. Schemas and awards tables are initialized, and data is loaded using local conformed CSV backups.
+2. **Backend API (Render)**: The FastAPI chatbot backend is deployed on Render as a Web Service. It automatically compiles using the Dockerfile inside `chatbot/backend/` and connects to Neon over SSL.
+3. **Frontend (Vercel)**: The React chatbot frontend is deployed to Vercel, pointing to the Render API endpoint for global secure access.
+

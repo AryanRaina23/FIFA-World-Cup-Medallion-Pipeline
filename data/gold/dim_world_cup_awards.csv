@@ -1,0 +1,39 @@
+award_id,year,host,award_type,winner,country
+718,1930,Uruguay,golden_ball,José Nasazzi,Uruguay
+719,1934,Italy,golden_ball,Giuseppe Meazza,Italy
+720,1938,France,golden_ball,Leônidas,Brazil
+721,1950,Brazil,golden_ball,Zizinho,Brazil
+722,1954,Switzerland,golden_ball,Ferenc Puskás,Hungary
+723,1958,Sweden,golden_ball,Didi,Brazil
+724,1962,Chile,golden_ball,Garrincha,Brazil
+725,1966,England,golden_ball,Bobby Charlton,England
+726,1970,Mexico,golden_ball,Pelé,Brazil
+727,1974,West Germany,golden_ball,Johan Cruyff,Netherlands
+728,1978,Argentina,golden_ball,Mario Kempes,Argentina
+729,1982,Spain,golden_ball,Paolo Rossi,Italy
+730,1986,Mexico,golden_ball,Diego Maradona,Argentina
+731,1990,Italy,golden_ball,Salvatore Schillaci,Italy
+732,1994,USA,golden_ball,Romário,Brazil
+733,1994,USA,golden_glove,Michel Preud'homme,Belgium
+734,1998,France,golden_ball,Ronaldo,Brazil
+735,1998,France,golden_glove,Fabien Barthez,France
+736,2002,Korea/Japan,golden_ball,Oliver Kahn,Germany
+737,2002,Korea/Japan,golden_glove,Oliver Kahn,Germany
+738,2006,Germany,golden_ball,Zinedine Zidane,France
+739,2006,Germany,golden_glove,Gianluigi Buffon,Italy
+740,2006,Germany,best_young_player,Lukas Podolski,Germany
+741,2010,South Africa,golden_ball,Diego Forlán,Uruguay
+742,2010,South Africa,golden_glove,Iker Casillas,Spain
+743,2010,South Africa,best_young_player,Thomas Müller,Germany
+744,2014,Brazil,golden_ball,Lionel Messi,Argentina
+745,2014,Brazil,golden_glove,Manuel Neuer,Germany
+746,2014,Brazil,best_young_player,Paul Pogba,France
+747,2018,Russia,golden_ball,Luka Modrić,Croatia
+748,2018,Russia,golden_glove,Thibaut Courtois,Belgium
+749,2018,Russia,best_young_player,Kylian Mbappé,France
+750,2022,Qatar,golden_ball,Lionel Messi,Argentina
+751,2022,Qatar,golden_glove,Emiliano Martínez,Argentina
+752,2022,Qatar,best_young_player,Enzo Fernández,Argentina
+753,2026,USA/Canada/Mexico,golden_ball,Rodri,Spain
+754,2026,USA/Canada/Mexico,golden_glove,Unai Simón,Spain
+755,2026,USA/Canada/Mexico,best_young_player,Pau Cubarsí,Spain

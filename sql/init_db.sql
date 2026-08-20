@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS bronze.teams_raw (
     _ingestion_id VARCHAR(50),
     _ingested_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     _source_file VARCHAR(255),
-    _source_format VARCHAR(10),
+    _source_format VARCHAR(50),
     _run_id VARCHAR(50)
 );
 
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS bronze.fixtures_raw (
     _ingestion_id VARCHAR(50),
     _ingested_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     _source_file VARCHAR(255),
-    _source_format VARCHAR(10),
+    _source_format VARCHAR(50),
     _run_id VARCHAR(50)
 );
 
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS bronze.editions_raw (
     _ingestion_id VARCHAR(50),
     _ingested_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     _source_file VARCHAR(255),
-    _source_format VARCHAR(10),
+    _source_format VARCHAR(50),
     _run_id VARCHAR(50)
 );
 
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS bronze.matches_raw (
     _ingestion_id VARCHAR(50),
     _ingested_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     _source_file VARCHAR(255),
-    _source_format VARCHAR(10),
+    _source_format VARCHAR(50),
     _run_id VARCHAR(50)
 );
 
@@ -133,7 +133,32 @@ CREATE TABLE IF NOT EXISTS bronze.top_scorers_raw (
     _ingestion_id VARCHAR(50),
     _ingested_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     _source_file VARCHAR(255),
-    _source_format VARCHAR(10),
+    _source_format VARCHAR(50),
+    _run_id VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS bronze.ballon_dor_raw (
+    year VARCHAR(50),
+    player VARCHAR(255),
+    country VARCHAR(255),
+    club VARCHAR(255),
+    _ingestion_id VARCHAR(50),
+    _ingested_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    _source_file VARCHAR(255),
+    _source_format VARCHAR(50),
+    _run_id VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS bronze.world_cup_awards_raw (
+    year VARCHAR(50),
+    host VARCHAR(255),
+    award_type VARCHAR(100),
+    winner VARCHAR(255),
+    country VARCHAR(255),
+    _ingestion_id VARCHAR(50),
+    _ingested_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    _source_file VARCHAR(255),
+    _source_format VARCHAR(50),
     _run_id VARCHAR(50)
 );
 
@@ -256,6 +281,23 @@ CREATE TABLE IF NOT EXISTS silver.top_scorers (
     team_result VARCHAR(255)
 );
 
+CREATE TABLE IF NOT EXISTS silver.ballon_dor (
+    award_id SERIAL PRIMARY KEY,
+    year INT NOT NULL,
+    player VARCHAR(255) NOT NULL,
+    country VARCHAR(255),
+    club VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS silver.world_cup_awards (
+    award_id SERIAL PRIMARY KEY,
+    year INT NOT NULL,
+    host VARCHAR(255) NOT NULL,
+    award_type VARCHAR(100) NOT NULL,
+    winner VARCHAR(255) NOT NULL,
+    country VARCHAR(255)
+);
+
 -- ============================================================================
 -- GOLD SCHEMA TABLES (Star Schema for reporting)
 -- ============================================================================
@@ -319,4 +361,23 @@ CREATE TABLE IF NOT EXISTS gold.mart_world_cup_stats (
     avg_attendance_per_match FLOAT,
     avg_ticket_price_usd FLOAT,
     estimated_revenue_usd FLOAT
+);
+
+-- dim_ballon_dor (Ballon d'Or Dimension)
+CREATE TABLE IF NOT EXISTS gold.dim_ballon_dor (
+    award_id INT PRIMARY KEY,
+    year INT NOT NULL,
+    player VARCHAR(255) NOT NULL,
+    country VARCHAR(255),
+    club VARCHAR(255)
+);
+
+-- dim_world_cup_awards (World Cup Individual Awards Dimension)
+CREATE TABLE IF NOT EXISTS gold.dim_world_cup_awards (
+    award_id INT PRIMARY KEY,
+    year INT NOT NULL,
+    host VARCHAR(255) NOT NULL,
+    award_type VARCHAR(100) NOT NULL,
+    winner VARCHAR(255) NOT NULL,
+    country VARCHAR(255)
 );

@@ -8,7 +8,7 @@ This guide provides step-by-step instructions on how to connect Microsoft Power 
 Your data warehouse is running locally inside a Docker container. When configuring the connection, use the following credentials:
 
 - **Data Source Type**: PostgreSQL Database
-- **Server**: `localhost` (or `127.0.0.1:5432` if standard porting is required)
+- **Server**: `localhost:5433` (or `127.0.0.1:5433` if standard porting is required)
 - **Database**: `fifa_dw`
 - **Authentication Method**: Database (Username/Password)
   - **Username**: `postgres`
@@ -28,7 +28,7 @@ Follow these steps to import your analytics-ready datasets:
 2. On the **Home** tab, click **Get Data** $\rightarrow$ **More...**
 3. Select **Database** $\rightarrow$ **PostgreSQL database**, and click **Connect**.
 4. In the dialog box:
-   - **Server**: `localhost:5432`
+   - **Server**: `localhost:5433`
    - **Database**: `fifa_dw`
    - **Data Connectivity Mode**: Select **Import** (recommended for performance and interactive filtering).
 5. Click **OK**.
@@ -108,6 +108,10 @@ This page drills down into team performance and legendary top scorers.
   - **X-Axis**: `current_fifa_rank` (from `dim_teams`)
   - **Y-Axis**: `best_wc_result`
   - *Insight*: Evaluates whether a team's current FIFA ranking correlates with their historically best finish.
+- **Donut Chart (Player Goal Share)**:
+  - **Legend**: `player` (from `dim_top_scorers_ranked`)
+  - **Values**: `goals` (Sum)
+  - *Insight*: Shows the percentage breakdown of goal contribution within a selected squad (filtered by Country and Year).
 
 ---
 

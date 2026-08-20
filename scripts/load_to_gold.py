@@ -5,20 +5,22 @@ import pandas as pd
 
 def get_connection():
     hosts = ['postgres', 'localhost', '127.0.0.1']
-    for host in hosts:
-        try:
-            conn = psycopg2.connect(
-                host=host,
-                database='fifa_dw',
-                user='postgres',
-                password='postgres',
-                port=5432,
-                connect_timeout=3
-            )
-            return conn
-        except Exception as e:
-            print(f"Connection to host {host} failed: {e}")
-            continue
+    ports = [5433, 5432]
+    for port in ports:
+        for host in hosts:
+            try:
+                import psycopg2
+                conn = psycopg2.connect(
+                    host=host,
+                    database='fifa_dw',
+                    user='postgres',
+                    password='postgres',
+                    port=port,
+                    connect_timeout=3
+                )
+                return conn
+            except Exception:
+                continue
     raise Exception("Unable to connect to PostgreSQL database.")
 
 def log_to_audit(run_id, step_name, table_name, processed, inserted, updated, rejected, status, error_msg=None):
@@ -260,6 +262,33 @@ def main():
         log_to_audit(run_id, "GOLD", "gold.dim_all_time_top_scorers", len(scorers_data), len(scorers_data), 0, 0, "SUCCESS")
 
         # =====================================================================
+        # 5c. LOAD BALLON D'OR AND WORLD CUP AWARDS
+        # =====================================================================
+        print("Loading gold.dim_ballon_dor...")
+        cur.execute("TRUNCATE TABLE gold.dim_ballon_dor;")
+        cur.execute(
+            """
+            INSERT INTO gold.dim_ballon_dor (award_id, year, player, country, club)
+            SELECT award_id, year, player, country, club FROM silver.ballon_dor;
+            """
+        )
+        bd_gold_loaded = cur.rowcount
+        print(f"Loaded {bd_gold_loaded} rows to gold.dim_ballon_dor.")
+        log_to_audit(run_id, "GOLD", "gold.dim_ballon_dor", bd_gold_loaded, bd_gold_loaded, 0, 0, "SUCCESS")
+
+        print("Loading gold.dim_world_cup_awards...")
+        cur.execute("TRUNCATE TABLE gold.dim_world_cup_awards;")
+        cur.execute(
+            """
+            INSERT INTO gold.dim_world_cup_awards (award_id, year, host, award_type, winner, country)
+            SELECT award_id, year, host, award_type, winner, country FROM silver.world_cup_awards;
+            """
+        )
+        wca_gold_loaded = cur.rowcount
+        print(f"Loaded {wca_gold_loaded} rows to gold.dim_world_cup_awards.")
+        log_to_audit(run_id, "GOLD", "gold.dim_world_cup_awards", wca_gold_loaded, wca_gold_loaded, 0, 0, "SUCCESS")
+
+        # =====================================================================
         # 6. LOAD KPI_SUMMARY (KPI Summary equivalent)
         # =====================================================================
         print("Loading gold.kpi_summary...")
@@ -294,7 +323,7 @@ def main():
         base_dir = os.environ.get("AIRFLOW_HOME", project_root)
         gold_dir = os.path.join(base_dir, "data", "gold")
         os.makedirs(gold_dir, exist_ok=True)
-        gold_tables = ["dim_teams", "dim_editions", "fact_matches", "mart_world_cup_stats", "kpi_summary", "dim_all_time_top_scorers"]
+        gold_tables = ["dim_teams", "dim_editions", "fact_matches", "mart_world_cup_stats", "kpi_summary", "dim_all_time_top_scorers", "dim_ballon_dor", "dim_world_cup_awards"]
         for tbl in gold_tables:
             try:
                 gdf = pd.read_sql_query(f"SELECT * FROM gold.{tbl};", conn)

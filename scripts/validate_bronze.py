@@ -9,19 +9,22 @@ from psycopg2.extras import execute_values
 
 def get_connection():
     hosts = ['postgres', 'localhost', '127.0.0.1']
-    for host in hosts:
-        try:
-            conn = psycopg2.connect(
-                host=host,
-                database='fifa_dw',
-                user='postgres',
-                password='postgres',
-                port=5432,
-                connect_timeout=3
-            )
-            return conn
-        except Exception:
-            continue
+    ports = [5433, 5432]
+    for port in ports:
+        for host in hosts:
+            try:
+                import psycopg2
+                conn = psycopg2.connect(
+                    host=host,
+                    database='fifa_dw',
+                    user='postgres',
+                    password='postgres',
+                    port=port,
+                    connect_timeout=3
+                )
+                return conn
+            except Exception:
+                continue
     raise Exception("Unable to connect to PostgreSQL database.")
 
 def log_to_audit(run_id, step_name, table_name, processed, inserted, updated, rejected, status, error_msg=None):
@@ -67,7 +70,7 @@ def main():
         )
         conn.commit()
         
-        tables = ["teams", "fixtures", "editions", "matches", "top_scorers"]
+        tables = ["teams", "fixtures", "editions", "matches", "top_scorers", "ballon_dor", "world_cup_awards"]
         
         for table in tables:
             print(f"\nValidating bronze.{table}_raw records for run {run_id}")
@@ -219,6 +222,40 @@ def main():
                         reasons.append(f"Duplicate top scorer '{player}' in edition '{ed_str}'.")
                     else:
                         seen_pks.add(scorer_key)
+                        
+                elif table == "ballon_dor":
+                    yr_str = row_dict.get('year', '').strip()
+                    player = row_dict.get('player', '').strip()
+                    if not yr_str or yr_str.lower() == 'nan':
+                        reasons.append("Field 'year' is null or empty.")
+                    if not player or player.lower() == 'nan':
+                        reasons.append("Field 'player' is null or empty.")
+                    # Duplicate check: year (except for 2020 which was not awarded)
+                    if yr_str and yr_str != "2020":
+                        if yr_str in seen_pks:
+                            reasons.append(f"Duplicate Ballon d'Or award for year {yr_str}.")
+                        else:
+                            seen_pks.add(yr_str)
+                            
+                elif table == "world_cup_awards":
+                    yr_str = row_dict.get('year', '').strip()
+                    host = row_dict.get('host', '').strip()
+                    aw_type = row_dict.get('award_type', '').strip()
+                    winner = row_dict.get('winner', '').strip()
+                    if not yr_str or yr_str.lower() == 'nan':
+                        reasons.append("Field 'year' is null or empty.")
+                    if not host or host.lower() == 'nan':
+                        reasons.append("Field 'host' is null or empty.")
+                    if not aw_type or aw_type.lower() == 'nan':
+                        reasons.append("Field 'award_type' is null or empty.")
+                    if not winner or winner.lower() == 'nan':
+                        reasons.append("Field 'winner' is null or empty.")
+                    
+                    award_key = (yr_str, aw_type.lower())
+                    if award_key in seen_pks:
+                        reasons.append(f"Duplicate award type '{aw_type}' for year {yr_str}.")
+                    else:
+                        seen_pks.add(award_key)
                 
                 # Check outcome
                 if reasons:

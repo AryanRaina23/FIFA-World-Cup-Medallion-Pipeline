@@ -1,0 +1,39 @@
+year,host,award_type,winner,country,_ingestion_id,_ingested_at,_source_file,_source_format,_run_id
+1930,Uruguay,golden_ball,José Nasazzi,Uruguay,4fd99657-ec2d-4af4-95cc-54fe5aba1e69,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1934,Italy,golden_ball,Giuseppe Meazza,Italy,c3e24c46-3c2f-4ec0-9c3e-12a4e69f71e0,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1938,France,golden_ball,Leônidas,Brazil,97d0dabb-2db9-493d-b42c-e73d8492cbc6,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1950,Brazil,golden_ball,Zizinho,Brazil,07284049-8c46-40cb-b3d9-3bc93afac65c,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1954,Switzerland,golden_ball,Ferenc Puskás,Hungary,2d53b6b9-3330-418f-a5b0-752026eb4783,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1958,Sweden,golden_ball,Didi,Brazil,73652abe-e44c-4ba3-90fe-30e1d11abd42,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1962,Chile,golden_ball,Garrincha,Brazil,bc19b97e-fe67-4b14-9352-5376635baaf2,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1966,England,golden_ball,Bobby Charlton,England,c3fa7a91-68d5-42ba-925b-60b65c3a2c49,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1970,Mexico,golden_ball,Pelé,Brazil,7b885e1e-9200-4a85-abd1-d6a9f8be18ab,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1974,West Germany,golden_ball,Johan Cruyff,Netherlands,1f47d7a4-3219-42e2-a6c8-b8c7b1791461,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1978,Argentina,golden_ball,Mario Kempes,Argentina,ad28e4d0-0462-4bee-90e4-df7e7780bd24,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1982,Spain,golden_ball,Paolo Rossi,Italy,c11f372b-f14c-4e82-82b1-6ea0fd7e994c,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1986,Mexico,golden_ball,Diego Maradona,Argentina,305bbbe2-1c92-4e9f-ba09-94f6831bae73,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1990,Italy,golden_ball,Salvatore Schillaci,Italy,c707e53f-aa84-47d3-af3c-2f8bb8efe36f,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1994,USA,golden_ball,Romário,Brazil,a243eb9d-f050-4d62-a5bf-c648d4fa4c43,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1994,USA,golden_glove,Michel Preud'homme,Belgium,7240df41-512b-4061-86bd-552fd082503a,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1998,France,golden_ball,Ronaldo,Brazil,e4dd1f4a-ebc5-484a-8e1b-ada63a4e731c,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1998,France,golden_glove,Fabien Barthez,France,7747d45d-31e5-409c-adca-8eec073d136e,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2002,Korea/Japan,golden_ball,Oliver Kahn,Germany,e623dc7f-40e4-45b3-b1f7-10ffadfa178c,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2002,Korea/Japan,golden_glove,Oliver Kahn,Germany,040d4b20-41b1-444b-800d-7a47d2545359,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2006,Germany,golden_ball,Zinedine Zidane,France,2529776d-27e3-4da8-8841-33af46c65775,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2006,Germany,golden_glove,Gianluigi Buffon,Italy,f58eb56d-0b8f-4875-82b1-a17313d60466,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2006,Germany,best_young_player,Lukas Podolski,Germany,da60ebaf-717c-426f-969a-c2d376c8f76b,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2010,South Africa,golden_ball,Diego Forlán,Uruguay,c84c844d-b877-4e2a-ba1b-9ebe5c8b6f38,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2010,South Africa,golden_glove,Iker Casillas,Spain,e3226564-9f38-4e0a-8a69-c1f4a5eb69d4,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2010,South Africa,best_young_player,Thomas Müller,Germany,a40524a8-0633-4510-b815-a8a0c1891139,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2014,Brazil,golden_ball,Lionel Messi,Argentina,81a93932-0781-4ee1-9358-a354b04834f9,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2014,Brazil,golden_glove,Manuel Neuer,Germany,c3360f6c-d76a-4104-9f58-e7cbc8e4efc4,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2014,Brazil,best_young_player,Paul Pogba,France,1aa340a7-5ef6-436e-ba97-872aba35a3e8,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2018,Russia,golden_ball,Luka Modrić,Croatia,5bf07eef-602f-4a57-85fd-4cb518f3f40d,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2018,Russia,golden_glove,Thibaut Courtois,Belgium,4e6ca4df-7635-4ef9-acd5-f52f3d1d1ddd,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2018,Russia,best_young_player,Kylian Mbappé,France,575b36cf-4746-4cd4-aafb-3324fd57b542,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2022,Qatar,golden_ball,Lionel Messi,Argentina,5d973426-5a0c-489b-9b7c-3f99dc3a719b,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2022,Qatar,golden_glove,Emiliano Martínez,Argentina,94d6f821-2b68-4451-8835-dd9528c07169,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2022,Qatar,best_young_player,Enzo Fernández,Argentina,3a3a39b5-6b06-4379-8306-4ca3a80e371a,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2026,USA/Canada/Mexico,golden_ball,Rodri,Spain,559b2bea-941f-40f3-a712-7a5e12e3f6e1,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2026,USA/Canada/Mexico,golden_glove,Unai Simón,Spain,12665c7b-ea34-426b-aeb9-5f19c4cb96cd,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2026,USA/Canada/Mexico,best_young_player,Pau Cubarsí,Spain,9f0ee6e6-aee6-4385-a195-cf4802d0aa38,2026-08-18T15:31:31.725149,world_cup_awards.xml,XML_WC_AWARDS,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353

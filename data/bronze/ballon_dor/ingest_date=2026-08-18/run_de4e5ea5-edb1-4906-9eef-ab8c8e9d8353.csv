@@ -1,0 +1,71 @@
+year,player,country,club,_ingestion_id,_ingested_at,_source_file,_source_format,_run_id
+1956,Stanley Matthews,England,Blackpool,c123c6b7-06b0-40cd-a8db-bc830b813f98,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1957,Alfredo Di Stéfano,Spain,Real Madrid,cf275046-7581-4cfe-9b06-e74206758078,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1958,Raymond Kopa,France,Real Madrid,fdbfae47-9d98-47ed-98e6-9b3c9f0b76ae,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1959,Alfredo Di Stéfano,Spain,Real Madrid,89967bcc-cc27-4523-b8eb-faaaeae07766,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1960,Luis Suárez,Spain,Barcelona,7c02c8b2-f233-4aa8-8647-b612965062fd,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1961,Omar Sívori,Italy,Juventus,0062859e-1a6f-40a8-bad2-265d08759333,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1962,Josef Masopust,Czechoslovakia,Dukla Prague,50e5c6cf-9579-4934-9c43-f7deb9edd4ed,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1963,Lev Yashin,Soviet Union,Dynamo Moscow,bc6bc507-123a-471b-a136-aba2bcf0ee90,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1964,Denis Law,Scotland,Manchester United,d713f161-f61b-40e8-8f0b-ca3e42f1fa45,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1965,Eusébio,Portugal,Benfica,e27d0171-1b92-4cf3-aa71-b934a7bf2880,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1966,Bobby Charlton,England,Manchester United,5a40102b-c8b7-4e9c-8b3d-8f939dbf9e72,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1967,Flórián Albert,Hungary,Ferencváros,f8019c72-658e-425a-8ba4-49a795e28385,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1968,George Best,Northern Ireland,Manchester United,ea0d753e-e85f-4252-b9ce-e0848a2716db,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1969,Gianni Rivera,Italy,AC Milan,85d2ec52-16e5-4099-8116-7413e5840d4d,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1970,Gerd Müller,West Germany,Bayern Munich,1cdc65c0-c9b0-4842-9093-a36eb6dc4dcf,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1971,Johan Cruyff,Netherlands,Ajax,cfb7d53a-8a1a-40b3-8d8e-1745acaea907,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1972,Franz Beckenbauer,West Germany,Bayern Munich,57944b03-5a54-4e38-86f9-0dab9eb4965b,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1973,Johan Cruyff,Netherlands,Barcelona,0c72e0fd-e56b-4557-894a-7593a3d5d715,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1974,Johan Cruyff,Netherlands,Barcelona,85a94805-48ef-4956-bc86-44eef60b310e,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1975,Oleg Blokhin,Soviet Union,Dynamo Kyiv,2b987418-4106-4649-941b-f7f9c4844d72,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1976,Franz Beckenbauer,West Germany,Bayern Munich,6e398c98-a5ca-42a6-ab29-1b34da32a8f5,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1977,Allan Simonsen,Denmark,Borussia Mönchengladbach,9de2ffde-e662-41fc-a760-fd04ea8273bd,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1978,Kevin Keegan,England,Hamburg,d58f4250-5417-4830-803b-e28f36f752cf,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1979,Kevin Keegan,England,Hamburg,f5cc201f-68db-44da-808b-5f68f26b4b85,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1980,Karl-Heinz Rummenigge,West Germany,Bayern Munich,46a0eece-c32b-4c8d-aef0-62f4275428b2,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1981,Karl-Heinz Rummenigge,West Germany,Bayern Munich,9bc3f021-001d-45ee-8fb0-8315d624e5e6,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1982,Paolo Rossi,Italy,Juventus,21befff8-ab41-4022-94f1-372648d57cb7,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1983,Michel Platini,France,Juventus,a699efd5-6405-47fa-9ac5-ca8afac14f37,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1984,Michel Platini,France,Juventus,3fd5557e-0b52-49cc-b11a-4f79dd890a61,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1985,Michel Platini,France,Juventus,aa0cf278-8573-40bf-bef7-1a89382fe5d9,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1986,Igor Belanov,Soviet Union,Dynamo Kyiv,55cf7d2d-0b13-4075-81f0-682b8fbfff9d,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1987,Ruud Gullit,Netherlands,AC Milan,b7b61ce4-2a05-4374-ac35-3a6dd4840894,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1988,Marco van Basten,Netherlands,AC Milan,e5d63104-1202-4b1f-aa98-fd163c5fd8f2,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1989,Marco van Basten,Netherlands,AC Milan,0af8b813-8805-4191-9978-e8a2879d79d0,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1990,Lothar Matthäus,Germany,Inter Milan,dcfec40f-bbb5-4ee9-ba8e-69bf79468756,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1991,Jean-Pierre Papin,France,Marseille,0d312e14-a49e-4330-8e3e-b2dd101c638a,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1992,Marco van Basten,Netherlands,AC Milan,70fb7b74-1116-4cd1-bfb0-a077bfaf9e88,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1993,Roberto Baggio,Italy,Juventus,8998365c-335d-4045-8e36-69178bace50a,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1994,Hristo Stoichkov,Bulgaria,Barcelona,2980cf62-7276-4842-a60a-b54df1bb7dc4,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1995,George Weah,Liberia,AC Milan,f878a285-4deb-4063-bdfd-b06ae86af19b,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1996,Matthias Sammer,Germany,Borussia Dortmund,acd03432-5338-45f4-a8b3-ada9d5692f31,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1997,Ronaldo Nazário,Brazil,Inter Milan,da3bd3e8-c898-4971-abdc-f414a81b444c,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1998,Zinedine Zidane,France,Juventus,6d6ae13b-263d-4ce5-9462-5ec0c5475451,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+1999,Rivaldo,Brazil,Barcelona,352ebb94-65c8-4598-ac43-0d8703c5ece7,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2000,Luís Figo,Portugal,Real Madrid,fbcc8a55-fc01-4ae5-8ccf-aefefc4f834b,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2001,Michael Owen,England,Liverpool,25cb14be-45d1-4de8-960a-f5795b5d65ca,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2002,Ronaldo Nazário,Brazil,Real Madrid,f34fdc12-1b0c-4a84-8cf6-8fa384e248b7,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2003,Pavel Nedvěd,Czechia,Juventus,70674d3a-0729-4f01-afc0-fa4901bfa74a,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2004,Andriy Shevchenko,Ukraine,AC Milan,4466132f-d033-46d2-9c24-626f401ce535,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2005,Ronaldinho,Brazil,Barcelona,b48a29ea-7166-4bd4-8ca6-08bdba273214,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2006,Fabio Cannavaro,Italy,Real Madrid,4ea4ace4-6491-48e5-89bc-5460459cb975,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2007,Kaká,Brazil,AC Milan,0ebb81f7-d36f-46fd-b0a9-1d4a5d9c561e,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2008,Cristiano Ronaldo,Portugal,Manchester United,feda2466-c255-4ae6-923f-4aa316d49f27,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2009,Lionel Messi,Argentina,Barcelona,0b0847ca-5c06-4ad6-b10b-2e0a7fd20031,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2010,Lionel Messi,Argentina,Barcelona,3bad053f-10bb-4d1b-9c55-b0edc63cc2bf,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2011,Lionel Messi,Argentina,Barcelona,51767411-a909-4b61-ab4e-c1b4a5ca71b7,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2012,Lionel Messi,Argentina,Barcelona,3d226758-21d3-46aa-a0f6-a7d9078c129f,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2013,Cristiano Ronaldo,Portugal,Real Madrid,3fbe1e33-a102-44fa-9c9f-ae655485c5f4,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2014,Cristiano Ronaldo,Portugal,Real Madrid,3e564634-5bd7-487e-b6ad-996b2aea1dea,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2015,Lionel Messi,Argentina,Barcelona,da402f92-5220-4d25-acb7-7415b0fe92e3,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2016,Cristiano Ronaldo,Portugal,Real Madrid,ef1d0906-bee6-4284-b66c-b8bf04e5e5ad,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2017,Cristiano Ronaldo,Portugal,Real Madrid,3f4b9e39-fb15-4e09-ab18-e794c211d856,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2018,Luka Modrić,Croatia,Real Madrid,645e721f-32b2-44c0-8c70-acc42e31c746,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2019,Lionel Messi,Argentina,Barcelona,8870c60d-6c7c-42cf-8018-644c15459182,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2020,NOT AWARDED,,COVID-19 pandemic cancellation,778c8651-29f5-48e1-9e0c-4754b5525016,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2021,Lionel Messi,Argentina,Paris Saint-Germain,d0a53b6d-b309-4cf2-a54f-58876e113263,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2022,Karim Benzema,France,Real Madrid,202dfbee-1e6a-4bcd-8015-892e12a1cecf,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2023,Lionel Messi,Argentina,Paris Saint-Germain,c99ca606-aaa7-438e-bc64-0ea961fc2b21,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2024,Rodri,Spain,Manchester City,3fa06efb-458b-4e15-8b71-8f75b310275a,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353
+2025,Ousmane Dembélé,France,Paris Saint-Germain,a170e1b0-4b39-479e-be7f-f9f78b5fc87a,2026-08-18T15:31:28.784739,ballon_dor_awards.xml,XML_BALLON,de4e5ea5-edb1-4906-9eef-ab8c8e9d8353

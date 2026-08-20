@@ -1,24 +1,25 @@
 edition_id,year,host,champion,runner_up,third_place,fourth_place,teams_count,matches_count,goals_count,goals_per_match,attendance,top_scorer,top_scorer_country,top_scorer_goals,start_date,end_date,final_city,host_won,format
-1,1930,Uruguay,Uruguay,Argentina,United States,Yugoslavia,13,18,70,3.89,590549,Guillermo Stábile,Argentina,8,1930-07-13,1930-07-30,Montevideo,False,Round Robin
-2,1934,Italy,Italy,Czechoslovakia,Germany,Austria,16,17,70,4.12,363000,Oldřich Nejedlý,Czechoslovakia,5,1934-05-27,1934-06-10,Rome,True,Knockout
-3,1938,France,Italy,Hungary,Brazil,Sweden,15,18,84,4.67,375700,Leônidas,Brazil,7,1938-06-04,1938-06-19,Paris,True,Knockout
-4,1950,Brazil,Uruguay,Brazil,Sweden,Spain,13,22,88,4.0,1045246,Ademir,Brazil,8,1950-06-24,1950-07-16,Rio de Janeiro,False,Round Robin Final
-5,1954,Switzerland,West Germany,Hungary,Austria,Uruguay,16,26,140,5.38,768607,Sándor Kocsis,Hungary,11,1954-06-16,1954-07-04,Bern,False,Knockout
-6,1958,Sweden,Brazil,Sweden,France,West Germany,16,35,126,3.6,819810,Just Fontaine,France,13,1958-06-08,1958-06-29,Stockholm,False,Knockout
-7,1962,Chile,Brazil,Czechoslovakia,Chile,Yugoslavia,16,32,89,2.7800000000000002,893172,Florian Albert / Garrincha / Valentin Ivanov / Leonel Sánchez / Dražan Jerković / Vavá,Multiple,4,1962-05-30,1962-06-17,Santiago,False,Knockout
-8,1966,England,England,West Germany,Portugal,Soviet Union,16,32,89,2.7800000000000002,1563135,Eusébio,Portugal,9,1966-07-11,1966-07-30,London,True,Knockout
-9,1970,Mexico,Brazil,Italy,West Germany,Uruguay,16,32,95,2.9699999999999998,1603975,Gerd Müller,West Germany,10,1970-05-31,1970-06-21,Mexico City,False,Knockout
-10,1974,West Germany,West Germany,Netherlands,Poland,Brazil,16,38,97,2.55,1865753,Grzegorz Lato,Poland,7,1974-06-13,1974-07-07,Munich,True,Knockout
-11,1978,Argentina,Argentina,Netherlands,Brazil,Italy,16,38,102,2.68,1545791,Mario Kempes,Argentina,6,1978-06-01,1978-06-25,Buenos Aires,True,Knockout
-12,1982,Spain,Italy,West Germany,Poland,France,24,52,146,2.81,1766277,Paolo Rossi,Italy,6,1982-06-13,1982-07-11,Madrid,False,Knockout
-13,1986,Mexico,Argentina,West Germany,France,Belgium,24,52,132,2.54,2394031,Gary Lineker,England,6,1986-05-31,1986-06-29,Mexico City,False,Knockout
-14,1990,Italy,West Germany,Argentina,Italy,England,24,52,115,2.21,2516215,Salvatore Schillaci,Italy,6,1990-06-08,1990-07-08,Rome,False,Knockout
-15,1994,United States,Brazil,Italy,Sweden,Bulgaria,24,52,141,2.71,3587538,Hristo Stoichkov / Oleg Salenko,Bulgaria / Russia,6,1994-06-17,1994-07-17,Pasadena,False,Knockout
-16,1998,France,France,Brazil,Croatia,Netherlands,32,64,171,2.67,2785100,Davor Šuker,Croatia,6,1998-06-10,1998-07-12,Paris,True,Knockout
-17,2002,South Korea / Japan,Brazil,Germany,Turkey,South Korea,32,64,161,2.52,2705197,Ronaldo,Brazil,8,2002-05-31,2002-06-30,Yokohama,False,Knockout
-18,2006,Germany,Italy,France,Germany,Portugal,32,64,147,2.3,3359439,Miroslav Klose,Germany,5,2006-06-09,2006-07-09,Berlin,False,Knockout
-19,2010,South Africa,Spain,Netherlands,Germany,Uruguay,32,64,145,2.27,3178856,Thomas Müller / Wesley Sneijder / David Villa / Diego Forlán,Multiple,5,2010-06-11,2010-07-11,Johannesburg,False,Knockout
-20,2014,Brazil,Germany,Argentina,Netherlands,Brazil,32,64,171,2.67,3429873,James Rodríguez,Colombia,6,2014-06-12,2014-07-13,Rio de Janeiro,False,Knockout
-21,2018,Russia,France,Croatia,Belgium,England,32,64,169,2.64,3031768,Harry Kane,England,6,2018-06-14,2018-07-15,Moscow,False,Knockout
-22,2022,Qatar,Argentina,France,Croatia,Morocco,32,64,172,2.69,3404252,Kylian Mbappé,France,8,2022-11-20,2022-12-18,Lusail,False,Knockout
-23,2026,United States / Canada / Mexico,Spain,Argentina,England,France,48,104,298,2.87,6850000,Kylian Mbappé,France,10,2026-06-11,2026-07-19,East Rutherford,False,Knockout
+1,1930,Uruguay,Uruguay,Argentina,United States,Yugoslavia,13,18,70,3.89,590549,Guillermo Stábile,Argentina,8.0,1930-07-13,1930-07-30,Montevideo,False,Round Robin
+2,1934,Italy,Italy,Czechoslovakia,Germany,Austria,16,17,70,4.12,363000,Oldřich Nejedlý,Czechoslovakia,5.0,1934-05-27,1934-06-10,Rome,True,Knockout
+3,1938,France,Italy,Hungary,Brazil,Sweden,15,18,84,4.67,375700,Leônidas,Brazil,7.0,1938-06-04,1938-06-19,Paris,True,Knockout
+4,1950,Brazil,Uruguay,Brazil,Sweden,Spain,13,22,88,4.0,1045246,Ademir,Brazil,8.0,1950-06-24,1950-07-16,Rio de Janeiro,False,Round Robin Final
+5,1954,Switzerland,West Germany,Hungary,Austria,Uruguay,16,26,140,5.38,768607,Sándor Kocsis,Hungary,11.0,1954-06-16,1954-07-04,Bern,False,Knockout
+6,1958,Sweden,Brazil,Sweden,France,West Germany,16,35,126,3.6,819810,Just Fontaine,France,13.0,1958-06-08,1958-06-29,Stockholm,False,Knockout
+7,1962,Chile,Brazil,Czechoslovakia,Chile,Yugoslavia,16,32,89,2.7800000000000002,893172,Florian Albert / Garrincha / Valentin Ivanov / Leonel Sánchez / Dražan Jerković / Vavá,Multiple,4.0,1962-05-30,1962-06-17,Santiago,False,Knockout
+8,1966,England,England,West Germany,Portugal,Soviet Union,16,32,89,2.7800000000000002,1563135,Eusébio,Portugal,9.0,1966-07-11,1966-07-30,London,True,Knockout
+9,1970,Mexico,Brazil,Italy,West Germany,Uruguay,16,32,95,2.9699999999999998,1603975,Gerd Müller,West Germany,10.0,1970-05-31,1970-06-21,Mexico City,False,Knockout
+10,1974,West Germany,West Germany,Netherlands,Poland,Brazil,16,38,97,2.55,1865753,Grzegorz Lato,Poland,7.0,1974-06-13,1974-07-07,Munich,True,Knockout
+11,1978,Argentina,Argentina,Netherlands,Brazil,Italy,16,38,102,2.68,1545791,Mario Kempes,Argentina,6.0,1978-06-01,1978-06-25,Buenos Aires,True,Knockout
+12,1982,Spain,Italy,West Germany,Poland,France,24,52,146,2.81,1766277,Paolo Rossi,Italy,6.0,1982-06-13,1982-07-11,Madrid,False,Knockout
+13,1986,Mexico,Argentina,West Germany,France,Belgium,24,52,132,2.54,2394031,Gary Lineker,England,6.0,1986-05-31,1986-06-29,Mexico City,False,Knockout
+14,1990,Italy,West Germany,Argentina,Italy,England,24,52,115,2.21,2516215,Salvatore Schillaci,Italy,6.0,1990-06-08,1990-07-08,Rome,False,Knockout
+15,1994,United States,Brazil,Italy,Sweden,Bulgaria,24,52,141,2.71,3587538,Hristo Stoichkov / Oleg Salenko,Bulgaria / Russia,6.0,1994-06-17,1994-07-17,Pasadena,False,Knockout
+16,1998,France,France,Brazil,Croatia,Netherlands,32,64,171,2.67,2785100,Davor Šuker,Croatia,6.0,1998-06-10,1998-07-12,Paris,True,Knockout
+17,2002,South Korea / Japan,Brazil,Germany,Turkey,South Korea,32,64,161,2.52,2705197,Ronaldo,Brazil,8.0,2002-05-31,2002-06-30,Yokohama,False,Knockout
+18,2006,Germany,Italy,France,Germany,Portugal,32,64,147,2.3,3359439,Miroslav Klose,Germany,5.0,2006-06-09,2006-07-09,Berlin,False,Knockout
+19,2010,South Africa,Spain,Netherlands,Germany,Uruguay,32,64,145,2.27,3178856,Thomas Müller / Wesley Sneijder / David Villa / Diego Forlán,Multiple,5.0,2010-06-11,2010-07-11,Johannesburg,False,Knockout
+20,2014,Brazil,Germany,Argentina,Netherlands,Brazil,32,64,171,2.67,3429873,James Rodríguez,Colombia,6.0,2014-06-12,2014-07-13,Rio de Janeiro,False,Knockout
+21,2018,Russia,France,Croatia,Belgium,England,32,64,169,2.64,3031768,Harry Kane,England,6.0,2018-06-14,2018-07-15,Moscow,False,Knockout
+22,2022,Qatar,Argentina,France,Croatia,Morocco,32,64,172,2.69,3404252,Kylian Mbappé,France,8.0,2022-11-20,2022-12-18,Lusail,False,Knockout
+24,2030,Spain/Portugal/Morocco,Unknown,Unknown,Unknown,,0,0,0,0.0,0,,,,,,,False,
+23,2026,United States / Canada / Mexico,Spain,Argentina,England,France,48,104,298,2.87,6850000,Kylian Mbappé,France,10.0,2026-06-11,2026-07-19,East Rutherford,False,Knockout

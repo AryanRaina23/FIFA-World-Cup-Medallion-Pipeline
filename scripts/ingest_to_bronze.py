@@ -9,21 +9,23 @@ import psycopg2
 from psycopg2.extras import execute_values
 
 def get_connection():
-    # Attempt to connect to PostgreSQL using different possible hosts
     hosts = ['postgres', 'localhost', '127.0.0.1']
-    for host in hosts:
-        try:
-            conn = psycopg2.connect(
-                host=host,
-                database='fifa_dw',
-                user='postgres',
-                password='postgres',
-                port=5432,
-                connect_timeout=3
-            )
-            return conn
-        except Exception:
-            continue
+    ports = [5433, 5432]
+    for port in ports:
+        for host in hosts:
+            try:
+                import psycopg2
+                conn = psycopg2.connect(
+                    host=host,
+                    database='fifa_dw',
+                    user='postgres',
+                    password='postgres',
+                    port=port,
+                    connect_timeout=3
+                )
+                return conn
+            except Exception:
+                continue
     raise Exception("Unable to connect to PostgreSQL database.")
 
 def log_to_run_history(run_id, pipeline_name, start_time):
@@ -78,6 +80,37 @@ def parse_xml_to_df(xml_path):
         records.append(row)
     return pd.DataFrame(records)
 
+def parse_ballon_dor_xml(xml_path):
+    # Parses the attribute-based XML structure of Ballon d'Or winners
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+    records = []
+    for node in root.findall('award'):
+        records.append(dict(node.attrib))
+    return pd.DataFrame(records)
+
+def parse_world_cup_awards_xml(xml_path):
+    # Parses the nested attribute-based XML structure of World Cup individual awards
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+    records = []
+    for ed in root.findall('edition'):
+        ed_year = ed.attrib.get('year')
+        ed_host = ed.attrib.get('host')
+        for award_child in ed:
+            award_type = award_child.tag # e.g. 'golden_ball'
+            winner = award_child.attrib.get('winner')
+            country = award_child.attrib.get('country')
+            records.append({
+                'year': ed_year,
+                'host': ed_host,
+                'award_type': award_type,
+                'winner': winner,
+                'country': country
+            })
+    return pd.DataFrame(records)
+
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(script_dir)
 BASE_DIR = os.environ.get("AIRFLOW_HOME", project_root)
@@ -98,8 +131,8 @@ def load_df_to_bronze_db(df, table_name, cur):
         return 0
 
     columns = list(df.columns)
-    col_str = ', '.join(['"' + str(c) + '"' for c in columns])
-    query = f"INSERT INTO bronze.{table_name}_raw ({col_str}) VALUES %s"
+    escaped_cols = ', '.join([f'"{c}"' for c in columns])
+    query = f"INSERT INTO bronze.{table_name}_raw ({escaped_cols}) VALUES %s"
     
     # Convert dataframe rows to tuples
     values = [tuple(x) for x in df.values]
@@ -120,7 +153,9 @@ def main():
         "fixtures": {"file": "wc_2026_fixtures.csv", "format": "CSV"},
         "editions": {"file": "wc_all_editions.json", "format": "JSON"},
         "matches": {"file": "wc_all_matches.csv", "format": "CSV"},
-        "top_scorers": {"file": "wc_top_scorers.json", "format": "JSON"}
+        "top_scorers": {"file": "wc_top_scorers.json", "format": "JSON"},
+        "ballon_dor": {"file": "ballon_dor_awards.xml", "format": "XML_BALLON"},
+        "world_cup_awards": {"file": "world_cup_awards.xml", "format": "XML_WC_AWARDS"}
     }
     
     conn = get_connection()
@@ -141,6 +176,10 @@ def main():
                 df = pd.read_json(file_path)
             elif info["format"] == "XML":
                 df = parse_xml_to_df(file_path)
+            elif info["format"] == "XML_BALLON":
+                df = parse_ballon_dor_xml(file_path)
+            elif info["format"] == "XML_WC_AWARDS":
+                df = parse_world_cup_awards_xml(file_path)
             else:
                 raise ValueError(f"Unknown format: {info['format']}")
             

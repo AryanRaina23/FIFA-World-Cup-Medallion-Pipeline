@@ -7,19 +7,22 @@ import psycopg2
 
 def get_connection():
     hosts = ['postgres', 'localhost', '127.0.0.1']
-    for host in hosts:
-        try:
-            conn = psycopg2.connect(
-                host=host,
-                database='fifa_dw',
-                user='postgres',
-                password='postgres',
-                port=5432,
-                connect_timeout=3
-            )
-            return conn
-        except Exception:
-            continue
+    ports = [5433, 5432]
+    for port in ports:
+        for host in hosts:
+            try:
+                import psycopg2
+                conn = psycopg2.connect(
+                    host=host,
+                    database='fifa_dw',
+                    user='postgres',
+                    password='postgres',
+                    port=port,
+                    connect_timeout=3
+                )
+                return conn
+            except Exception:
+                continue
     raise Exception("Unable to connect to PostgreSQL database.")
 
 def update_run_status(run_id, status, duration=None):

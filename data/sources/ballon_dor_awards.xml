@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Ballon d'Or Winners Dataset
+  Source: France Football / compiled public award records
+-->
+<ballon_dor_awards>
+  <award year="1956" player="Stanley Matthews" country="England" club="Blackpool"/>
+  <award year="1957" player="Alfredo Di Stéfano" country="Spain" club="Real Madrid"/>
+  <award year="1958" player="Raymond Kopa" country="France" club="Real Madrid"/>
+  <award year="1959" player="Alfredo Di Stéfano" country="Spain" club="Real Madrid"/>
+  <award year="1960" player="Luis Suárez" country="Spain" club="Barcelona"/>
+  <award year="1961" player="Omar Sívori" country="Italy" club="Juventus"/>
+  <award year="1962" player="Josef Masopust" country="Czechoslovakia" club="Dukla Prague"/>
+  <award year="1963" player="Lev Yashin" country="Soviet Union" club="Dynamo Moscow"/>
+  <award year="1964" player="Denis Law" country="Scotland" club="Manchester United"/>
+  <award year="1965" player="Eusébio" country="Portugal" club="Benfica"/>
+  <award year="1966" player="Bobby Charlton" country="England" club="Manchester United"/>
+  <award year="1967" player="Flórián Albert" country="Hungary" club="Ferencváros"/>
+  <award year="1968" player="George Best" country="Northern Ireland" club="Manchester United"/>
+  <award year="1969" player="Gianni Rivera" country="Italy" club="AC Milan"/>
+  <award year="1970" player="Gerd Müller" country="West Germany" club="Bayern Munich"/>
+  <award year="1971" player="Johan Cruyff" country="Netherlands" club="Ajax"/>
+  <award year="1972" player="Franz Beckenbauer" country="West Germany" club="Bayern Munich"/>
+  <award year="1973" player="Johan Cruyff" country="Netherlands" club="Barcelona"/>
+  <award year="1974" player="Johan Cruyff" country="Netherlands" club="Barcelona"/>
+  <award year="1975" player="Oleg Blokhin" country="Soviet Union" club="Dynamo Kyiv"/>
+  <award year="1976" player="Franz Beckenbauer" country="West Germany" club="Bayern Munich"/>
+  <award year="1977" player="Allan Simonsen" country="Denmark" club="Borussia Mönchengladbach"/>
+  <award year="1978" player="Kevin Keegan" country="England" club="Hamburg"/>
+  <award year="1979" player="Kevin Keegan" country="England" club="Hamburg"/>
+  <award year="1980" player="Karl-Heinz Rummenigge" country="West Germany" club="Bayern Munich"/>
+  <award year="1981" player="Karl-Heinz Rummenigge" country="West Germany" club="Bayern Munich"/>
+  <award year="1982" player="Paolo Rossi" country="Italy" club="Juventus"/>
+  <award year="1983" player="Michel Platini" country="France" club="Juventus"/>
+  <award year="1984" player="Michel Platini" country="France" club="Juventus"/>
+  <award year="1985" player="Michel Platini" country="France" club="Juventus"/>
+  <award year="1986" player="Igor Belanov" country="Soviet Union" club="Dynamo Kyiv"/>
+  <award year="1987" player="Ruud Gullit" country="Netherlands" club="AC Milan"/>
+  <award year="1988" player="Marco van Basten" country="Netherlands" club="AC Milan"/>
+  <award year="1989" player="Marco van Basten" country="Netherlands" club="AC Milan"/>
+  <award year="1990" player="Lothar Matthäus" country="Germany" club="Inter Milan"/>
+  <award year="1991" player="Jean-Pierre Papin" country="France" club="Marseille"/>
+  <award year="1992" player="Marco van Basten" country="Netherlands" club="AC Milan"/>
+  <award year="1993" player="Roberto Baggio" country="Italy" club="Juventus"/>
+  <award year="1994" player="Hristo Stoichkov" country="Bulgaria" club="Barcelona"/>
+  <award year="1995" player="George Weah" country="Liberia" club="AC Milan"/>
+  <award year="1996" player="Matthias Sammer" country="Germany" club="Borussia Dortmund"/>
+  <award year="1997" player="Ronaldo Nazário" country="Brazil" club="Inter Milan"/>
+  <award year="1998" player="Zinedine Zidane" country="France" club="Juventus"/>
+  <award year="1999" player="Rivaldo" country="Brazil" club="Barcelona"/>
+  <award year="2000" player="Luís Figo" country="Portugal" club="Real Madrid"/>
+  <award year="2001" player="Michael Owen" country="England" club="Liverpool"/>
+  <award year="2002" player="Ronaldo Nazário" country="Brazil" club="Real Madrid"/>
+  <award year="2003" player="Pavel Nedvěd" country="Czechia" club="Juventus"/>
+  <award year="2004" player="Andriy Shevchenko" country="Ukraine" club="AC Milan"/>
+  <award year="2005" player="Ronaldinho" country="Brazil" club="Barcelona"/>
+  <award year="2006" player="Fabio Cannavaro" country="Italy" club="Real Madrid"/>
+  <award year="2007" player="Kaká" country="Brazil" club="AC Milan"/>
+  <award year="2008" player="Cristiano Ronaldo" country="Portugal" club="Manchester United"/>
+  <award year="2009" player="Lionel Messi" country="Argentina" club="Barcelona"/>
+  <award year="2010" player="Lionel Messi" country="Argentina" club="Barcelona"/>
+  <award year="2011" player="Lionel Messi" country="Argentina" club="Barcelona"/>
+  <award year="2012" player="Lionel Messi" country="Argentina" club="Barcelona"/>
+  <award year="2013" player="Cristiano Ronaldo" country="Portugal" club="Real Madrid"/>
+  <award year="2014" player="Cristiano Ronaldo" country="Portugal" club="Real Madrid"/>
+  <award year="2015" player="Lionel Messi" country="Argentina" club="Barcelona"/>
+  <award year="2016" player="Cristiano Ronaldo" country="Portugal" club="Real Madrid"/>
+  <award year="2017" player="Cristiano Ronaldo" country="Portugal" club="Real Madrid"/>
+  <award year="2018" player="Luka Modrić" country="Croatia" club="Real Madrid"/>
+  <award year="2019" player="Lionel Messi" country="Argentina" club="Barcelona"/>
+  <award year="2020" player="NOT AWARDED" country="" club="COVID-19 pandemic cancellation"/>
+  <award year="2021" player="Lionel Messi" country="Argentina" club="Paris Saint-Germain"/>
+  <award year="2022" player="Karim Benzema" country="France" club="Real Madrid"/>
+  <award year="2023" player="Lionel Messi" country="Argentina" club="Paris Saint-Germain"/>
+  <award year="2024" player="Rodri" country="Spain" club="Manchester City"/>
+  <award year="2025" player="Ousmane Dembélé" country="France" club="Paris Saint-Germain"/>
+</ballon_dor_awards>

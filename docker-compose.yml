@@ -26,7 +26,9 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: fifa_dw
     ports:
-      - "5432:5432"
+      - "5433:5432"
+
+
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./sql/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
@@ -70,5 +72,31 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
+  chatbot_backend:
+    build:
+      context: ./chatbot/backend
+    container_name: fifa_chatbot_backend
+    env_file:
+      - ./chatbot/backend/.env
+    environment:
+      DB_HOST: postgres
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  chatbot_frontend:
+    image: python:3.10-slim
+    container_name: fifa_chatbot_frontend
+    volumes:
+      - ./chatbot/frontend:/app
+    working_dir: /app
+    command: python -m http.server 5501
+    ports:
+      - "5501:5501"
+
 volumes:
   postgres_data:
+
+

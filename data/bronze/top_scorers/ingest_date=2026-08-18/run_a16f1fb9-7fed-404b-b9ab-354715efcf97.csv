@@ -1,0 +1,23 @@
+edition,year,player,country,position,goals,assists,penalties,matches_played,host,team_result,_ingestion_id,_ingested_at,_source_file,_source_format,_run_id
+1,1930,Guillermo Stábile,Argentina,FW,8,0,0,4,Uruguay,Champions,39ca51d8-e1c6-4ee1-b278-8b2dee0efd8b,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+2,1934,Oldřich Nejedlý,Czechoslovakia,FW,5,0,0,4,Italy,Semi-final,9397ac31-4399-448e-9855-78e737a1c361,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+3,1938,Leônidas,Brazil,FW,7,0,0,5,France,Third place,33d90615-5404-4a04-b502-1f859e1a38fa,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+4,1950,Ademir,Brazil,FW,8,0,0,6,Brazil,Runner-up,baf6ba94-edb2-4cff-8f60-b68edbb7ee56,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+5,1954,Sándor Kocsis,Hungary,FW,11,0,0,5,Switzerland,Runner-up,eeaa6290-ce8e-482c-abf9-03c2afa5bdd0,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+6,1958,Just Fontaine,France,FW,13,0,0,6,Sweden,Third place,d0b99f6e-8033-4742-b6d6-1d70affa7947,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+7,1962,Multiple Winners,Multiple,FW,4,0,0,6,Chile,Varies,3784238a-04b5-44df-aa21-b1af9f7a6408,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+8,1966,Eusébio,Portugal,FW,9,0,0,6,England,Third place,6e67b91c-a6bb-4878-8ab2-defae6f66a98,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+9,1970,Gerd Müller,West Germany,FW,10,0,0,6,Mexico,Third place,a5aa3adf-2bd2-4d35-99c7-4b6038b042c2,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+10,1974,Grzegorz Lato,Poland,FW,7,0,0,7,West Germany,Third place,9986914c-4aa9-4f8f-b5e1-a3f994f7598e,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+11,1978,Mario Kempes,Argentina,FW,6,0,0,7,Argentina,Champions,5841a214-4e4a-4226-9e40-28aacdb4491e,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+12,1982,Paolo Rossi,Italy,FW,6,0,0,7,Spain,Champions,059339bc-8f90-4cbb-b463-0534e917449b,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+13,1986,Gary Lineker,England,FW,6,0,0,5,Mexico,Quarter-final,f38513d2-6e36-4488-bfcb-6332fd929c91,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+14,1990,Salvatore Schillaci,Italy,FW,6,0,0,7,Italy,Third place,1a6da3b7-162e-4929-8089-bf06850d2d95,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+15,1994,Hristo Stoichkov,Bulgaria,FW,6,0,0,6,United States,Semi-final,d9af7327-0b85-4599-9e50-c835dd9253b0,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+16,1998,Davor Šuker,Croatia,FW,6,0,0,6,France,Third place,299c53b3-fefe-460c-a23e-334f02915f8f,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+17,2002,Ronaldo,Brazil,FW,8,0,0,7,South Korea/Japan,Champions,67a5eba5-1560-47fe-8e33-521a285a3b6a,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+18,2006,Miroslav Klose,Germany,FW,5,0,0,7,Germany,Third place,18b5d471-94b7-491b-aa3c-f9bce7e8a3ac,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+19,2010,Thomas Müller,Germany,FW,5,3,0,6,South Africa,Third place,1632fc32-dde2-44fe-931d-7dcb51a45f07,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+20,2014,James Rodríguez,Colombia,FW,6,2,0,5,Brazil,Quarter-final,ccd2bff3-afd4-4ab4-9f31-578b1b621b2b,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+21,2018,Harry Kane,England,FW,6,0,0,6,Russia,Fourth place,66f8ab95-3672-4d43-8b89-585594c818e8,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97
+22,2022,Kylian Mbappé,France,FW,8,2,0,7,Qatar,Runner-up,c698264e-d878-4272-ac75-fc114d8be20d,2026-08-18T12:34:11.279935,wc_top_scorers.json,JSON,a16f1fb9-7fed-404b-b9ab-354715efcf97

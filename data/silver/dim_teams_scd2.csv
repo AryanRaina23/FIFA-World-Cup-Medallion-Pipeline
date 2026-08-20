@@ -58,6 +58,39 @@ team_key,team_name,group_letter,confederation,fifa_rank,coach,best_wc_result,deb
 57,Brazil,C,CONMEBOL,3,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",False,2026-07-21,2026-07-25,False,6,2026-07-21 09:11:18.955485
 58,Germany,E,UEFA,10,Jurgen Klopp,"Winners (1954,1974,1990,2014)",False,2026-07-21,2026-07-25,False,6,2026-07-21 09:11:18.955485
 59,Brazil,C,CONMEBOL,6,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",False,2026-07-26,2026-08-03,False,7,2026-07-26 06:40:37.565875
-61,Brazil,C,CONMEBOL,3,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",False,2026-08-04,9999-12-31,True,8,2026-08-04 09:42:10.515251
 60,Germany,E,UEFA,10,Julian Nagelsmann,"Winners (1954,1974,1990,2014)",False,2026-07-26,2026-08-03,False,7,2026-07-26 06:40:37.565875
-62,Germany,E,UEFA,10,Jurgen Klopp,"Winners (1954,1974,1990,2014)",False,2026-08-04,9999-12-31,True,8,2026-08-04 09:42:10.515251
+86,Soviet Union,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+87,Italy,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+88,Cameroon,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+89,Czechoslovakia,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+90,Ireland,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+91,Ukraine,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+92,North Korea,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+93,West Germany,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+94,Northern Ireland,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+95,Chile,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+96,Peru,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+97,Yugoslavia,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+98,Denmark,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+99,Turkey,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+100,Nigeria,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+101,Hungary,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+102,Russia,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+103,Romania,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+104,Bolivia,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+105,East Germany,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+106,Bulgaria,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+107,Poland,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+108,Costa Rica,None,Unknown,999,Unknown,Unknown,False,1930-01-01,9999-12-31,True,1,2026-08-14 10:55:29.827389
+61,Brazil,C,CONMEBOL,3,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",False,2026-08-04,2026-08-16,False,8,2026-08-04 09:42:10.515251
+62,Germany,E,UEFA,10,Jurgen Klopp,"Winners (1954,1974,1990,2014)",False,2026-08-04,2026-08-16,False,8,2026-08-04 09:42:10.515251
+109,Brazil,C,CONMEBOL,6,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",False,2026-08-17,2026-08-16,False,9,2026-08-17 11:38:48.672317
+110,Germany,E,UEFA,10,Julian Nagelsmann,"Winners (1954,1974,1990,2014)",False,2026-08-17,2026-08-16,False,9,2026-08-17 11:38:48.672317
+111,Brazil,C,CONMEBOL,3,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",False,2026-08-17,2026-08-17,False,10,2026-08-17 11:40:43.431538
+112,Germany,E,UEFA,10,Jurgen Klopp,"Winners (1954,1974,1990,2014)",False,2026-08-17,2026-08-17,False,10,2026-08-17 11:40:43.431538
+113,Brazil,C,CONMEBOL,6,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",False,2026-08-18,2026-08-17,False,11,2026-08-18 06:59:47.172402
+114,Germany,E,UEFA,10,Julian Nagelsmann,"Winners (1954,1974,1990,2014)",False,2026-08-18,2026-08-17,False,11,2026-08-18 06:59:47.172402
+115,Brazil,C,CONMEBOL,3,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",False,2026-08-18,2026-08-17,False,12,2026-08-18 07:04:46.698856
+117,Brazil,C,CONMEBOL,6,Dorival Júnior,"Winners (1958,1962,1970,1994,2002)",False,2026-08-18,9999-12-31,True,13,2026-08-18 10:02:06.650765
+116,Germany,E,UEFA,10,Jurgen Klopp,"Winners (1954,1974,1990,2014)",False,2026-08-18,2026-08-17,False,12,2026-08-18 07:04:46.698856
+118,Germany,E,UEFA,10,Julian Nagelsmann,"Winners (1954,1974,1990,2014)",False,2026-08-18,9999-12-31,True,13,2026-08-18 10:02:06.650765
